@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=Lato&display=swap');
+/* 
+font-family: 'IM Fell French Canon SC', serif;
+font-family: 'Lato', sans-serif; */
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    overflow-y: hidden;
+}
+
+:root {
+    --dark-blue: #030e2c;
+    --silver: #C0C0C0;
+}
+
+.hero {
+    background: url("../images/great_atuin.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* padding-top: 200px; */
+    min-height: 100vh;
+}
+
+.bg-light.h-100.p-5.rounded-3.text-center {
+    opacity: 0.7;
+}
+
+/* ----------nav -------------- */
+
+.grimReaper {
+    height: 60px;
+    padding-right: 10px;
+    color: white;
+}
+
+.navbar-dark .navbar-toggler {
+    color: #dde1ef;
+    border-color: #dde1ef;
+    padding: 10px;
+}
+
+/* as nav is transparent it is hard to see on mobile so media query to change to dark-blue  */
+@media only screen and (max-width: 768px) {
+    nav {
+        background-color: var(--dark-blue);
+    }
+}
+
+.navbar-brand:hover {
+    animation: rotate 1s;
+
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+    transform: rotate(360deg);  
+    }
+}
+
+.nav-link {
+    font-size: 1.5em;
+}
+
+/* hover underline nav items  */
+a.nav-link.text-white:hover {
+    border-bottom: 2px solid white;
+    transform: scale(1.2)
+}
+
+.btn-outline-light:hover {
+    color: rgb(3 14 44);
+    background-color: #9fa5a5;
+    border-color: rgb(248, 249, 250);
+    border-width: 2px;
+}
+
+/* Body styling  */
+
+
+h1 {
+    font-size: 45px;
+    font-family: 'IM Fell French Canon SC', serif;
+}
+
+
+footer {
+    list-style-type: none;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    opacity: 0.6;
+    height: 60px;
+}
+
+footer li {
+    list-style-type: none;
+    justify-items: center;
+    align-items: center;
+    color: black;
+}
+
+.icon {
+    height: 35px;
+    /* padding-top: 10px; */
+}
+
+.copyright {
+    padding-top: 12px;
+}
+
+.sm-links-ul {
+    text-align: right;
+    margin-right: 20px;
+    padding-top: 15px;
+}
+
+.sm-links li {
+    margin-bottom: 0;
+    font-size: 1.5em;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+    text-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+}
+
+footer img {
+    height: 32px;
+}
+
+ul.list-inline.sm-links-ul a:hover {
+    padding: 7px 5px 10px 5px;
+    transform: scale(1.1);
+    box-shadow: 0 0 1.5rem black;
+}

@@ -20,7 +20,6 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    /* padding-top: 200px; */
     min-height: 100vh;
 }
 
@@ -50,7 +49,7 @@ body {
 }
 
 .navbar-brand:hover {
-    animation: rotate 1s;
+    animation: rotate 1.2s;
 
 }
 @keyframes rotate {
@@ -58,7 +57,7 @@ body {
         transform: rotate(0deg);
     }
     to {
-    transform: rotate(360deg);  
+        transform: rotate(360deg);  
     }
 }
 
@@ -82,11 +81,41 @@ a.nav-link.text-white:hover {
 /* Body styling  */
 
 
-h1 {
-    font-size: 45px;
-    font-family: 'IM Fell French Canon SC', serif;
+
+
+/* Modal  */
+
+/* This to be removed when JS written to target the modal  */
+button.btn.btn-primary {
+    margin-top: 100px;
 }
 
+.modal-title {
+    font-family: 'IM Fell French Canon SC', serif;
+    font-weight: 800;
+    text-align: center;
+}
+
+.modal-content {
+    background-color: rgb(213 220 220 / 88%);
+    text-align: center;
+}
+
+.play, .help {
+   font-family: 'IM Fell French Canon SC', serif;
+
+}
+
+.btn-light {
+    background-color:black;
+    border: 1px solid black;
+    color: #fff;
+}
+
+.modal-footer {
+    justify-content: center;
+}
+/* Footer  */
 
 footer {
     list-style-type: none;
@@ -96,7 +125,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: white;
+    background: #fff;
     opacity: 0.6;
     height: 60px;
 }

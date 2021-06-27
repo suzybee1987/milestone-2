@@ -1,0 +1,23 @@
+[{
+    "id": 1,
+    "question": "Which of these statements about food are your favourite?",
+    "answers": {
+        "a": "I COULD MURDER A CURRY",
+        "b": "Pride is all very well, but a sausage is a sausage.",
+        "c": "A BLT, heavy on the B",
+        "d": "Food? I'd rather drink! Anything vaguely alcoholic (turpentine / rat poison / lamp oil etc.)"
+    }
+},
+
+{
+    "id": 2,
+    "question": "Which of these activities is your idea of a good time?",
+    "answers": {
+        "a": "Singing songs like 'The Hedgehog Can Never Be Buggered At All'",
+        "b": "Playing a board game with a friend",
+        "c": "Drinking, fighting and stealing",
+        "d": "Lying low and keeping out of trouble"
+    }
+}
+
+]

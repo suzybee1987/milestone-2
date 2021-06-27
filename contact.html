@@ -15,6 +15,17 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <title>Discworld Quiz</title>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_mqpiOf4JQC7rltYhhk9PS");
+        })();
+
+    </script>
+
+
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -49,66 +60,47 @@
         <!-- /Bootstrap navbar -->
     </header>
     <!-- /Nav Header -->
+    <section>
+        <div class="container-fluid hero">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <div class="p-5 bg-light border contact">
+                            <h3 class="text-center contact-header">comments?</h3>
+                            <form id="form">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">name:</label>
+                                    <input type="text" name="from_name" class="form-control" id="name"
+                                        placeholder="name" aria-describedby="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="emailAddress" class="form-label">email address:</label>
+                                    <input type="email" name="from_email" class="form-control" id="emailAddress"
+                                        aria-describedby="emailHelp" placeholder="email address" required>
+                                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="textArea" class="form-label">comments:</label>
+                                    <textarea name="message" class="form-control" id="textArea" rows="3"></textarea>
+                                </div>
+                                <div class="row buttons justify-content-end">
+                                    <div class="col-md-4">
+                                        <button type="submit" id="submitEmail" class="btn btn-secondary">submit</button>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="reset" class="btn btn-light">reset</button>
+                                    </div>
+                                </div>
 
-    <div class="container-fluid hero h-100">
-
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">
-            Launch demo modal
-        </button>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header text-center">
-                    <h2 class="modal-title welcome" id="modalLabel">Welcome to the Discworld Quiz</h2>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <h2>Who do you think you are?</h2>
-                    <p>Do you think you're as naughty as Nanny Ogg?</p>
-                    <p>As noble as Sam Vimes?</p>
-                    <p>Or as inquisitive as Death?</p>
-                    <p class="underline">Take this quiz to find out</p>
-                </div>
-
-                <div class="modal-footer">
-                    <div class="row">
-                        <div class="col-12">
-                            <button type="button" class="btn btn-secondary play" href="game.html">Play</button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <button data-bs-target="#modal2" data-bs-toggle="modal"
-                                data-bs-dismiss="modal" type="button" class="btn btn-light help">Help</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-<div class="modal fade" id="modal2" aria-hidden="true" aria-labelledby="modalLabel2"
-    tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header text-center">
-                <h3 class="modal-title help-title text-center" id="modelLabel2">Help</h3>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>The aim of the quiz is to find out which Discworld Personality you are most like. So answer as honestly as you can and all will be revealed!</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary play" href="game.html" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"
-                    data-bs-dismiss="modal">Play</button>
-            </div>
-        </div>
-    </div>
-</div>
-<a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
+    </section>
+
     <!-- Transparent Footer help https://codepen.io/knuhol/pen/zzQpeR  -->
     <footer class="footer mt-auto py-3 bg-light">
         <div class="container-fluid">
@@ -140,7 +132,14 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/sendEmail.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_mqpiOf4JQC7rltYhhk9PS");
+        })();
+    </script>
 </body>
 
 </html>

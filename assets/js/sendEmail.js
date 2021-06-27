@@ -1,16 +1,20 @@
-function sendMail(contactForm) {
-    emailjs.send("service_hmey31f", "ms2", {
-            "from_name": contactForm.name.value,
-            "from_email": contactForm.emailaddress.value,
-            "project_request": contactForm.projectsummary.value
-        })
-        .then(
-            function (response) {
-                console.log("SUCCESS", response);
-            },
-            function (error) {
-                console.log("FAILED", error);
-            }
-        );
-    return false; // To block from loading a new page
-};
+    const subBtn = document.getElementById('submitEmail');
+
+    document.getElementById('form')
+        .addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            subBtn.value = 'Sending...';
+
+            const serviceID = 'service_hmey31f';
+            const templateID = 'discworld';
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    subBtn.value = 'Send Email';
+                    alert('Sent!');
+                }, (err) => {
+                    subBtn.value = 'Send Email';
+                    alert(JSON.stringify(err));
+                });
+        });

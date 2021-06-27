@@ -11,13 +11,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Discworld Quiz</title>
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
     </script>
     <script type="text/javascript">
         (function () {
             emailjs.init("user_mqpiOf4JQC7rltYhhk9PS");
         })();
+
     </script>
+
+
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -59,26 +63,26 @@
                     <div class="col-md-6 offset-md-3">
                         <div class="p-5 bg-light border contact">
                             <h3 class="text-center contact-header">comments?</h3>
-                            <form onsubmit="return sendMail(this);">
+                            <form id="form">
                                 <div class="mb-3">
                                     <label for="name" class="form-label">name:</label>
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="name"
-                                        aria-describedby="name" required>
+                                    <input type="text" name="from_name" class="form-control" id="name"
+                                        placeholder="name" aria-describedby="name" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="emailAddress" class="form-label">email address:</label>
-                                    <input type="email" name="email" class="form-control" id="emailAddress"
+                                    <input type="email" name="from_email" class="form-control" id="emailAddress"
                                         aria-describedby="emailHelp" placeholder="email address" required>
                                     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <label for="textArea" class="form-label">comments:</label>
-                                    <textarea class="form-control" id="textArea" rows="3"></textarea>
+                                    <textarea name="message" class="form-control" id="textArea" rows="3"></textarea>
                                 </div>
                                 <div class="row buttons justify-content-end">
                                     <div class="col-md-4">
-                                        <button type="submit" class="btn btn-secondary">submit</button>
+                                        <button type="submit" id="submitEmail" class="btn btn-secondary">submit</button>
                                     </div>
                                     <div class="col-md-4">
                                         <button type="reset" class="btn btn-light">reset</button>
@@ -124,7 +128,14 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/sendEmail.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_mqpiOf4JQC7rltYhhk9PS");
+        })();
+    </script>
 </body>
 
 </html>

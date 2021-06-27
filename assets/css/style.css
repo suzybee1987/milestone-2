@@ -81,13 +81,21 @@ a.nav-link.text-white:hover {
 
 /* This to be removed when JS written to target the modal  */
 button.btn.btn-primary {
-    margin-top: 100px;
+    margin-top: 200px;
 }
 
 .modal-title, .contact-header {
     font-family: 'IM Fell French Canon SC', serif;
     font-weight: 800;
     text-align: center;
+}
+
+.welcome {
+    padding-left: 47px;
+}
+
+.help-title {
+    padding-left: 200px;
 }
 
 .modal-content {

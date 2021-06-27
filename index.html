@@ -10,6 +10,10 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <title>Discworld Quiz</title>
 </head>
 
@@ -58,8 +62,8 @@
     <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="modalLabel">Welcome to the Discworld Quiz</h2>
+                <div class="modal-header text-center">
+                    <h2 class="modal-title welcome" id="modalLabel">Welcome to the Discworld Quiz</h2>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -73,19 +77,38 @@
                 <div class="modal-footer">
                     <div class="row">
                         <div class="col-12">
-                            <button type="button" class="btn btn-secondary play">Play</button>
+                            <button type="button" class="btn btn-secondary play" href="game.html">Play</button>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <button type="button" class="btn btn-light help">Help</button>
+                            <button data-bs-target="#modal2" data-bs-toggle="modal"
+                                data-bs-dismiss="modal" type="button" class="btn btn-light help">Help</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
+<div class="modal fade" id="modal2" aria-hidden="true" aria-labelledby="modalLabel2"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h3 class="modal-title help-title text-center" id="modelLabel2">Help</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>The aim of the quiz is to find out which Discworld Personality you are most like. So answer as honestly as you can and all will be revealed!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary play" href="game.html" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"
+                    data-bs-dismiss="modal">Play</button>
+            </div>
+        </div>
+    </div>
+</div>
+<a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
     <!-- Transparent Footer help https://codepen.io/knuhol/pen/zzQpeR  -->
     <footer class="footer mt-auto py-3 bg-light">
         <div class="container-fluid">

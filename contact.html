@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Discworld Quiz</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_mqpiOf4JQC7rltYhhk9PS");
+        })();
+    </script>
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -45,46 +52,46 @@
         <!-- /Bootstrap navbar -->
     </header>
     <!-- /Nav Header -->
+    <section>
+        <div class="container-fluid hero">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <div class="p-5 bg-light border contact">
+                            <h3 class="text-center contact-header">comments?</h3>
+                            <form onsubmit="return sendMail(this);">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">name:</label>
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="name"
+                                        aria-describedby="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="emailAddress" class="form-label">email address:</label>
+                                    <input type="email" name="email" class="form-control" id="emailAddress"
+                                        aria-describedby="emailHelp" placeholder="email address" required>
+                                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="textArea" class="form-label">comments:</label>
+                                    <textarea class="form-control" id="textArea" rows="3"></textarea>
+                                </div>
+                                <div class="row buttons justify-content-end">
+                                    <div class="col-md-4">
+                                        <button type="submit" class="btn btn-secondary">submit</button>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="reset" class="btn btn-light">reset</button>
+                                    </div>
+                                </div>
 
-    <div class="container-fluid hero h-100">
-
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">
-            Launch demo modal
-        </button>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="modalLabel">Welcome to the Discworld Quiz</h2>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <h2>Who do you think you are?</h2>
-                    <p>Do you think you're as naughty as Nanny Ogg?</p>
-                    <p>As noble as Sam Vimes?</p>
-                    <p>Or as inquisitive as Death?</p>
-                    <p class="underline">Take this quiz to find out</p>
-                </div>
-
-                <div class="modal-footer">
-                    <div class="row">
-                        <div class="col-12">
-                            <button type="button" class="btn btn-secondary play">Play</button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <button type="button" class="btn btn-light help">Help</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Transparent Footer help https://codepen.io/knuhol/pen/zzQpeR  -->
     <footer class="footer mt-auto py-3 bg-light">

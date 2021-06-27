@@ -90,7 +90,7 @@ button.btn.btn-primary {
     margin-top: 100px;
 }
 
-.modal-title {
+.modal-title, .contact-header {
     font-family: 'IM Fell French Canon SC', serif;
     font-weight: 800;
     text-align: center;
@@ -101,9 +101,14 @@ button.btn.btn-primary {
     text-align: center;
 }
 
-.play, .help {
+.play, .help, .submit, .reset {
    font-family: 'IM Fell French Canon SC', serif;
+   font-size: 1.5em;
+}
 
+.play:hover, .submit:hover {
+    background-color: white;
+    color:black;
 }
 
 .btn-light {
@@ -115,6 +120,17 @@ button.btn.btn-primary {
 .modal-footer {
     justify-content: center;
 }
+
+/* contact  */
+
+.contact {
+    margin-top: 200px;
+    max-width: 800px;
+    align-items: center;
+    opacity: 0.9;
+    border-radius: 5rem;
+}
+
 /* Footer  */
 
 footer {

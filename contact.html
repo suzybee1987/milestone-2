@@ -10,22 +10,13 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- favicons  -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
     <title>Discworld Quiz</title>
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init("user_mqpiOf4JQC7rltYhhk9PS");
-        })();
-
-    </script>
-
-
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -35,8 +26,7 @@
         <!-- Transparent navbar https://www.youtube.com/watch?v=kmmxxfyufLE -->
         <nav class="navbar fixed-top navbar-expand-md navbar-dark p-md-3">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><img src="assets/images/noun_turtle_2007557 (2).png"
-                        class="grimReaper"></a>
+                <a class="navbar-brand" href="index.html"><img src="assets/images/noun_turtle.png" class="turtle"></a>
                 <button class="navbar-toggler btn btn-outline-light" type="button" data-toggle="collapse"
                     data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -46,8 +36,12 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <div class="ms-auto"></div>
                     <ul class="navbar-nav align-items-end">
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="help.html">help</a>
+                        <!-- Buttons to trigger modals -->
+                        <li class="nav-item" type="button" data-bs-toggle="modal" data-bs-target="#modal">
+                            <a class="nav-link text-white">play</a>
+                        </li>
+                        <li class="nav-item" type="button" data-bs-toggle="modal" data-bs-target="#modal2">
+                            <a class="nav-link text-white">help</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="contact.html">contact</a>
@@ -56,10 +50,8 @@
                 </div>
             </div>
         </nav>
-
-        <!-- /Bootstrap navbar -->
     </header>
-    <!-- /Nav Header -->
+
     <section>
         <div class="container-fluid hero">
             <div class="container">

@@ -40,12 +40,8 @@ body {
     nav {
         background-color: var(--dark-blue);
     }
-    img,
-    svg {
-        vertical-align: middle;
-        height: 50px;
-    }
 }
+
 
 img,
 svg {
@@ -53,17 +49,26 @@ svg {
     height: 75px;
 }
 
+@media only screen and (max-width: 768px) {
+
+    img,
+    svg {
+        vertical-align: middle;
+        height: 50px;
+    }
+}
+
 .navbar-brand:hover {
     animation: rotate 1.2s;
-
-
 }
+
 @keyframes rotate {
     from {
         transform: rotate(0deg);
     }
+
     to {
-        transform: rotate(360deg);  
+        transform: rotate(360deg);
     }
 }
 
@@ -96,7 +101,8 @@ button.btn.btn-primary {
     margin-top: 200px;
 }
 
-.modal-title, .contact-header {
+.modal-title,
+.contact-header {
     font-family: 'IM Fell French Canon SC', serif;
     font-weight: 800;
     text-align: center;
@@ -115,18 +121,22 @@ button.btn.btn-primary {
     text-align: center;
 }
 
-.play, .help, .submit, .reset {
-   font-family: 'IM Fell French Canon SC', serif;
-   font-size: 1.5em;
+.play,
+.help,
+.submit,
+.reset {
+    font-family: 'IM Fell French Canon SC', serif;
+    font-size: 1.5em;
 }
 
-.play:hover, .submit:hover {
+.play:hover,
+.submit:hover {
     background-color: white;
-    color:black;
+    color: black;
 }
 
 .btn-light {
-    background-color:black;
+    background-color: black;
     border: 1px solid black;
     color: #fff;
 }

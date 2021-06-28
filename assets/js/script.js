@@ -1,5 +1,5 @@
 window.onload = (event) => {
-    console.log('page is fully loaded');
+    myModal.show();
 };
 
 let vimes;

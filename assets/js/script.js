@@ -1,3 +1,7 @@
+window.onload = (event) => {
+    console.log('page is fully loaded');
+};
+
 let vimes;
 let death;
 let nanny;

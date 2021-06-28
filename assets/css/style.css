@@ -40,10 +40,22 @@ body {
     nav {
         background-color: var(--dark-blue);
     }
+    img,
+    svg {
+        vertical-align: middle;
+        height: 50px;
+    }
+}
+
+img,
+svg {
+    vertical-align: middle;
+    height: 75px;
 }
 
 .navbar-brand:hover {
     animation: rotate 1.2s;
+
 
 }
 @keyframes rotate {

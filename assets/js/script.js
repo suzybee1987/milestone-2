@@ -1,44 +1,21 @@
-// Single responsibility function
-
-runGame()
-checkAnswer()
-incrementCharScore()
-displayQuestion()
-
-const questionsToAsk = 10;
-let questionsAnswered = 0;
-
-
-// character scores
-
-let vimesScore = 0;
-let deathScore = 0;
-let nannyScore = 0;
-let gaspodeScore = 0;
-let librarianScore = 0;
-let robScore = 0;
-let vetinariScore = 0;
-
-
-function finalScore() {
-    Math.max(vimesScore, deathScore, nannyScore, gaspodeScore, librarianScore, robScore, vetinariScore);
-}
-
-<button onclick = "vimes()" > answer </button>
-
-function vimes() {
-    vimesScore++
+window.onload = (event) => {
+    myModal.show();
 };
 
-<button onclick = "death()" > answer </button>
+let vimes;
+let death;
+let nanny;
+let question;
+let answer;
 
-function death() {
-    deathScore++
-};
-
-
-<button onclick = "nanny()" > answer </button>
-
-function nanny() {
-    nannyScore++
+function quizzy() {
+    if (answer == vimes) {
+        vimes++;
+    } else if (answer == death) {
+        death++;
+    } else if (answer == nobby) {
+        nobby++;
+    } else {
+        console.log("no character");
+    }
 };

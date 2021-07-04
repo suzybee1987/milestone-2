@@ -82,6 +82,7 @@ a.nav-link.text-white:hover {
     transform: scale(1.2)
 }
 
+/* navbar turtle */
 .btn-outline-light:hover {
     color: rgb(3 14 44);
     background-color: #9fa5a5;
@@ -95,11 +96,6 @@ a.nav-link.text-white:hover {
 
 
 /* Modal  */
-
-/* This to be removed when JS written to target the modal  */
-button.btn.btn-primary {
-    margin-top: 200px;
-}
 
 .modal-title,
 .contact-header {
@@ -129,11 +125,17 @@ button.btn.btn-primary {
     font-size: 1.5em;
 }
 
-.play:hover,
-.submit:hover {
-    background-color: white;
-    color: black;
+.play:hover {
+    background-color: #54789d;
+    border-color: #54789d;
 }
+
+a,
+a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
 
 .btn-light {
     background-color: black;

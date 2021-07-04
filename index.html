@@ -23,11 +23,7 @@
 
     <!-- code to launch modal on page load -->
     <!-- https://www.tutorialrepublic.com/codelab.php?topic=faq&file=show-bootstrap-modal-on-page-load  -->
-    <script>
-        $(document).ready(function () {
-            $("#myModal").modal('show');
-        });
-    </script>
+
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -68,7 +64,7 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header text-center">
@@ -149,6 +145,11 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#modal").modal('show');
+            });
+        </script>
     <script src="assets/js/script.js"></script>
 </body>
 

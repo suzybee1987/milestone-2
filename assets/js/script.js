@@ -3,6 +3,7 @@
 
 let questionList = null;
 
+
 document.addEventListener("DOMContentLoaded", function () {
     getJsonThenLoad();
     runGame();
@@ -24,7 +25,7 @@ const getJsonThenLoad = function () {
 const gamePlay = (function () {
     const quizLength = 7;
     let currentAnswers = 0;
-
+  
     // character scores 
     let vimesScore = 0;
     let deathScore = 0;
@@ -102,6 +103,13 @@ function displayQuestion() {
     }
 }
 
+// functions 
+// starts the game 
+function runGame() {
+
+    displayQuestions();
+}
+
 
 checkAnswer()
 
@@ -112,20 +120,6 @@ incrementCharScore()
 function finalScore() {
     Math.max(vimesScore, deathScore, nannyScore, gaspodeScore, librarianScore, robScore, vetinariScore);
 }
-
-
-function vimesGame() {
-    vimesScore++;
-};
-
-function deathGame() {
-    deathScore++;
-};
-
-function nannyGame() {
-    nannyScore++;
-};
-
 
 // user keys and values 
 
@@ -223,13 +217,13 @@ const rob = [
         "A Hat Full of Sky", "I Shall Wear Midnight", "The Shepherd's Crown", "The Wee Free Men", "Wintersmith"
     ],
     [{
-        1: "Food? I'd rather drink! Anything vaguely alcoholic (turpentine / rat poison / lamp oil etc.)",
-        2: "Drinking, fighting and stealing",
-        3: "Drinking, fighting and stealing",
-        4: "Ships!",
-        9: "Daft Wullie",
-        10: "CRIVENS!"
-    }]
+            1: "Food? I'd rather drink! Anything vaguely alcoholic.",
+            2: "Drinking, fighting and stealing",
+            3: "Drinking, fighting and stealing",
+            4: "Ships!",
+            9: "Daft Wullie",
+            10: "CRIVENS!"
+        }]
 ]
 
 const gaspode = [
@@ -244,3 +238,4 @@ const gaspode = [
         10: "Bark"
     }]
 ]
+

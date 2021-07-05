@@ -7,6 +7,7 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     overflow-y: hidden;
+    
 }
 
 :root {
@@ -82,6 +83,7 @@ a.nav-link.text-white:hover {
     transform: scale(1.2)
 }
 
+/* navbar turtle */
 .btn-outline-light:hover {
     color: rgb(3 14 44);
     background-color: #9fa5a5;
@@ -95,11 +97,6 @@ a.nav-link.text-white:hover {
 
 
 /* Modal  */
-
-/* This to be removed when JS written to target the modal  */
-button.btn.btn-primary {
-    margin-top: 200px;
-}
 
 .modal-title,
 .contact-header {
@@ -122,24 +119,45 @@ button.btn.btn-primary {
 }
 
 .play,
-.help,
 .submit,
 .reset {
     font-family: 'IM Fell French Canon SC', serif;
     font-size: 1.5em;
 }
-
-.play:hover,
-.submit:hover {
-    background-color: white;
-    color: black;
+.help {
+    font-family: 'IM Fell French Canon SC',
+    serif;
+}
+.play {
+        background-color: black;
+        border-color: white;
 }
 
-.btn-light {
+
+.play:hover {
+    background-color: #273a4e;
+    border-color: #273a4e;
+}
+
+a,
+a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+.btn-light.help:hover {
     background-color: black;
     border: 1px solid black;
     color: #fff;
 }
+
+a,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 .modal-footer {
     justify-content: center;
@@ -211,4 +229,44 @@ ul.list-inline.sm-links-ul a:hover {
     padding: 7px 5px 10px 5px;
     transform: scale(1.1);
     box-shadow: 0 0 1.5rem black;
+}
+
+
+/* game page  */
+.game {
+    background: url("../images/backgroundsky.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.gameContent {
+    display: table-cell;
+    vertical-align: middle;
+    min-height: 100%;
+    height: 100%;
+    align-items: center;
+    padding-top:57px;
+}
+
+/* quiz  */
+
+.row-question {
+    padding: 20px;
+    height: 120px;
+}
+
+.answer {
+    max-width: 80%;
+    padding: 10px;
+}
+
+.quizQuestion {
+    padding-top: 100px;
+    color: white;
+    font-family: 'IM Fell French Canon SC',
+        serif;
+    font-size: 2.5em;
 }

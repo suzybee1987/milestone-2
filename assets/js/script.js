@@ -3,12 +3,11 @@
 
 let questionList = null;
 
-document.addEventListener("DOMContentLoaded", function () {
-    getJsonThenLoad();
-    let answers = document.getElementsByClassName('answer');
-    for (let answer of answers) {
-        answer.addEventListener('click', function() {
 
+document.addEventListener("DOMContentLoaded", function () {
+    alert('Ready!');
+    getJsonThenLoad();
+    runGame();
         })
     }
     
@@ -32,8 +31,15 @@ const gamePlay = (function () {
 })
 
 // functions 
+// starts the game 
+function runGame() {
 
-runGame()
+    displayQuestions();
+}
+
+
+
+
 checkAnswer()
 incrementCharScore()
 displayQuestion()
@@ -60,11 +66,11 @@ function vimesGame() {
     vimesScore++;
 };
 
-function death() {
+function deathGame() {
     deathScore++;
 };
 
-function nanny() {
+function nannyGame() {
     nannyScore++;
 };
 

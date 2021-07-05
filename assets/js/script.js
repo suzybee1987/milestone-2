@@ -56,7 +56,7 @@ function finalScore() {
 }
 
 
-function vimes() {
+function vimesGame() {
     vimesScore++;
 };
 

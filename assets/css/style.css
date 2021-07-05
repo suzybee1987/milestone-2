@@ -119,16 +119,24 @@ a.nav-link.text-white:hover {
 }
 
 .play,
-.help,
 .submit,
 .reset {
     font-family: 'IM Fell French Canon SC', serif;
     font-size: 1.5em;
 }
+.help {
+    font-family: 'IM Fell French Canon SC',
+    serif;
+}
+.play {
+        background-color: black;
+        border-color: white;
+}
+
 
 .play:hover {
-    background-color: #54789d;
-    border-color: #54789d;
+    background-color: #273a4e;
+    border-color: #273a4e;
 }
 
 a,
@@ -138,17 +146,10 @@ a:hover {
 }
 
 
-.btn-light {
-.btn-light.help {
+.btn-light.help:hover {
     background-color: black;
     border: 1px solid black;
     color: #fff;
-}
-
-.btn-light.help:hover {
-    background-color: white;
-    border: 1px solid white;
-    color: black;
 }
 
 a,

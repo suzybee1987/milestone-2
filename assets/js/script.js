@@ -5,6 +5,13 @@ let questionList = null;
 
 document.addEventListener("DOMContentLoaded", function () {
     getJsonThenLoad();
+    let answers = document.getElementsByClassName('answer');
+    for (let answer of answers) {
+        answer.addEventListener('click', function() {
+
+        })
+    }
+    
 });
 
 const getJsonThenLoad = function () {
@@ -169,7 +176,7 @@ const rob = [
     ],
     [
         {
-            1: "Food? I'd rather drink! Anything vaguely alcoholic (turpentine / rat poison / lamp oil etc.)",
+            1: "Food? I'd rather drink! Anything vaguely alcoholic.",
             2: "Drinking, fighting and stealing",
             3: "Drinking, fighting and stealing",
             4: "Ships!",

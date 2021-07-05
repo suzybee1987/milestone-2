@@ -19,7 +19,7 @@
     <title>Discworld Quiz</title>
 </head>
 
-<body class="d-flex flex-column h-100">
+<body class="d-flex flex-column">
     <header>
         <!-- Bootstrap navbar -->
         <!-- https://getbootstrap.com/docs/5.0/components/navbar/ -->
@@ -48,25 +48,34 @@
             </div>
         </nav>
     </header>
-    <div class="container-fluid hero h-100">
-        <div class="row" id="quiz">
-            <div class="col" id="quizQuestion">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="quizAnswers">
-                    <div id="a"></div>
-                    <div id="b"></div>
-                    <div id="c"></div>
-                    <div id="d"></div>
+    <section class="game min-vh-90">
+        <div class="container-fluid gameContent">
+            <div class="row quizQuestion text-center" id="quiz">
+                <div class="col-12 m-auto" id="quizQuestion">Which of these statements about food are your favourite?
                 </div>
-
+            </div>
+            <div class="quizAnswers text-center">
+                <div class="row row-question btn-group-lg">
+                    <div class="col-6 m-auto h-100 w-50">
+                        <button type="button" class="btn btn-light answer h-100">I COULD MURDER A CURRY</button>
+                    </div>
+                    <div class="col-6 m-auto h-100 w-50">
+                        <button type="button" class="btn btn-light answer h-100">Pride is all very well, but a
+                            sausage is a sausage.</button>
+                    </div>
+                </div>
+                <div class="row row-question text-center">
+                    <div class="col-6 m-auto h-100 w-50">
+                        <button type="button" class="btn btn-light answer h-100">A BLT, heavy on the B</button>
+                    </div>
+                    <div class="col-6 m-auto h-100 w-50">
+                        <button type="button" class="btn btn-light answer h-100">Food? I'd rather drink! Anything vaguely
+                            alcoholic.</button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-
-
+    </section>
     <!-- Transparent Footer help https://codepen.io/knuhol/pen/zzQpeR  -->
     <footer class="footer mt-auto py-3 bg-light">
         <div class="container-fluid">

@@ -8,9 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
     alert('Ready!');
     getJsonThenLoad();
     runGame();
-        })
-    }
-    
 });
 
 const getJsonThenLoad = function () {
@@ -21,40 +18,97 @@ const getJsonThenLoad = function () {
         .then(json => {
             questionList = json;
         })
-        .then(() => pageHandler.firstLoad());
+        .then(() => loadQuestions.runGame());
 };
+
+// start game function 
 
 const gamePlay = (function () {
     const quizLength = 7;
     let currentAnswers = 0;
-    let
-})
 
-// functions 
-// starts the game 
-function runGame() {
+    // character scores 
+    let vimesScore = 0;
+    let deathScore = 0;
+    let nannyScore = 0;
+    let gaspodeScore = 0;
+    let robScore = 0;
+    let vetinariScore = 0;
 
-    displayQuestions();
+
+    let questionsAsked = [];
+
+    return {
+
+        // reset game for next play 
+
+        replayGame: function() {
+                let currentAnswers = 0;
+
+                let vimesScore = 0;
+                let deathScore = 0;
+                let nannyScore = 0;
+                let gaspodeScore = 0;
+                let robScore = 0;
+                let vetinariScore = 0;
+        }
+    }
+});
+
+const loadQuestions = function () {
+    let questionButton = document.getElementById('quizQuestion');
+    let answerButton = document.getElementById('answer');
+    return {
+        runGame: function() {
+            document.getElementsByClassName('play').addEventListener('click', () => {
+                setTimeout(function () {
+                    gamePlay.replayGame();
+                    displayQuestion();
+                })
+            })
+        }
+    }
+}
+
+// functions
+
+function displayQuestion() {
+    if (questionsAnswered === quizlength) {
+        return checkAnswer();
+    } else {
+        // get next question 
+        // randomise questions 
+        // https: //stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array 
+
+        const getRandomQ = questionList[Math.floor(Math.random() * questionList.length)];
+        
+        function displayQuestion(questionId, givenAnswer) {
+            questionsAnswered++;
+            questionsAsked.push(questionId);
+
+            const question = questionList.find(d => d.id === questionId);
+
+            if (givenAnswer === question.correct) {
+                correctAnswers += 1;
+            }
+
+            return question.correct;
+        }
+
+
+        
+
+
+
+
+    }
 }
 
 
-
-
 checkAnswer()
-incrementCharScore()
-displayQuestion()
 
-const questionsToAsk = 7;
-let questionsAnswered = 0;
-let questionsAsked = [];
-// character scores 
-let vimesScore = 0;
-let deathScore = 0;
-let nannyScore = 0;
-let gaspodeScore = 0;
-let librarianScore = 0;
-let robScore = 0;
-let vetinariScore = 0;
+incrementCharScore()
+
 
 
 function finalScore() {
@@ -84,19 +138,16 @@ const vimes = [
         "The Truth", "Night Watch", "Monstrous Regiment", "Thud!", "Where's My Cow?", "Making Money",
         "Unseen Academicals", "Snuff", "Raising Steam"
     ],
-    [
-        {
-            1: "A BLT, heavy on the B",
-            3: "Chasing criminals and setting traps for assassins",
-            5: "My own feet",
-            6: "Where's My Cow?",
-            7: "A good cigar",
-            8: "Only if I was really hungry",
-            9: "Nobby Nobbs"
-        }
-    ]
+    [{
+        1: "A BLT, heavy on the B",
+        3: "Chasing criminals and setting traps for assassins",
+        5: "My own feet",
+        6: "Where's My Cow?",
+        7: "A good cigar",
+        8: "Only if I was really hungry",
+        9: "Nobby Nobbs"
+    }]
 ]
-
 
 const death = [
     "Death",
@@ -109,17 +160,15 @@ const death = [
         "Going Postal", "Thud!", "Wintersmith", "Making Money", "Unseen Academicals", "I Shall Wear Midnight",
         "Raising Steam", "The Shepherd's Crown"
     ],
-    [
-        {
-            1: "I COULD MURDER A CURRY",
-            3: "I'M HANDY WITH A SCYTHE",
-            4: "CATS. CATS ARE NICE",
-            5: "BINKY",
-            6: "A MYSTERY NOVEL",
-            8: "I DON'T EAT MY FRIENDS",
-            9: "NOBBY NOBBS"
-        }
-    ]
+    [{
+        1: "I COULD MURDER A CURRY",
+        3: "I'M HANDY WITH A SCYTHE",
+        4: "CATS. CATS ARE NICE",
+        5: "BINKY",
+        6: "A MYSTERY NOVEL",
+        8: "I DON'T EAT MY FRIENDS",
+        9: "NOBBY NOBBS"
+    }]
 ]
 
 const nanny = [
@@ -128,16 +177,15 @@ const nanny = [
         "Wyrd Sisters", "Witches Abroad", "Lords and Ladies", "Maskerade", "Carpe Jugulum",
         "The Sea and Little Fishes", "Wintersmith", "I Shall Wear Midnight", "The Shepherd's Crown"
     ],
-    [
-        {
-            4: "My handsome Greebo",
-            5: "Broomstick",
-            6: "My Cookbook",
-            7: "Scumble and a nice man ;)",
-            10: "Don't do anything I wouldn't do, if you ever find anything I wouldn't do."
-        }
-    ]
+    [{
+        4: "My handsome Greebo",
+        5: "Broomstick",
+        6: "My Cookbook",
+        7: "Scumble and a nice man ;)",
+        10: "Don't do anything I wouldn't do, if you ever find anything I wouldn't do."
+    }]
 ]
+
 const librarian = [
     "The Librarian",
     [
@@ -145,14 +193,12 @@ const librarian = [
         "Soul Music", "Interesting Times", "Maskerade", "The Last Continent", "The Last Hero", "The Science of Discworld",
         "The Science of Discworld II: the Globe", "The Science of Discworld III: Darwin 's Watch", "Unseen Academicals"
     ],
-    [
-        {
-            2: "Going to the pub and eating peanuts",
-            3: "Attacking anyone who calls me a monkey",
-            7: "Bananas and Organ Music",
-            10: "OOK!"
-        }
-    ]
+    [{
+        2: "Going to the pub and eating peanuts",
+        3: "Attacking anyone who calls me a monkey",
+        7: "Bananas and Organ Music",
+        10: "OOK!"
+    }]
 ]
 
 const vetinari = [
@@ -163,16 +209,14 @@ const vetinari = [
         "Unseen Academicals", "Raising Steam", "The Colour of Magic", "Soul Music", "The Last Hero",
         "Night Watch"
     ],
-    [
-        {
-            2: "Playing a board game with a friend",
-            4: "Dogs, of course",
-            5: "Coach",
-            6: "Written music rather than listening to it performed",
-            8: "I'd rather train them",
-            9: "Cecil Wormsborough St. John 'Nobby' Nobbs"
-        }
-    ]
+    [{
+        2: "Playing a board game with a friend",
+        4: "Dogs, of course",
+        5: "Coach",
+        6: "Written music rather than listening to it performed",
+        8: "I'd rather train them",
+        9: "Cecil Wormsborough St. John 'Nobby' Nobbs"
+    }]
 ]
 
 const rob = [
@@ -197,13 +241,10 @@ const gaspode = [
     [
         "Moving Pictures", "Men at Arms", "The Fifth Elephant", "The Truth", "Soul Music", "Hogfather", "Feet of Clay"
     ],
-    [
-        {
-            1: "Pride is all very well, but a sausage is a sausage",
-            7: "A warm place by the fire and NO BATHS",
-            8: "Abso-woof-ly",
-            10: "Bark"
-        }
-    ]
+    [{
+        1: "Pride is all very well, but a sausage is a sausage",
+        7: "A warm place by the fire and NO BATHS",
+        8: "Abso-woof-ly",
+        10: "Bark"
+    }]
 ]
-

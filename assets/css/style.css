@@ -37,11 +37,11 @@ body {
 }
 
 /* as nav is transparent it is hard to see on mobile so media query to change to dark-blue  */
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
     nav {
         background-color: var(--dark-blue);
     }
-}
+} */
 
 
 img,
@@ -196,7 +196,7 @@ footer li {
 }
 
 .icon {
-    height: 35px;
+    height: 30px;
     /* padding-top: 10px; */
 }
 

@@ -71,37 +71,47 @@ const loadQuestions = function () {
 
 // functions
 
+// function displayQuestion() {
+//     if (questionsAnswered === quizlength) {
+//         return checkAnswer();
+//     } else {
+//         // get next question 
+//         // randomise questions 
+//         // https: //stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array 
+
+//         const getRandomQ = questionList[Math.floor(Math.random() * questionList.length)];
+        
+//         function displayQuestion(questionId, givenAnswer) {
+//             const ANSWERS = [];
+            
+//             questionsAnswered++;
+//             questionsAsked.push(questionId);
+
+//             const QUESTION = questionList.find(d => d.id === questionId);
+
+
+//             // this is from the hackathon 
+//             // if (givenAnswer === question.correct) {
+//             //     correctAnswers += 1;
+//             // }
+//             // return question.correct;
+//         }
+//     }
+// }
+
+function randomiseQuestion() {
+    let getRandomQ = questionList[Math.floor(Math.random() * questionList.length)];
+   }
+
+
 function displayQuestion() {
-    if (questionsAnswered === quizlength) {
-        return checkAnswer();
-    } else {
-        // get next question 
-        // randomise questions 
-        // https: //stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array 
-
-        const getRandomQ = questionList[Math.floor(Math.random() * questionList.length)];
-        
-        function displayQuestion(questionId, givenAnswer) {
-            questionsAnswered++;
-            questionsAsked.push(questionId);
-
-            const question = questionList.find(d => d.id === questionId);
-
-            if (givenAnswer === question.correct) {
-                correctAnswers += 1;
-            }
-
-            return question.correct;
-        }
+    let question = document.getElementById=('quizQuestion');
+    question.innerText = getRandomQ
+//  above we need to grab the question key from json and insert to getRandomQ 
 
 
-        
-
-
-
-
-    }
 }
+
 
 // functions 
 // starts the game 
@@ -238,3 +248,5 @@ const gaspode = [
         10: "Bark"
     }]
 ]
+
+});

@@ -81,7 +81,7 @@ const loadQuestions = function () {
 //         // randomise questions 
 //         // https: //stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array 
 
-//         const getRandomQ = questionList[Math.floor(Math.random() * questionList.length)];
+        // const getRandomQ = questionList[Math.floor(Math.random() * questionList.length)];
 
 //         function displayQuestion(questionId, givenAnswer) {
 //             const ANSWERS = [];

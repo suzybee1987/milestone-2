@@ -3,7 +3,6 @@
 
 let questionList = null;
 
-
 document.addEventListener("DOMContentLoaded", function () {
     getJsonThenLoad();
     runGame();
@@ -13,19 +12,22 @@ const getJsonThenLoad = function () {
     fetch("./assets/js/quiz.json")
         .then(file => {
             return file.json();
+            console.log('hey');
         })
         .then(json => {
             questionList = json;
         })
-        .then(() => loadQuestions.runGame());
+        .then(() => loadQuestions.firstLoad());
 };
 
-// start game function 
+
+
+// character variables  
 
 const gamePlay = (function () {
     const quizLength = 7;
     let currentAnswers = 0;
-  
+
     // character scores 
     let vimesScore = 0;
     let deathScore = 0;
@@ -41,15 +43,15 @@ const gamePlay = (function () {
 
         // reset game for next play 
 
-        replayGame: function() {
-                let currentAnswers = 0;
+        replayGame: function () {
+            let currentAnswers = 0;
 
-                let vimesScore = 0;
-                let deathScore = 0;
-                let nannyScore = 0;
-                let gaspodeScore = 0;
-                let robScore = 0;
-                let vetinariScore = 0;
+            let vimesScore = 0;
+            let deathScore = 0;
+            let nannyScore = 0;
+            let gaspodeScore = 0;
+            let robScore = 0;
+            let vetinariScore = 0;
         }
     }
 });
@@ -58,7 +60,7 @@ const loadQuestions = function () {
     let questionButton = document.getElementById('quizQuestion');
     let answerButton = document.getElementById('answer');
     return {
-        runGame: function() {
+        runGame: function () {
             document.getElementsByClassName('play').addEventListener('click', () => {
                 setTimeout(function () {
                     gamePlay.replayGame();
@@ -80,10 +82,10 @@ const loadQuestions = function () {
 //         // https: //stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array 
 
 //         const getRandomQ = questionList[Math.floor(Math.random() * questionList.length)];
-        
+
 //         function displayQuestion(questionId, givenAnswer) {
 //             const ANSWERS = [];
-            
+
 //             questionsAnswered++;
 //             questionsAsked.push(questionId);
 
@@ -99,37 +101,46 @@ const loadQuestions = function () {
 //     }
 // }
 
-function randomiseQuestion() {
-    let getRandomQ = questionList[Math.floor(Math.random() * questionList.length)];
-   }
-
+// function randomiseQuestion() {
+//     let getRandomQ = questionList[Math.floor(Math.random() * questionList.length)];
+// }
 
 function displayQuestion() {
-    let question = document.getElementById=('quizQuestion');
-    question.innerText = getRandomQ
-//  above we need to grab the question key from json and insert to getRandomQ 
+    console.log("loaded");
+       let question = document.getElementById('quizQuestion');
+       question.innerHTML = json;
+    }
+
+    //  above we need to grab the question key from json and insert to getRandomQ 
 
 
-}
+
+displayQuestion();
+
+// function writeToDocument(type) {
+//     getData(type, function (data) {
+//         document.getElementById("data").innerHTML = data;
+//     });
+// }
 
 
 // functions 
 // starts the game 
-function runGame() {
+// function runGame() {
 
-    displayQuestions();
-}
-
-
-checkAnswer()
-
-incrementCharScore()
+//     displayQuestions();
+// }
 
 
+// checkAnswer()
 
-function finalScore() {
-    Math.max(vimesScore, deathScore, nannyScore, gaspodeScore, librarianScore, robScore, vetinariScore);
-}
+// incrementCharScore()
+
+
+
+// function finalScore() {
+//     Math.max(vimesScore, deathScore, nannyScore, gaspodeScore, librarianScore, robScore, vetinariScore);
+// }
 
 // user keys and values 
 
@@ -227,26 +238,24 @@ const rob = [
         "A Hat Full of Sky", "I Shall Wear Midnight", "The Shepherd's Crown", "The Wee Free Men", "Wintersmith"
     ],
     [{
-            1: "Food? I'd rather drink! Anything vaguely alcoholic.",
-            2: "Drinking, fighting and stealing",
-            3: "Drinking, fighting and stealing",
-            4: "Ships!",
-            9: "Daft Wullie",
-            10: "CRIVENS!"
-        }]
-]
-
-const gaspode = [
-    "Gaspode",
-    [
-        "Moving Pictures", "Men at Arms", "The Fifth Elephant", "The Truth", "Soul Music", "Hogfather", "Feet of Clay"
-    ],
-    [{
-        1: "Pride is all very well, but a sausage is a sausage",
-        7: "A warm place by the fire and NO BATHS",
-        8: "Abso-woof-ly",
-        10: "Bark"
+        1: "Food? I'd rather drink! Anything vaguely alcoholic.",
+        2: "Drinking, fighting and stealing",
+        3: "Drinking, fighting and stealing",
+        4: "Ships!",
+        9: "Daft Wullie",
+        10: "CRIVENS!"
     }]
 ]
 
-});
+const gaspode = [
+"Gaspode",
+[
+    "Moving Pictures", "Men at Arms", "The Fifth Elephant", "The Truth", "Soul Music", "Hogfather", "Feet of Clay"
+],
+[{
+    1: "Pride is all very well, but a sausage is a sausage",
+    7: "A warm place by the fire and NO BATHS",
+    8: "Abso-woof-ly",
+    10: "Bark"
+}]
+]

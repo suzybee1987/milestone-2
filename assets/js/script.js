@@ -1,11 +1,21 @@
 // event listener from my Hackathon project
 // https: //github.com/NicolaLampis/hackathon_ci 
 
-let questionList = null;
+
+// To start each round of the quiz on zero
+let questionList;
+
+// Reserved for question 
+
+let quizContainer = document.getElementById('quiz');
+let quizQs = document.getElementById('quizQuestion');
+let answersElements = document.getElementsByClassName('answer');
+let answerContainer = document.getElementById('quizAnswers')
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
     getJsonThenLoad();
-    runGame();
 });
 
 const getJsonThenLoad = function () {
@@ -17,9 +27,52 @@ const getJsonThenLoad = function () {
         .then(json => {
             questionList = json;
         })
-        .then(() => loadQuestions.firstLoad());
+        .then(() => startGame()
+            .catch(function (err) {
+                alert('error!');
+            }))
 };
 
+
+function startGame() {
+
+    displayQuestions();
+    answerSelected();
+};
+
+startGame();
+
+// finding DRY method to display questions, check https: //www.sitepoint.com/simple-javascript-quiz/ 
+
+function displayQuestions() {
+    for (let i = 0; i < 7; i++) {
+        quizQs.innerHTML = questionList[i].question;
+        answersElements.innerHTML = questionList[i].answers[j];
+
+    }
+}
+
+// to find which value was clicked
+function answerSelected() {
+    for (let element of answersElements) {
+        element.addEventListener("click", () => {
+        giveAnswer(quizQs.value, element.value);
+        });
+    }
+
+// hackathon answer }
+
+function giveAnswer(questionId, clickedAnswer) {
+
+    for (let element of answersElements) {
+
+        if (element.innerHTML.includes(vimes[1])) {
+            vimesScore++;
+            console.log('Vimes');
+        } 
+    }
+
+}
 
 
 // character variables  
@@ -56,20 +109,20 @@ const gamePlay = (function () {
     }
 });
 
-const loadQuestions = function () {
-    let questionButton = document.getElementById('quizQuestion');
-    let answerButton = document.getElementById('answer');
-    return {
-        runGame: function () {
-            document.getElementsByClassName('play').addEventListener('click', () => {
-                setTimeout(function () {
-                    gamePlay.replayGame();
-                    displayQuestion();
-                })
-            })
-        }
-    }
-}
+// const loadQuestions = function () {
+//     let questionButton = document.getElementById('quizQuestion');
+//     let answerButton = document.getElementById('answer');
+//     return {
+//         runGame: function () {
+//             document.getElementsByClassName('play').addEventListener('click', () => {
+//                 setTimeout(function () {
+//                     gamePlay.replayGame();
+//                     displayQuestion();
+//                 })
+//             })
+//         }
+//     }
+// }
 
 // functions
 
@@ -81,7 +134,7 @@ const loadQuestions = function () {
 //         // randomise questions 
 //         // https: //stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array 
 
-        // const getRandomQ = questionList[Math.floor(Math.random() * questionList.length)];
+//         const getRandomQ = questionList[Math.floor(Math.random() * questionList.length)];
 
 //         function displayQuestion(questionId, givenAnswer) {
 //             const ANSWERS = [];
@@ -105,17 +158,17 @@ const loadQuestions = function () {
 //     let getRandomQ = questionList[Math.floor(Math.random() * questionList.length)];
 // }
 
-function displayQuestion() {
-    console.log("loaded");
-       let question = document.getElementById('quizQuestion');
-       question.innerHTML = json;
-    }
+// function displayQuestion() {
+//     console.log("loaded");
+//     let question = document.getElementById('quizQuestion');
+//     question.innerHTML = json;
+// }
 
-    //  above we need to grab the question key from json and insert to getRandomQ 
+//  above we need to grab the question key from json and insert to getRandomQ 
 
 
 
-displayQuestion();
+// displayQuestion();
 
 // function writeToDocument(type) {
 //     getData(type, function (data) {
@@ -248,14 +301,14 @@ const rob = [
 ]
 
 const gaspode = [
-"Gaspode",
-[
-    "Moving Pictures", "Men at Arms", "The Fifth Elephant", "The Truth", "Soul Music", "Hogfather", "Feet of Clay"
-],
-[{
-    1: "Pride is all very well, but a sausage is a sausage",
-    7: "A warm place by the fire and NO BATHS",
-    8: "Abso-woof-ly",
-    10: "Bark"
-}]
-]
+    "Gaspode",
+    [
+        "Moving Pictures", "Men at Arms", "The Fifth Elephant", "The Truth", "Soul Music", "Hogfather", "Feet of Clay"
+    ],
+    [{
+        1: "Pride is all very well, but a sausage is a sausage",
+        7: "A warm place by the fire and NO BATHS",
+        8: "Abso-woof-ly",
+        10: "Bark"
+    }]
+]}

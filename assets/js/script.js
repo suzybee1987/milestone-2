@@ -42,9 +42,16 @@ function startGame() {
 
 startGame();
 
-// finding DRY method to display questions, check https: //www.sitepoint.com/simple-javascript-quiz/ 
+// finding DRY method to display questions, check https: //www.sitepoint.com/simple-javascript-quiz/
+
+// const getRandomQ = questionList[Math.floor(Math.random() * questionList.length)];
+
+// let getRandomQ = questionList.sort(() => Math.random() - 0.5)
+
 
 function displayQuestions() {
+    
+    let getRandomQ = questionList.sort(() => Math.random() - 0.5)
     for (let i = 0; i < 7; i++) {
         quizQs.innerHTML = questionList[i].question;
         answersElements.innerHTML = questionList[i].answers[j];

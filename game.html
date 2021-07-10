@@ -51,18 +51,23 @@
     </header>
     <section class="game min-vh-90">
 
-        <div class="quiz-container">
-            <div class="container-fluid gameContent">
-                <div class="row quizQuestion text-center" id="quiz">
 
-                </div>
+        <div class="container-fluid gameContent quiz-container">
+            <div class="row quizQuestion text-center" id="quiz">
             </div>
         </div>
-       
+
+        <div id="buttons" class="row">
+            <div class="col buttons text-center">
+                <button type="button" class="btn btn-light" id="previous">Previous Question</button>
+                <button type="button" class="btn btn-secondary" id="next">Next Question</button>
+                <button id="submit" class="btn-primary">Submit Quiz</button>
+            </div>
+        </div>
+ 
         <div id="results"></div>
         </div>
     </section>
-
 
     <!-- Transparent Footer help https://codepen.io/knuhol/pen/zzQpeR  -->
     <footer class="footer mt-auto py-3 bg-light">

@@ -120,17 +120,25 @@ a.nav-link.text-white:hover {
 
 .play,
 .submit,
-.reset {
+.reset, #previous, #next {
     font-family: 'IM Fell French Canon SC', serif;
     font-size: 1.5em;
 }
 
-.help {
+.btn-check:focus+.btn-light,
+.btn-light:focus {
+    color: #f9fafb;
+    background-color: #000; 
+    border-color: #000;
+    box-shadow: 0 0 0 0.25rem rgb(211 212 213 / 50%);
+}
+
+.help, #previous {
     font-family: 'IM Fell French Canon SC',
         serif;
 }
 
-.play {
+.play, #next {
     background-color: black;
     border-color: white;
 }
@@ -259,6 +267,12 @@ ul.list-inline.sm-links-ul a:hover {
     height: 120px;
 }
 
+/* container holding the answers  */
+.answers {
+    padding-top: 40px;
+}
+
+
 .answer {
     margin: 10px;
 }
@@ -292,3 +306,9 @@ ul.list-inline.sm-links-ul a:hover {
     height: 200px;
     margin-top: 40px;
 }
+/* prev and next buttons  */
+.buttons {
+    margin-top: 300px;
+
+}
+

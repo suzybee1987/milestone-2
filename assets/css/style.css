@@ -7,7 +7,7 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     overflow-y: hidden;
-    
+
 }
 
 :root {
@@ -124,13 +124,15 @@ a.nav-link.text-white:hover {
     font-family: 'IM Fell French Canon SC', serif;
     font-size: 1.5em;
 }
+
 .help {
     font-family: 'IM Fell French Canon SC',
-    serif;
+        serif;
 }
+
 .play {
-        background-color: black;
-        border-color: white;
+    background-color: black;
+    border-color: white;
 }
 
 
@@ -247,7 +249,7 @@ ul.list-inline.sm-links-ul a:hover {
     min-height: 100%;
     height: 100%;
     align-items: center;
-    padding-top:57px;
+    padding-top: 57px;
 }
 
 /* quiz  */
@@ -258,14 +260,35 @@ ul.list-inline.sm-links-ul a:hover {
 }
 
 .answer {
-    max-width: 80%;
-    padding: 10px;
+    margin: 10px;
 }
 
-.quizQuestion {
+#quizQuestion {
     padding-top: 100px;
     color: white;
     font-family: 'IM Fell French Canon SC',
         serif;
     font-size: 2.5em;
+}
+
+/* css from sitepoint  */
+.slide {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.active-slide {
+    opacity: 1;
+    z-index: 2;
+}
+
+.quiz-container {
+    position: relative;
+    height: 200px;
+    margin-top: 40px;
 }

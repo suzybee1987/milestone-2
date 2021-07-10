@@ -2,17 +2,8 @@
 // https: //github.com/NicolaLampis/hackathon_ci 
 
 
-// To start each round of the quiz on zero
-let questionList;
-
-// Reserved for question 
-
-let quizContainer = document.getElementById('quiz');
-let quizQs = document.getElementById('quizQuestion');
-let answersElements = document.getElementsByClassName('answer');
-let answerContainer = document.getElementById('quizAnswers')
-
-
+// define questionList 
+let questionList = [];
 
 document.addEventListener("DOMContentLoaded", function () {
     getJsonThenLoad();
@@ -27,67 +18,48 @@ const getJsonThenLoad = function () {
         .then(json => {
             questionList = json;
         })
-        .then(() => startGame()
-            .catch(function (err) {
-                alert('error!');
-            }))
+        .then(() => startGame())
+    // .catch (function () {
+    //         alert('error!');
+    //     })
 };
-
 
 function startGame() {
+    const gameOutput = [];
 
-    displayQuestions();
-    answerSelected();
-};
-
-startGame();
-
-// finding DRY method to display questions, check https: //www.sitepoint.com/simple-javascript-quiz/
-
-// const getRandomQ = questionList[Math.floor(Math.random() * questionList.length)];
-
-// let getRandomQ = questionList.sort(() => Math.random() - 0.5)
-
-
-function displayQuestions() {
-    
-    let getRandomQ = questionList.sort(() => Math.random() - 0.5)
-    for (let i = 0; i < 7; i++) {
-        quizQs.innerHTML = questionList[i].question;
-        answersElements.innerHTML = questionList[i].answers[j];
-
-    }
+    // for each question get current question and number 
+    questionList.forEach(
+        (currentQ, qNumber) => {
+            // variable to store answers 
+            const answers = [];
+            // for each answer add a button to click 
+            for (option in currentQ.answers) {
+                answers.push(
+                    `<div class="col m-auto">
+                        <button type="button" class="btn btn-light answer h-100" name="question${qNumber}" value="${option}">
+                        ${option}:
+                        ${currentQ.answers[option]}
+                        </button>
+                    </div>`
+                );
+            }
+            // add q and a to the output 
+            gameOutput.push(
+                `<div class="row">
+                    <div class="col m-auto text-center" id="quizQuestion">${currentQ.question}</div>
+                </div>
+                <div class="row">
+                    <div class="answer text-center">${answers.join('')}</div>
+                </div>`
+            );
+        }
+    );
+    // join gameOutput to html push to page 
+    quizContainer.innerHTML = gameOutput.join('');
 }
 
-// to find which value was clicked
-function answerSelected() {
-    for (let element of answersElements) {
-        element.addEventListener("click", () => {
-        giveAnswer(quizQs.value, element.value);
-        });
-    }
-
-// hackathon answer }
-
-function giveAnswer(questionId, clickedAnswer) {
-
-    for (let element of answersElements) {
-
-        if (element.innerHTML.includes(vimes[1])) {
-            vimesScore++;
-            console.log('Vimes');
-        } 
-    }
-
-}
-
-
-// character variables  
-
-const gamePlay = (function () {
-    const quizLength = 7;
-    let currentAnswers = 0;
-
+function quizResults() {
+    const answerContainers = quizContainer.querySelectorAll('answers');
     // character scores 
     let vimesScore = 0;
     let deathScore = 0;
@@ -96,111 +68,48 @@ const gamePlay = (function () {
     let robScore = 0;
     let vetinariScore = 0;
 
+    questionList.forEach((currentQ, qNumber) => {
+        const answerContainer = answersContainers[qNumber];
+        // selector variable assigned to whichever button clicked
+        
+        // this isn't working right now 
 
-    let questionsAsked = [];
 
-    return {
+        const selector = `button[name=question${qNumber}]:clicked`;
+        // chosenAnswer assigned to the value of the button clicked 
+        const chosenAnswer = (answerContainer.querySelector(selector) || {}).value;
 
-        // reset game for next play 
-
-        replayGame: function () {
-            let currentAnswers = 0;
-
-            let vimesScore = 0;
-            let deathScore = 0;
-            let nannyScore = 0;
-            let gaspodeScore = 0;
-            let robScore = 0;
-            let vetinariScore = 0;
+        if (vimes.includes(chosenAnswer)) {
+            vimesScore++;
+            console.log('Vimes!');
+        } else if (death.includes(chosenAnswer)) {
+            deathScore++;
+        } else if (gaspode.includes(chosenAnswer)) {
+            gaspodeScore++;
+        } else if (vetinari.includes(chosenAnswer)) {
+            vetinariScore++;
+        } else if (nanny.includes(chosenAnswer)) {
+            nannyScore++;
+        } else if (rob.includes(chosenAnswer)) {
+            robScore++;
+        } else {
+            librarianScore++;
         }
-    }
-});
+    });
+    let result = Math.max(vimesScore, deathScore, nannyScore, gaspodeScore, librarianScore, robScore, vetinariScore);
+}
 
-// const loadQuestions = function () {
-//     let questionButton = document.getElementById('quizQuestion');
-//     let answerButton = document.getElementById('answer');
-//     return {
-//         runGame: function () {
-//             document.getElementsByClassName('play').addEventListener('click', () => {
-//                 setTimeout(function () {
-//                     gamePlay.replayGame();
-//                     displayQuestion();
-//                 })
-//             })
-//         }
-//     }
-// }
-
-// functions
-
-// function displayQuestion() {
-//     if (questionsAnswered === quizlength) {
-//         return checkAnswer();
-//     } else {
-//         // get next question 
-//         // randomise questions 
-//         // https: //stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array 
-
-//         const getRandomQ = questionList[Math.floor(Math.random() * questionList.length)];
-
-//         function displayQuestion(questionId, givenAnswer) {
-//             const ANSWERS = [];
-
-//             questionsAnswered++;
-//             questionsAsked.push(questionId);
-
-//             const QUESTION = questionList.find(d => d.id === questionId);
-
-
-//             // this is from the hackathon 
-//             // if (givenAnswer === question.correct) {
-//             //     correctAnswers += 1;
-//             // }
-//             // return question.correct;
-//         }
-//     }
-// }
-
-// function randomiseQuestion() {
-//     let getRandomQ = questionList[Math.floor(Math.random() * questionList.length)];
-// }
-
-// function displayQuestion() {
-//     console.log("loaded");
-//     let question = document.getElementById('quizQuestion');
-//     question.innerHTML = json;
-// }
-
-//  above we need to grab the question key from json and insert to getRandomQ 
+// Suzy you need to do the pagination after lunch 
 
 
 
-// displayQuestion();
-
-// function writeToDocument(type) {
-//     getData(type, function (data) {
-//         document.getElementById("data").innerHTML = data;
-//     });
-// }
+// variables 
+const quizContainer = document.getElementById('quiz');
+const resultsContainer = document.getElementById('results');
+const submitButton = document.getElementById('submit');
+// Event listeners
 
 
-// functions 
-// starts the game 
-// function runGame() {
-
-//     displayQuestions();
-// }
-
-
-// checkAnswer()
-
-// incrementCharScore()
-
-
-
-// function finalScore() {
-//     Math.max(vimesScore, deathScore, nannyScore, gaspodeScore, librarianScore, robScore, vetinariScore);
-// }
 
 // user keys and values 
 
@@ -318,4 +227,4 @@ const gaspode = [
         8: "Abso-woof-ly",
         10: "Bark"
     }]
-]}
+]

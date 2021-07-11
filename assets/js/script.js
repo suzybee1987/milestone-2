@@ -3,22 +3,11 @@
  const resultsContainer = document.getElementById('results');
  const submitButton = document.getElementById('submit');
 
-//  these variables added because buttons overlapping the answers after pagination but it didn't work
-//  const buttons = document.getElementById('buttons');
-//  let buttonsHtml = `<div id="results"></div>
-//             <div class="col buttons text-center align-items-around">
-//                 <button type="button" class="btn btn-light" id="previous">Previous Question</button>
-//                 <button type="button" class="btn btn-secondary" id="next">Next Question</button>
-//                 <button id="submit" class="btn-primary">Submit Quiz</button>
-//             </div>`
-
- // event listener from my Hackathon project
- // https: //github.com/NicolaLampis/hackathon_ci 
-
-
  // define questionList 
  let questionList = null;
 
+ // event listener from my Hackathon project
+ // https: //github.com/NicolaLampis/hackathon_ci 
  // on DOM load function to fetch the JSON file 
 
  document.addEventListener("DOMContentLoaded", function () {
@@ -35,95 +24,113 @@
  		})
  		.then(() => buildQuiz());
  };
-function buildQuiz(){
-	startGame();
-	// showSlide(currentSlide);
+
+ function buildQuiz() {
+ 	startGame();
 
 
- // function to start the game 
- function startGame() {
- 	const gameOutput = [];
+ 	// function to start the game 
+ 	function startGame() {
+ 		const gameOutput = [];
 
- 	// for each question get current question and number 
- 	questionList.forEach(
- 		(currentQ, qNumber) => {
- 			// variable to store answers 
+ 		// for each question get current question and number 
+ 		questionList.forEach(
+ 			(currentQ, qNumber) => {
+ 				// variable to store answers 
 
- 			const answers = [];
- 			// for each answer add a button to click 
+ 				const answers = [];
+ 				// for each answer add a button to click 
 
- 			for (option in currentQ.answers) {
- 				answers.push(
- 					`<div class="col-sm-6 m-auto">
+ 				for (option in currentQ.answers) {
+ 					answers.push(
+ 						`<div class="col-sm-6 m-auto">
                         <button type="button" class="btn btn-light answer h-100" name="question${qNumber}" value="${option}">
                         ${currentQ.answers[option]}
                         </button>
                     </div>`
- 				);
- 			};
+ 					);
+ 				};
 
- 			// add q and a to the output 
- 			gameOutput.push(
- 				`<div class="slide">
+ 				// add q and a to the output 
+ 				gameOutput.push(
+ 					`<div class="slide">
                         <div class="col m-auto text-center" id="quizQuestion">${currentQ.question}</div>
                         <div class="answers row text-center">${answers.join('')}</div>
                 </div>`
- 			);
- 		}
- 	);
- 	// join gameOutput to html push to page 
- 	quizContainer.innerHTML = gameOutput.join('');
-	// buttons.innerHTML = buttonsHtml;
-	
- };
-
- function quizResults() {
-
- 	const answerContainers = quizContainer.querySelectorAll('.answers');
- 	// character scores 
-
- 	let vimesScore = 0;
- 	let deathScore = 0;
- 	let nannyScore = 0;
- 	let gaspodeScore = 0;
- 	let robScore = 0;
- 	let vetinariScore = 0;
-
- 	questionList.forEach((currentQ, qNumber) => {
-
- 		const answerContainer = answersContainers[qNumber];
- 		// selector variable assigned to whichever button clicked
-
- 		// this isn't working right now 
- 		// maybe try: 
- 		// let selector = `button[value=]:clicked`;
+ 				);
+ 			}
+ 		);
+ 		// join gameOutput to html push to page 
+ 		quizContainer.innerHTML = gameOutput.join('');
+ 	};
+ 	// let result = Math.max(vimesScore, deathScore, nannyScore, gaspodeScore, librarianScore, robScore, vetinariScore);
 
 
- 		const selector = `button[name=question${qNumber}]:clicked`;
- 		// chosenAnswer assigned to the value of the button clicked 
- 		const chosenAnswer = (answerContainer.querySelector(selector) || {}).value;
+   function checkAnswer() {
 
- 		if (vimes.includes(chosenAnswer)) {
- 			vimesScore++;
- 			console.log('Vimes!');
- 		} else if (death.includes(chosenAnswer)) {
- 			deathScore++;
- 		} else if (gaspode.includes(chosenAnswer)) {
- 			gaspodeScore++;
- 		} else if (vetinari.includes(chosenAnswer)) {
- 			vetinariScore++;
- 		} else if (nanny.includes(chosenAnswer)) {
- 			nannyScore++;
- 		} else if (rob.includes(chosenAnswer)) {
- 			robScore++;
- 		} else {
- 			librarianScore++;
- 		}
- 	});
+   	// gather answer containers from our quiz
+   	const answerContainers = quizContainer.querySelectorAll('.answers');
 
- 	let result = Math.max(vimesScore, deathScore, nannyScore, gaspodeScore, librarianScore, robScore, vetinariScore);
- };
+   	// keep track of user's answers
 
+ 	   	let vimesScore = 0;
+ 		let deathScore = 0;
+    	let nannyScore = 0;
+    	let gaspodeScore = 0;
+ 		let robScore = 0;
+ 	   	let vetinariScore = 0;
+		let librarianScore = 0;
+
+		
+
+   	// for each question...
+   	questionList.forEach((currentQ, qNumber) => {
+
+   		// find selected answer
+   		const answerContainer = answerContainers[qNumber];
+		let selector;
+   		 $(".answer").click(function () {
+   		 	selector = this.value;
+   		 	console.log(chosenAnswer);
+   		 })
+   		const chosenAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+   		// find out which button clicked 
+		    console.log(qNumber.value);
+		     
+   		
+
+ 			  // find which character and ++	
+ 			  if (vimes.includes(chosenAnswer)) {
+ 			  vimesScore++;
+ 			  console.log('Vimes!');
+ 			  }
+ 			  else if (death.includes(chosenAnswer)) {
+ 			  	deathScore++;
+ 			  } else if (gaspode.includes(chosenAnswer)) {
+ 			  	gaspodeScore++;
+ 			  } else if (vetinari.includes(chosenAnswer)) {
+ 			  	vetinariScore++;
+ 			  } else if (nanny.includes(chosenAnswer)) {
+ 			  	nannyScore++;
+ 			  } else if (rob.includes(chosenAnswer)) {
+ 			  	robScore++;
+ 			  } else {
+ 			  	librarianScore++;
+ 			  }
+
+
+   		}
+
+   	);
+
+   	// show which character you are
+   	resultsContainer.innerHTML = `You are (character)!`;
+   }
+
+   function quizResults() {
+	   console.log('You clicked ' + this)
+   }
 
  // pagination function 
 
@@ -153,9 +160,8 @@ function buildQuiz(){
  function showPreviousSlide() {
  	showSlide(currentSlide - 1);
  }
-
-
-
+ let answerButton = document.getElementsByClassName('answer');
+ answerButton.addEventListener("click", checkAnswer);
  // user keys and values 
 
  const vimes = [
@@ -274,111 +280,6 @@ function buildQuiz(){
  	}]
  ];
 
- // const questionList = [{
- //         "id": 1,
- //         "question": "Which of these statements about food are your favourite?",
- //         "answers": {
- //             "a": "I COULD MURDER A CURRY",
- //             "b": "Pride is all very well, but a sausage is a sausage.",
- //             "c": "A BLT, heavy on the B",
- //             "d": "Food? I'd rather drink! Anything vaguely alcoholic."
- //         }
- //     },
-
- //     {
- //         "id": 2,
- //         "question": "Which of these activities is your idea of a good time?",
- //         "answers": {
- //             "a": "Singing songs like 'The Hedgehog Can Never Be Buggered At All'",
- //             "b": "Playing a board game with a friend",
- //             "c": "Drinking, fighting and stealing",
- //             "d": "Going to the pub and eating peanuts"
- //         }
- //     },
- //     {
- //         "id": 3,
- //         "question": "Which of these is your specialist subject?",
- //         "answers": {
- //             "a": "Attacking anyone who calls me a monkey",
- //             "b": "I'M HANDY WITH A SCYTHE",
- //             "c": "Drinking, fighting and stealing",
- //             "d": "Chasing criminals and setting traps for assassins"
- //         }
- //     },
- //     {
- //         "id": 4,
- //         "question": "Which of these is your favourite animal?",
- //         "answers": {
- //             "a": "CATS. CATS ARE NICE",
- //             "b": "My handsome Greebo",
- //             "c": "Dogs, of course",
- //             "d": "Ships!"
- //         }
- //     },
- //     {
- //         "id": 5,
- //         "question": "Which is your favourite mode of transport?",
- //         "answers": {
- //             "a": "My own feet",
- //             "b": "Coach",
- //             "c": "BINKY",
- //             "d": "Broomstick"
- //         }
- //     },
- //     {
- //         "id": 6,
- //         "question": "Which is your favourite reading material?",
- //         "answers": {
- //             "a": "Where's My Cow?",
- //             "b": "My Cookbook",
- //             "c": "A MYSTERY NOVEL",
- //             "d": "Written music rather than listening to it performed"
- //         }
- //     },
- //     {
- //         "id": 7,
- //         "question": "Which would you prefer as a Hogswatch present?",
- //         "answers": {
- //             "a": "Bananas and Organ Music",
- //             "b": "A good cigar",
- //             "c": "Scumble and a nice man ;)",
- //             "d": "A warm place by the fire and NO BATHS"
- //         }
- //     },
-
- //     {
- //         "id": 8,
- //         "question": "Would you ever eat a fried rat?",
- //         "answers": {
- //             "a": "Only if I was really hungry",
- //             "b": "Abso-woof-ly",
- //             "c": "I DON'T EAT MY FRIENDS",
- //             "d": "I'd rather train them"
- //         }
- //     },
- //     {
- //         "id": 9,
- //         "question": "Who is the strangest person you've met?",
- //         "answers": {
- //             "a": "Nobby Nobbs",
- //             "b": "Cecil Wormsborough St. John 'Nobby' Nobbs",
- //             "c": "NOBBY NOBBS",
- //             "d": "Daft Wullie"
- //         }
- //     },
- //     {
- //         "id": 10,
- //         "question": "What's your favourite saying?",
- //         "answers": {
- //             "a": "OOK!",
- //             "b": "CRIVENS!",
- //             "c": "Don't do anything I wouldn't do, if you ever find anything I wouldn't do.",
- //             "d": "Bark"
- //         }
- //     }
-
- // ]
-
  // pagination variables 
  const previousButton = document.getElementById("previous");
  const nextButton = document.getElementById("next");
@@ -388,8 +289,16 @@ function buildQuiz(){
  showSlide(currentSlide);
 
  // Event listeners
- // submitButton.addEventListener('click', showResults);
+ submitButton.addEventListener('click', quizResults);
  previousButton.addEventListener("click", showPreviousSlide);
  nextButton.addEventListener("click", showNextSlide);
 
- }
+
+
+// jquery listening for answer clicked 
+//   $(".answer").click(function () {
+//   	let chosenAnswer = this.value;
+//   	console.log(chosenAnswer);
+//   })
+
+ };

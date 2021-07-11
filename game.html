@@ -54,17 +54,49 @@
 
         <div class="container-fluid gameContent quiz-container">
             <div class="row quizQuestion text-center" id="quiz">
+                <!-- <div class="slide"> -->
+                <div class="col m-auto text-center" id="quizQuestion">Question</div>
+                <!-- </div> -->
+                <div class="row text-center">
+                    <div class="col-6 m-auto">
+                        <button type="button" class="btn btn-light answer h-100" name="question${qNumber}"
+                            value="${option}">
+                            I COULD MURDER A CURRY
+                        </button>
+                    </div>
+                    <div class="col-6 m-auto">
+                        <button type="button" class="btn btn-light answer h-100" name="question${qNumber}"
+                            value="${option}">
+                            I COULD MURDER A CURRY
+                        </button>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-6 m-auto">
+                        <button type="button" class="btn btn-light answer h-100" name="question${qNumber}"
+                            value="${option}">
+                            I COULD MURDER A CURRY
+                        </button>
+                    </div>
+                    <div class="col-6 m-auto">
+                        <button type="button" class="btn btn-light answer h-100" name="question${qNumber}"
+                            value="${option}">
+                            I COULD MURDER A CURRY
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="buttons" class="row">
+                <div class="col buttons text-center">
+                    <button type="button" class="btn btn-secondary" id="previous">Previous Question</button>
+                    <button type="button" class="btn btn-secondary" id="next">Next Question</button>
+                    <button id="submit" class="btn btn-success btn-lg">Submit Quiz</button>
+                </div>
             </div>
         </div>
 
-        <div id="buttons" class="row">
-            <div class="col buttons text-center">
-                <button type="button" class="btn btn-light" id="previous">Previous Question</button>
-                <button type="button" class="btn btn-secondary" id="next">Next Question</button>
-                <button id="submit" class="btn-primary">Submit Quiz</button>
-            </div>
-        </div>
- 
+
         <div id="results"></div>
         </div>
     </section>

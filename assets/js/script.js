@@ -1,5 +1,62 @@
-(function () {
-// function to start the game 
+    // event listener from my Hackathon project
+    // https: //github.com/NicolaLampis/hackathon_ci 
+
+    // define questionList 
+    let questionList = null;
+
+    // on DOM load function to fetch the JSON file then run startGame()
+
+    document.addEventListener("DOMContentLoaded", function () {
+        getJsonThenLoad();
+    });
+
+    const getJsonThenLoad = function () {
+        fetch("./assets/js/quizData.json")
+            .then(file => {
+                return file.json();
+            })
+            .then(json => {
+                questionList = json;
+            })
+            .then(() => startGame());
+    };
+
+    const game = (function () {
+        const gameLength = 10;
+        let currentQ = 0;
+
+        // character scores 
+
+        let vimesScore = 0;
+        let deathScore = 0;
+        let nannyScore = 0;
+        let gaspodeScore = 0;
+        let robScore = 0;
+        let vetinariScore = 0;
+
+        let questionsAsked = [];
+
+        return {
+
+            :newGame function() {
+                currentQ = 0;
+                vimesScore = 0;
+                deathScore = 0;
+                nannyScore = 0;
+                gaspodeScore = 0;
+                robScore = 0;
+                vetinariScore = 0;
+
+                questionsAsked = [];
+            },
+        }
+
+    }
+
+
+
+
+    // function to start the game 
     function startGame() {
         const gameOutput = [];
 
@@ -38,14 +95,7 @@
     // function quizResults() {
 
     //     const answerContainers = quizContainer.querySelectorAll('.answers');
-    //     // character scores 
 
-    //     let vimesScore = 0;
-    //     let deathScore = 0;
-    //     let nannyScore = 0;
-    //     let gaspodeScore = 0;
-    //     let robScore = 0;
-    //     let vetinariScore = 0;
 
     //     questionList.forEach((currentQ, qNumber) => {
 
@@ -83,7 +133,7 @@
     // };
 
     // pagination function 
-    
+
     function showSlide(n) {
         slides[currentSlide].classList.remove('active-slide');
         slides[n].classList.add('active-slide');
@@ -116,34 +166,7 @@
     const resultsContainer = document.getElementById('results');
     const submitButton = document.getElementById('submit');
 
-    // event listener from my Hackathon project
-    // https: //github.com/NicolaLampis/hackathon_ci 
 
-
-    // define questionList 
-    // let questionList = [];
-
-
-    // on DOM load function to fetch the JSON file 
-
-    // document.addEventListener("DOMContentLoaded", function () {
-    //     getJsonThenLoad();
-    // });
-
-    // const getJsonThenLoad = function () {
-    //     fetch("./assets/js/quiz.json")
-    //         .then(file => {
-    //             return file.json();
-    //             console.log('hey');
-    //         })
-    //         .then(json => {
-    //             questionList = json;
-    //         })
-    //         .then(() => startGame())
-    //     .catch (function () {
-    //             alert('error!');
-    //         })
-    // };
 
     // user keys and values 
 
@@ -263,111 +286,111 @@
         }]
     ];
 
-const questionList =
-[{
-        "id": 1,
-        "question": "Which of these statements about food are your favourite?",
-        "answers": {
-            "a": "I COULD MURDER A CURRY",
-            "b": "Pride is all very well, but a sausage is a sausage.",
-            "c": "A BLT, heavy on the B",
-            "d": "Food? I'd rather drink! Anything vaguely alcoholic."
-        }
-    },
+    // const questionList =
+    // [{
+    //         "id": 1,
+    //         "question": "Which of these statements about food are your favourite?",
+    //         "answers": {
+    //             "a": "I COULD MURDER A CURRY",
+    //             "b": "Pride is all very well, but a sausage is a sausage.",
+    //             "c": "A BLT, heavy on the B",
+    //             "d": "Food? I'd rather drink! Anything vaguely alcoholic."
+    //         }
+    //     },
 
-    {
-        "id": 2,
-        "question": "Which of these activities is your idea of a good time?",
-        "answers": {
-            "a": "Singing songs like 'The Hedgehog Can Never Be Buggered At All'",
-            "b": "Playing a board game with a friend",
-            "c": "Drinking, fighting and stealing",
-            "d": "Going to the pub and eating peanuts"
-        }
-    },
-    {
-        "id": 3,
-        "question": "Which of these is your specialist subject?",
-        "answers": {
-            "a": "Attacking anyone who calls me a monkey",
-            "b": "I'M HANDY WITH A SCYTHE",
-            "c": "Drinking, fighting and stealing",
-            "d": "Chasing criminals and setting traps for assassins"
-        }
-    },
-    {
-        "id": 4,
-        "question": "Which of these is your favourite animal?",
-        "answers": {
-            "a": "CATS. CATS ARE NICE",
-            "b": "My handsome Greebo",
-            "c": "Dogs, of course",
-            "d": "Ships!"
-        }
-    },
-    {
-        "id": 5,
-        "question": "Which is your favourite mode of transport?",
-        "answers": {
-            "a": "My own feet",
-            "b": "Coach",
-            "c": "BINKY",
-            "d": "Broomstick"
-        }
-    },
-    {
-        "id": 6,
-        "question": "Which is your favourite reading material?",
-        "answers": {
-            "a": "Where's My Cow?",
-            "b": "My Cookbook",
-            "c": "A MYSTERY NOVEL",
-            "d": "Written music rather than listening to it performed"
-        }
-    },
-    {
-        "id": 7,
-        "question": "Which would you prefer as a Hogswatch present?",
-        "answers": {
-            "a": "Bananas and Organ Music",
-            "b": "A good cigar",
-            "c": "Scumble and a nice man ;)",
-            "d": "A warm place by the fire and NO BATHS"
-        }
-    },
+    //     {
+    //         "id": 2,
+    //         "question": "Which of these activities is your idea of a good time?",
+    //         "answers": {
+    //             "a": "Singing songs like 'The Hedgehog Can Never Be Buggered At All'",
+    //             "b": "Playing a board game with a friend",
+    //             "c": "Drinking, fighting and stealing",
+    //             "d": "Going to the pub and eating peanuts"
+    //         }
+    //     },
+    //     {
+    //         "id": 3,
+    //         "question": "Which of these is your specialist subject?",
+    //         "answers": {
+    //             "a": "Attacking anyone who calls me a monkey",
+    //             "b": "I'M HANDY WITH A SCYTHE",
+    //             "c": "Drinking, fighting and stealing",
+    //             "d": "Chasing criminals and setting traps for assassins"
+    //         }
+    //     },
+    //     {
+    //         "id": 4,
+    //         "question": "Which of these is your favourite animal?",
+    //         "answers": {
+    //             "a": "CATS. CATS ARE NICE",
+    //             "b": "My handsome Greebo",
+    //             "c": "Dogs, of course",
+    //             "d": "Ships!"
+    //         }
+    //     },
+    //     {
+    //         "id": 5,
+    //         "question": "Which is your favourite mode of transport?",
+    //         "answers": {
+    //             "a": "My own feet",
+    //             "b": "Coach",
+    //             "c": "BINKY",
+    //             "d": "Broomstick"
+    //         }
+    //     },
+    //     {
+    //         "id": 6,
+    //         "question": "Which is your favourite reading material?",
+    //         "answers": {
+    //             "a": "Where's My Cow?",
+    //             "b": "My Cookbook",
+    //             "c": "A MYSTERY NOVEL",
+    //             "d": "Written music rather than listening to it performed"
+    //         }
+    //     },
+    //     {
+    //         "id": 7,
+    //         "question": "Which would you prefer as a Hogswatch present?",
+    //         "answers": {
+    //             "a": "Bananas and Organ Music",
+    //             "b": "A good cigar",
+    //             "c": "Scumble and a nice man ;)",
+    //             "d": "A warm place by the fire and NO BATHS"
+    //         }
+    //     },
 
-    {
-        "id": 8,
-        "question": "Would you ever eat a fried rat?",
-        "answers": {
-            "a": "Only if I was really hungry",
-            "b": "Abso-woof-ly",
-            "c": "I DON'T EAT MY FRIENDS",
-            "d": "I'd rather train them"
-        }
-    },
-    {
-        "id": 9,
-        "question": "Who is the strangest person you've met?",
-        "answers": {
-            "a": "Nobby Nobbs",
-            "b": "Cecil Wormsborough St. John 'Nobby' Nobbs",
-            "c": "NOBBY NOBBS",
-            "d": "Daft Wullie"
-        }
-    },
-    {
-        "id": 10,
-        "question": "What's your favourite saying?",
-        "answers": {
-            "a": "OOK!",
-            "b": "CRIVENS!",
-            "c": "Don't do anything I wouldn't do, if you ever find anything I wouldn't do.",
-            "d": "Bark"
-        }
-    }
+    //     {
+    //         "id": 8,
+    //         "question": "Would you ever eat a fried rat?",
+    //         "answers": {
+    //             "a": "Only if I was really hungry",
+    //             "b": "Abso-woof-ly",
+    //             "c": "I DON'T EAT MY FRIENDS",
+    //             "d": "I'd rather train them"
+    //         }
+    //     },
+    //     {
+    //         "id": 9,
+    //         "question": "Who is the strangest person you've met?",
+    //         "answers": {
+    //             "a": "Nobby Nobbs",
+    //             "b": "Cecil Wormsborough St. John 'Nobby' Nobbs",
+    //             "c": "NOBBY NOBBS",
+    //             "d": "Daft Wullie"
+    //         }
+    //     },
+    //     {
+    //         "id": 10,
+    //         "question": "What's your favourite saying?",
+    //         "answers": {
+    //             "a": "OOK!",
+    //             "b": "CRIVENS!",
+    //             "c": "Don't do anything I wouldn't do, if you ever find anything I wouldn't do.",
+    //             "d": "Bark"
+    //         }
+    //     }
 
-]
+    // ]
 
 
     startGame();
@@ -382,7 +405,6 @@ const questionList =
 
     // Event listeners
     // submitButton.addEventListener('click', showResults);
-    previousButton.addEventListener("click", showPreviousSlide);
-    nextButton.addEventListener("click", showNextSlide);
+    previousButton.addEventListener("click", showPreviousSlide); nextButton.addEventListener("click", showNextSlide);
 
-})();
+    })();

@@ -7,6 +7,7 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     overflow-y: hidden;
+    overflow-x: hidden;
 
 }
 
@@ -109,9 +110,9 @@ a.nav-link.text-white:hover {
     padding-left: 47px;
 }
 
-.help-title {
+/* .help-title {
     padding-left: 200px;
-}
+} */
 
 .modal-content {
     background-color: rgb(213 220 220 / 88%);
@@ -120,7 +121,9 @@ a.nav-link.text-white:hover {
 
 .play,
 .submit,
-.reset, #previous, #next {
+.reset,
+#previous,
+#next {
     font-family: 'IM Fell French Canon SC', serif;
     font-size: 1.5em;
 }
@@ -128,17 +131,19 @@ a.nav-link.text-white:hover {
 .btn-check:focus+.btn-light,
 .btn-light:focus {
     color: #f9fafb;
-    background-color: #000; 
+    background-color: #000;
     border-color: #000;
     box-shadow: 0 0 0 0.25rem rgb(211 212 213 / 50%);
 }
 
-.help, #previous {
+.help,
+#previous {
     font-family: 'IM Fell French Canon SC',
         serif;
 }
 
-.play, #next {
+.play,
+#next {
     background-color: black;
     border-color: white;
 }
@@ -149,6 +154,10 @@ a.nav-link.text-white:hover {
     border-color: #273a4e;
 }
 
+#next:hover {
+    background-color:#0e2849;
+}
+
 a,
 a:hover {
     color: #ffffff;
@@ -156,7 +165,7 @@ a:hover {
 }
 
 
-.btn-light.help:hover {
+.btn-light:hover {
     background-color: black;
     border: 1px solid black;
     color: #fff;
@@ -278,7 +287,7 @@ ul.list-inline.sm-links-ul a:hover {
 }
 
 #quizQuestion {
-    padding-top: 100px;
+    /* padding-top: 100px; */
     color: white;
     font-family: 'IM Fell French Canon SC',
         serif;
@@ -306,9 +315,15 @@ ul.list-inline.sm-links-ul a:hover {
     height: 200px;
     margin-top: 40px;
 }
-/* prev and next buttons  */
-.buttons {
-    margin-top: 300px;
 
+.buttons {
+    padding-top: 50px;
 }
 
+#submit {
+    color: #fff;
+    font-family: 'IM Fell French Canon SC', serif;
+    background-color: #091733;
+    border-color: #ffffff;
+    border: 3px solid #fff;
+}

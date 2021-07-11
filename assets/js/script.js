@@ -1,61 +1,4 @@
-    // event listener from my Hackathon project
-    // https: //github.com/NicolaLampis/hackathon_ci 
-
-    // define questionList 
-    let questionList = null;
-
-    // on DOM load function to fetch the JSON file then run startGame()
-
-    document.addEventListener("DOMContentLoaded", function () {
-        getJsonThenLoad();
-    });
-
-    const getJsonThenLoad = function () {
-        fetch("./assets/js/quizData.json")
-            .then(file => {
-                return file.json();
-            })
-            .then(json => {
-                questionList = json;
-            })
-            .then(() => startGame());
-    };
-
-    const game = (function () {
-        const gameLength = 10;
-        let currentQ = 0;
-
-        // character scores 
-
-        let vimesScore = 0;
-        let deathScore = 0;
-        let nannyScore = 0;
-        let gaspodeScore = 0;
-        let robScore = 0;
-        let vetinariScore = 0;
-
-        let questionsAsked = [];
-
-        return {
-
-            :newGame function() {
-                currentQ = 0;
-                vimesScore = 0;
-                deathScore = 0;
-                nannyScore = 0;
-                gaspodeScore = 0;
-                robScore = 0;
-                vetinariScore = 0;
-
-                questionsAsked = [];
-            },
-        }
-
-    }
-
-
-
-
+(function () {
     // function to start the game 
     function startGame() {
         const gameOutput = [];
@@ -70,7 +13,7 @@
 
                 for (option in currentQ.answers) {
                     answers.push(
-                        `<div class="col m-auto">
+                        `<div class="col-sm-6 m-auto">
                         <button type="button" class="btn btn-light answer h-100" name="question${qNumber}" value="${option}">
                         ${option}:
                         ${currentQ.answers[option]}
@@ -83,7 +26,7 @@
                 gameOutput.push(
                     `<div class="slide">
                         <div class="col m-auto text-center" id="quizQuestion">${currentQ.question}</div>
-                        <div class="answers text-center">${answers.join('')}</div>
+                        <div class="answers row text-center">${answers.join('')}</div>
                 </div>`
                 );
             }
@@ -92,45 +35,52 @@
         quizContainer.innerHTML = gameOutput.join('');
     };
 
-    // function quizResults() {
+    function quizResults() {
 
-    //     const answerContainers = quizContainer.querySelectorAll('.answers');
+        const answerContainers = quizContainer.querySelectorAll('.answers');
+        // character scores 
+
+        let vimesScore = 0;
+        let deathScore = 0;
+        let nannyScore = 0;
+        let gaspodeScore = 0;
+        let robScore = 0;
+        let vetinariScore = 0;
+
+        questionList.forEach((currentQ, qNumber) => {
+
+            const answerContainer = answersContainers[qNumber];
+            // selector variable assigned to whichever button clicked
+
+            // this isn't working right now 
+            // maybe try: 
+            // let selector = `button[value=]:clicked`;
 
 
-    //     questionList.forEach((currentQ, qNumber) => {
+            const selector = `button[name=question${qNumber}]:clicked`;
+            // chosenAnswer assigned to the value of the button clicked 
+            const chosenAnswer = (answerContainer.querySelector(selector) || {}).value;
 
-    //         const answerContainer = answersContainers[qNumber];
-    //         // selector variable assigned to whichever button clicked
+            if (vimes.includes(chosenAnswer)) {
+                vimesScore++;
+                console.log('Vimes!');
+            } else if (death.includes(chosenAnswer)) {
+                deathScore++;
+            } else if (gaspode.includes(chosenAnswer)) {
+                gaspodeScore++;
+            } else if (vetinari.includes(chosenAnswer)) {
+                vetinariScore++;
+            } else if (nanny.includes(chosenAnswer)) {
+                nannyScore++;
+            } else if (rob.includes(chosenAnswer)) {
+                robScore++;
+            } else {
+                librarianScore++;
+            }
+        });
 
-    //         // this isn't working right now 
-    //         // maybe try: 
-    //         // let selector = `button[value=]:clicked`;
-
-
-    //         const selector = `button[name=question${qNumber}]:clicked`;
-    //         // chosenAnswer assigned to the value of the button clicked 
-    //         const chosenAnswer = (answerContainer.querySelector(selector) || {}).value;
-
-    //         if (vimes.includes(chosenAnswer)) {
-    //             vimesScore++;
-    //             console.log('Vimes!');
-    //         } else if (death.includes(chosenAnswer)) {
-    //             deathScore++;
-    //         } else if (gaspode.includes(chosenAnswer)) {
-    //             gaspodeScore++;
-    //         } else if (vetinari.includes(chosenAnswer)) {
-    //             vetinariScore++;
-    //         } else if (nanny.includes(chosenAnswer)) {
-    //             nannyScore++;
-    //         } else if (rob.includes(chosenAnswer)) {
-    //             robScore++;
-    //         } else {
-    //             librarianScore++;
-    //         }
-    //     });
-
-    //     let result = Math.max(vimesScore, deathScore, nannyScore, gaspodeScore, librarianScore, robScore, vetinariScore);
-    // };
+        let result = Math.max(vimesScore, deathScore, nannyScore, gaspodeScore, librarianScore, robScore, vetinariScore);
+    };
 
     // pagination function 
 
@@ -166,7 +116,29 @@
     const resultsContainer = document.getElementById('results');
     const submitButton = document.getElementById('submit');
 
+    // event listener from my Hackathon project
+    // https: //github.com/NicolaLampis/hackathon_ci 
 
+
+    // define questionList 
+    const questionList = null;
+
+    // on DOM load function to fetch the JSON file 
+
+    document.addEventListener("DOMContentLoaded", function () {
+        getJsonThenLoad();
+    });
+
+const getJsonThenLoad = function () {
+    fetch("./assets/js/quiz.json")
+        .then(file => {
+            return file.json();
+        })
+        .then(json => {
+            questionList = json;
+        })
+        .then(() => startGame());
+};
 
     // user keys and values 
 
@@ -286,8 +258,7 @@
         }]
     ];
 
-    // const questionList =
-    // [{
+    // const questionList = [{
     //         "id": 1,
     //         "question": "Which of these statements about food are your favourite?",
     //         "answers": {
@@ -405,6 +376,7 @@
 
     // Event listeners
     // submitButton.addEventListener('click', showResults);
-    previousButton.addEventListener("click", showPreviousSlide); nextButton.addEventListener("click", showNextSlide);
+    previousButton.addEventListener("click", showPreviousSlide);
+    nextButton.addEventListener("click", showNextSlide);
 
-    })();
+})();

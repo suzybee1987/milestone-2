@@ -7,8 +7,7 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     overflow-y: hidden;
-    overflow-x: hidden;
-
+    overflow-x: hidden;    
 }
 
 :root {
@@ -110,9 +109,9 @@ a.nav-link.text-white:hover {
     padding-left: 47px;
 }
 
-/* .help-title {
+.help-title {
     padding-left: 200px;
-} */
+}
 
 .modal-content {
     background-color: rgb(213 220 220 / 88%);
@@ -154,10 +153,6 @@ a.nav-link.text-white:hover {
     border-color: #273a4e;
 }
 
-#next:hover {
-    background-color:#0e2849;
-}
-
 a,
 a:hover {
     color: #ffffff;
@@ -165,7 +160,7 @@ a:hover {
 }
 
 
-.btn-light:hover {
+.btn-light.help:hover {
     background-color: black;
     border: 1px solid black;
     color: #fff;
@@ -287,7 +282,7 @@ ul.list-inline.sm-links-ul a:hover {
 }
 
 #quizQuestion {
-    /* padding-top: 100px; */
+    padding-top: 100px;
     color: white;
     font-family: 'IM Fell French Canon SC',
         serif;
@@ -316,14 +311,12 @@ ul.list-inline.sm-links-ul a:hover {
     margin-top: 40px;
 }
 
-.buttons {
-    padding-top: 50px;
+/* prev and next buttons  */
+#buttons {
+    z-index:2;
+    margin-top: 100px;
 }
 
-#submit {
-    color: #fff;
-    font-family: 'IM Fell French Canon SC', serif;
-    background-color: #091733;
-    border-color: #ffffff;
-    border: 3px solid #fff;
+.buttons {
+  z-index:2;
 }

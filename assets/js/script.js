@@ -1,12 +1,9 @@
- // variables 
- const quizContainer = document.getElementById('quiz');
- const resultsContainer = document.getElementById('results');
- const submitButton = document.getElementById('submit');
-
-
+// variables 
+const quizContainer = document.getElementById('quiz');
+const resultsContainer = document.getElementById('results');
+const submitButton = document.getElementById('submit');
 
 // user keys and values
-
 const death = [
 	"Death",
 	[
@@ -105,166 +102,160 @@ const gaspode = [
 	}]
 ];
 
- const vimes = [
- 	"Commander Vimes",
- 	[
- 		"Guards! Guards!", "Men At Arms", "Feet of Clay", "Jingo", "The Fifth Elephant",
- 		"The Truth", "Night Watch", "Monstrous Regiment", "Thud!", "Where's My Cow?", "Making Money",
- 		"Unseen Academicals", "Snuff", "Raising Steam"
- 	],
- 	[{
- 		1: "A BLT, heavy on the B",
- 		3: "Chasing criminals and setting traps for assassins",
- 		5: "My own feet",
- 		6: "Where's My Cow?",
- 		7: "A good cigar",
- 		8: "Only if I was really hungry",
- 		9: "Nobby Nobbs"
- 	}]
- ];
+const vimes = [
+	"Commander Vimes",
+	[
+		"Guards! Guards!", "Men At Arms", "Feet of Clay", "Jingo", "The Fifth Elephant",
+		"The Truth", "Night Watch", "Monstrous Regiment", "Thud!", "Where's My Cow?", "Making Money",
+		"Unseen Academicals", "Snuff", "Raising Steam"
+	],
+	[{
+		1: "A BLT, heavy on the B",
+		3: "Chasing criminals and setting traps for assassins",
+		5: "My own feet",
+		6: "Where's My Cow?",
+		7: "A good cigar",
+		8: "Only if I was really hungry",
+		9: "Nobby Nobbs"
+	}]
+];
 
 
- // define questionList 
- let questionList = null;
+// define questionList 
+let questionList = null;
 
 
- // event listener from my Hackathon project
- // https: //github.com/NicolaLampis/hackathon_ci 
- // on DOM load function to fetch the JSON file 
+// event listener from my Hackathon project
+// https: //github.com/NicolaLampis/hackathon_ci 
+// on DOM load function to fetch the JSON file 
 
- document.addEventListener("DOMContentLoaded", function () {
- 	getJsonThenLoad();
- });
+document.addEventListener("DOMContentLoaded", function () {
+	getJsonThenLoad();
+});
 
- const getJsonThenLoad = function () {
- 	fetch("./assets/js/quiz.json")
- 		.then(file => {
- 			return file.json();
- 		})
- 		.then(json => {
- 			questionList = json;
- 		})
- 		.then(() => buildQuiz());
- };
+const getJsonThenLoad = function () {
+	fetch("./assets/js/quiz.json")
+		.then(file => {
+			return file.json();
+		})
+		.then(json => {
+			questionList = json;
+		})
+		.then(() => buildQuiz());
+};
 
 
- function buildQuiz() {
+function buildQuiz() {
 	//  let answerButton = document.getElementsByClassName('answer');
- 	startGame();
+	startGame();
 
 
- 	// function to start the game 
- 	function startGame() {
- 		const gameOutput = [];
+	// function to start the game 
+	function startGame() {
 
- 		// for each question get current question and number 
- 		questionList.forEach(
- 			(currentQ, qNumber) => {
- 				// variable to store answers 
+		// gameOutput is an array 
+		const gameOutput = [];
 
- 				const answers = [];
- 				// for each answer add a button to click 
+		// for each question get current question and number 
+		questionList.forEach(
+			(currentQ, qNumber) => {
+				// variable to store answers 
 
- 				for (option in currentQ.answers) {
- 					answers.push(
- 						`<div class="col-sm-6 m-auto">
+				const answers = [];
+				// for each answer add a button to click 
+
+				for (option in currentQ.answers) {
+					answers.push(
+						`<div class="col-sm-6 m-auto">
                         <button type="button" class="btn btn-light answer h-100" name="question${qNumber}" value="${option}">
+						
                         ${currentQ.answers[option]}
                         </button>
                     </div>`
- 					);
- 				};
+					);
+				};
 
- 				// add q and a to the output 
- 				gameOutput.push(
- 					`<div class="slide">
+				// add q and a to the output 
+				gameOutput.push(
+					`<div class="slide">
                         <div class="col m-auto text-center" id="quizQuestion">${currentQ.question}</div>
                         <div class="answers row text-center">${answers.join('')}</div>
                 </div>`
- 				);
- 			}
- 		);
- 		// join gameOutput to html push to page 
- 		quizContainer.innerHTML = gameOutput.join('');
- 	};
+				);
+			}
+		);
+		// join gameOutput to html push to page 
+		quizContainer.innerHTML = gameOutput.join('');
+	};
 
-	 function getResults() {
-		 const answerContainers = quizContainer.querySelectorAll('.answers');
-		 let questionsAsked
+	function getResults() {
+		const answerContainers = quizContainer.querySelectorAll('.answers');
+		let questionsAsked = 0;
 
-		 let userAnswers = 0;
-		 questionList.forEach( (currentQ, qNumber) => {
+		let userAnswers = 0;
+		questionList.forEach((questionId, qNumber) => {
 
 			//find selected answer
 			const answerContainer = answerContainers[qNumber];
-			const selector = `button[name=question${qNumber}]:selected`;
-			const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+			const selector = `input[name=question${qNumber}]:checked`;
+			let userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+
 
 			questionsAsked++;
 
-			userAnswer.find(checkAnswer);
+			// const question = questionList.find(d => d.id === questionId);
 
-			 
 
-		 })
-	 }
+			if (questionList.includes(userAnswer)) {
 
-// find function
+				// add to the number of correct answers
+				console.log(userAnswer);
+				numCorrect++;
+			}
+			console.log(selector);
 
-function checkAnswer(userAnswer){
+		})
+	}
 
-	// this is code from the hackathon and explained by Tobi. find() needs to return a callback function 
-	const question = questionList.find(d => d.id === questionId);
+	// find function
 
-}
+	function checkAnswer(userAnswer) {
 
- 	// pagination function 
+		// this is code from the hackathon and explained by Tobi. find() needs to return a callback function 
+		const question = questionList.find(d => d.id === questionId);
 
- 	function showSlide(n) {
-		slides[currentSlide].classList.remove('active-slide');
- 		slides[n].classList.add('active-slide');
- 		currentSlide = n;
- 		if (currentSlide === 0) {
- 			previousButton.style.display = 'none';
- 		} else {
- 			previousButton.style.display = 'inline-block';
- 		}
- 		if (currentSlide === slides.length - 1) {
-			//  answerButton.style.display = 'none';
-			nextButton.style.display = 'none';
- 			submitButton.style.display = 'inline-block';
- 		} else {
- 			// answerButton.style.display = 'inline-block';
- 			submitButton.style.display = 'none';
- 		}
- 	}
+	};
 
- 	// pagination show next question 
- 	function showNextSlide() {
- 		showSlide(currentSlide + 1);
- 	}
+	// pagination when answer button clicked 
 
- 	function showPreviousSlide() {
- 		showSlide(currentSlide - 1);
- 	}
- 	
- 	//  answerButton.addEventListener("click", checkAnswer);
- 	
- 	// pagination variables 
- 	const previousButton = document.getElementById("previous");
- 	const nextButton = document.getElementById("next");
-	
- 	let slides = document.querySelectorAll(".slide");
- 	let currentSlide = 0;
+		function showSlide(n) {
+			slides[currentSlide].classList.remove('active-slide');
+			slides[n].classList.add('active-slide');
+			currentSlide = n;
+			if (currentSlide === slides.length + 1) {
+				slides.classList.remove('active-slide');
+				getResults();
+			} 
+		}
 
- 	showSlide(currentSlide);
+	// pagination show next question 
+	function showNextSlide() {
+		showSlide(currentSlide + 1);
+	}
 
- 	// Event listeners
- 	submitButton.addEventListener('click', getResults);
- 	previousButton.addEventListener("click", showPreviousSlide);
- 	nextButton.addEventListener("click", showNextSlide);
-	// answerButton.addEventListener("click", showNextSlide);
+	function showPreviousSlide() {
+		showSlide(currentSlide - 1);
+	}
 
- 	// jquery listening for answer clicked and displaying next question
- 	// $(".answer").click(showNextSlide());
- };
+	let slides = document.querySelectorAll(".slide");
+	let currentSlide = 0;
+
+	showSlide(currentSlide);
+
+
+	// jquery listening for answer clicked and displaying next question
+	$('.answer').click(function () {
+		showNextSlide();
+	});
+};

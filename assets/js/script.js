@@ -149,7 +149,6 @@ function buildQuiz() {
 	//  let answerButton = document.getElementsByClassName('answer');
 	startGame();
 
-
 	// function to start the game 
 	function startGame() {
 
@@ -189,73 +188,83 @@ function buildQuiz() {
 	};
 
 	function getResults() {
+
+		// container to put the answers in to 
 		const answerContainers = quizContainer.querySelectorAll('.answers');
+
+		// so that each game starts with zero questions asked 
 		let questionsAsked = 0;
 
-		let userAnswers = 0;
+		let userAnswers = [];
+
 		questionList.forEach((questionId, qNumber) => {
 
-			//find selected answer
-			const answerContainer = answerContainers[qNumber];
-			const selector = `input[name=question${qNumber}]:checked`;
-			let userAnswer = (answerContainer.querySelector(selector) || {}).value;
+				//find selected answer
+				const answerContainer = answerContainers[qNumber];
+				const selector = `input[name=question${qNumber}]:checked`;
+				let userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+				questionsAsked++;
+		});
+}
+
+// find function
+
+function checkAnswer(userAnswer) {
+
+	// this is code from the hackathon and explained by Tobi. find() needs to return a callback function 
+	// answer: function (questionId, givenAnswer) {
+	// 	givenAnswers += 1;
+	// 	questionsAsked.push(questionId);
+
+	// 	const question = questionList.find(d => d.id === questionId);
+
+	// 	if (givenAnswer === question.correct) {
+	// 		correctAnswers += 1;
+	// 	}
+
+	// 	return question.correct;
+	// },
+
+	// use includes?
+	// if (questionList.includes(userAnswer)) {
+
+	// 	answerContainer.push(userAnswer);
 
 
+};
 
-			questionsAsked++;
+// pagination when answer button clicked 
 
-			// const question = questionList.find(d => d.id === questionId);
-
-
-			if (questionList.includes(userAnswer)) {
-
-				// add to the number of correct answers
-				console.log(userAnswer);
-				numCorrect++;
-			}
-			console.log(selector);
-
-		})
+function showSlide(n) {
+	slides[currentSlide].classList.remove('active-slide');
+	slides[n].classList.add('active-slide');
+	currentSlide = n;
+	if (currentSlide === slides.length + 1) {
+		slides.classList.remove('active-slide');
+		getResults();
 	}
+}
 
-	// find function
+// pagination show next question 
+function showNextSlide() {
+	showSlide(currentSlide + 1);
+}
 
-	function checkAnswer(userAnswer) {
+function showPreviousSlide() {
+	showSlide(currentSlide - 1);
+}
 
-		// this is code from the hackathon and explained by Tobi. find() needs to return a callback function 
-		const question = questionList.find(d => d.id === questionId);
+let slides = document.querySelectorAll(".slide");
+let currentSlide = 0;
 
-	};
-
-	// pagination when answer button clicked 
-
-		function showSlide(n) {
-			slides[currentSlide].classList.remove('active-slide');
-			slides[n].classList.add('active-slide');
-			currentSlide = n;
-			if (currentSlide === slides.length + 1) {
-				slides.classList.remove('active-slide');
-				getResults();
-			} 
-		}
-
-	// pagination show next question 
-	function showNextSlide() {
-		showSlide(currentSlide + 1);
-	}
-
-	function showPreviousSlide() {
-		showSlide(currentSlide - 1);
-	}
-
-	let slides = document.querySelectorAll(".slide");
-	let currentSlide = 0;
-
-	showSlide(currentSlide);
+showSlide(currentSlide);
 
 
-	// jquery listening for answer clicked and displaying next question
-	$('.answer').click(function () {
-		showNextSlide();
-	});
+// jquery listening for answer clicked and displaying next question
+
+$('.answer').click(function () {
+
+	showNextSlide();
+});
 };

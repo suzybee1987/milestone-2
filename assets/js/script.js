@@ -1,6 +1,7 @@
 // variables 
 const quizContainer = document.getElementById('quiz');
 const submitButton = document.getElementById('submit');
+const answerButton = document.getElementById('.answer');
 
 const characters = {
 	death: {
@@ -113,7 +114,7 @@ function buildQuiz() {
 					answers.push(
 						`<div class="col-sm-6 m-auto">
                         <button type="button" class="btn btn-light answer h-100" name="question${qNumber}" value="${option}">
-						
+						${option}: 
                         ${currentQ.answers[option]}
                         </button>
                     </div>`
@@ -147,19 +148,19 @@ function buildQuiz() {
 		// each character appears the number of times selected
 		// use filter will give array and count length
 
-		questionList.forEach((questionId, qNumber) => {
+		// questionList.forEach((currentQ, qNumber) => {
 
 			//find selected answer
-			const answerContainer = answerContainers[qNumber];
-			const selector = `input[value=${option}]:checked`;
-			let userAnswer = (answerContainer.querySelector(selector) || {}).value;
+			// const answerContainer = answerContainers[qNumber];
+			// const selector = `input[value=${option}]:checked`;
+			// let userAnswer = (answerContainer.querySelector(selector) || {}).value;
 
-			userAnswers.push(value);
-			console.log(userAnswers);
+			let amount = value;
+			console.log(amount);
 
-			questionsAsked++;
 
-		});
+		// }
+		// );
 		// this is coming back undefined 
 		// userAnswers.forEach(character => console.log(character));
 
@@ -198,11 +199,11 @@ function buildQuiz() {
 		slides[currentSlide].classList.remove('active-slide');
 		slides[n].classList.add('active-slide');
 		currentSlide = n;
-		if (currentSlide === slides.length - 1) {
+		if (currentSlide === slides.length) {
 			slides.classList.remove('active-slide');
 			submitButton.style.display = 'inline-block';
 		} else {
-			submitButton.style.display = 'none';
+			checkAnswer();
 		}
 	}
 
@@ -224,10 +225,10 @@ function buildQuiz() {
 	// jquery listening for answer clicked and displaying next question
 
 	$('.answer').click(function () {
-		if (currentSlide < slides.length - 1) {
+		if (currentSlide < slides.length) {
 			showNextSlide();
-		} else {
-			getResults();
-		}
+			getResults(this.value);			
+		} 
+			
 	});
 };

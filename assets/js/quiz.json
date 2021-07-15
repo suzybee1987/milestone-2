@@ -3,10 +3,10 @@
         "id": 1,
         "question": "Which of these statements about food are your favourite?",
         "answers": {
-            "a": "I COULD MURDER A CURRY",
-            "b": "Pride is all very well, but a sausage is a sausage.",
-            "c": "A BLT, heavy on the B",
-            "d": "Food? I'd rather drink! Anything vaguely alcoholic."
+            "death": "I COULD MURDER A CURRY",
+            "gaspode": "Pride is all very well, but a sausage is a sausage.",
+            "vimes": "A BLT, heavy on the B",
+            "rob": "Food? I'd rather drink! Anything vaguely alcoholic."
         }
     },
 
@@ -14,60 +14,60 @@
         "id": 2,
         "question": "Which of these activities is your idea of a good time?",
         "answers": {
-            "a": "Singing songs like 'The Hedgehog Can Never Be Buggered At All'",
-            "b": "Playing a board game with a friend",
-            "c": "Drinking, fighting and stealing",
-            "d": "Going to the pub and eating peanuts"
+            "nanny": "Singing songs like 'The Hedgehog Can Never Be Buggered At All'",
+            "vetinari": "Playing a board game with a friend",
+            "rob": "Drinking, fighting and stealing",
+            "librarian": "Going to the pub and eating peanuts"
         }
     },
     {
         "id": 3,
         "question": "Which of these is your specialist subject?",
         "answers": {
-            "a": "Attacking anyone who calls me a monkey",
-            "b": "I'M HANDY WITH A SCYTHE",
-            "c": "Drinking, fighting and stealing",
-            "d": "Chasing criminals and setting traps for assassins"
+            "librarian": "Attacking anyone who calls me a monkey",
+            "death": "I'M HANDY WITH A SCYTHE",
+            "rob": "Drinking, fighting and stealing",
+            "vimes": "Chasing criminals and setting traps for assassins"
         }
     },
     {
         "id": 4,
         "question": "Which of these is your favourite animal?",
         "answers": {
-            "a": "CATS. CATS ARE NICE",
-            "b": "My handsome Greebo",
-            "c": "Dogs, of course",
-            "d": "Ships!"
+            "death": "CATS. CATS ARE NICE",
+            "nanny": "My handsome Greebo",
+            "vetinari": "Dogs, of course",
+            "rob": "Ships!"
         }
     },
     {
         "id": 5,
         "question": "Which is your favourite mode of transport?",
         "answers": {
-            "a": "My own feet",
-            "b": "Coach",
-            "c": "BINKY",
-            "d": "Broomstick"
+            "vimes": "My own feet",
+            "vetinari": "Coach",
+            "death": "BINKY",
+            "nanny": "Broomstick"
         }
     },
     {
         "id": 6,
         "question": "Which is your favourite reading material?",
         "answers": {
-            "a": "Where's My Cow?",
-            "b": "My Cookbook",
-            "c": "A MYSTERY NOVEL",
-            "d": "Written music rather than listening to it performed"
+            "vimes": "Where's My Cow?",
+            "nanny": "My Cookbook",
+            "death": "A MYSTERY NOVEL",
+            "vetinari": "Written music rather than listening to it performed"
         }
     },
     {
         "id": 7,
         "question": "Which would you prefer as a Hogswatch present?",
         "answers": {
-            "a": "Bananas and Organ Music",
-            "b": "A good cigar",
-            "c": "Scumble and a nice man ;)",
-            "d": "A warm place by the fire and NO BATHS"
+            "librarian": "Bananas and Organ Music",
+            "vimes": "A good cigar",
+            "nanny": "Scumble and a nice man ;)",
+            "gaspode": "A warm place by the fire and NO BATHS"
         }
     },
 
@@ -75,30 +75,30 @@
         "id": 8,
         "question": "Would you ever eat a fried rat?",
         "answers": {
-            "a": "Only if I was really hungry",
-            "b": "Abso-woof-ly",
-            "c": "I DON'T EAT MY FRIENDS",
-            "d": "I'd rather train them"
+            "vimes": "Only if I was really hungry",
+            "gaspode": "Abso-woof-ly",
+            "death": "I DON'T EAT MY FRIENDS",
+            "vetinari": "I'd rather train them"
         }
     },
     {
         "id": 9,
         "question": "Who is the strangest person you've met?",
         "answers": {
-            "a": "Nobby Nobbs",
-            "b": "Cecil Wormsborough St. John 'Nobby' Nobbs",
-            "c": "NOBBY NOBBS",
-            "d": "Daft Wullie"
+            "vimes": "Nobby Nobbs",
+            "vetinari": "Cecil Wormsborough St. John 'Nobby' Nobbs",
+            "death": "NOBBY NOBBS",
+            "rob": "Daft Wullie"
         }
     },
     {
         "id": 10,
         "question": "What's your favourite saying?",
         "answers": {
-            "a": "OOK!",
-            "b": "CRIVENS!",
-            "c": "Don't do anything I wouldn't do, if you ever find anything I wouldn't do.",
-            "d": "Bark"
+            "librarian": "OOK!",
+            "rob": "CRIVENS!",
+            "nanny": "Don't do anything I wouldn't do, if you ever find anything I wouldn't do.",
+            "gaspode": "Bark"
         }
     }
 

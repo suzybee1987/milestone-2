@@ -1,6 +1,5 @@
 // variables 
 const quizContainer = document.getElementById('quiz');
-const submitButton = document.getElementById('submit');
 const answerButton = document.getElementById('.answer');
 
 const characters = {
@@ -93,6 +92,9 @@ const getJsonThenLoad = function () {
 
 
 function buildQuiz() {
+	// answer keys in here
+	let userAnswers = [];
+
 	// start the game 
 	startGame();
 
@@ -136,62 +138,20 @@ function buildQuiz() {
 
 	function getResults(value) {
 
-		// container to put the answers in to 
-		const answerContainers = quizContainer.querySelectorAll('.answers');
+				userAnswers.push(value);
+				console.log(userAnswers);
+				const gameLength = 10;
+				if (userAnswers.length === gameLength - 1) {
+					slides[currentSlide].classList.remove('active-slide');
+				};
 
-		// so that each game starts with zero questions asked 
-		let questionsAsked = 0;
-
-		// keys in here
-		let userAnswers = [];
-		
 		// each character appears the number of times selected
 		// use filter will give array and count length
-
-		// questionList.forEach((currentQ, qNumber) => {
-
-			//find selected answer
-			// const answerContainer = answerContainers[qNumber];
-			// const selector = `input[value=${option}]:checked`;
-			// let userAnswer = (answerContainer.querySelector(selector) || {}).value;
-
-			let amount = value;
-			console.log(amount);
-
-
-		// }
-		// );
-		// this is coming back undefined 
-		// userAnswers.forEach(character => console.log(character));
-
-
-	}
-
-	// find function
-
-	function checkAnswer(userAnswer) {
-
-		// this is code from the hackathon and explained by Tobi. find() needs to return a callback function 
-		// answer: function (questionId, givenAnswer) {
-		// 	givenAnswers += 1;
-		// 	questionsAsked.push(questionId);
-
-		// 	const question = questionList.find(d => d.id === questionId);
-
-		// 	if (givenAnswer === question.correct) {
-		// 		correctAnswers += 1;
-		// 	}
-
-		// 	return question.correct;
-		// },
-
-		// // use includes?
-		// if (questionList.includes(userAnswer)) {
-
-		// 	answerContainer.push(userAnswer);
-
-
 	};
+
+	// function showResults() {
+		
+	// };
 
 	// pagination when answer button clicked 
 
@@ -199,11 +159,11 @@ function buildQuiz() {
 		slides[currentSlide].classList.remove('active-slide');
 		slides[n].classList.add('active-slide');
 		currentSlide = n;
-		if (currentSlide === slides.length) {
+		if (currentSlide > slides.length + 1) {
 			slides.classList.remove('active-slide');
-			submitButton.style.display = 'inline-block';
+			// getResults();
 		} else {
-			checkAnswer();
+			
 		}
 	}
 
@@ -225,10 +185,14 @@ function buildQuiz() {
 	// jquery listening for answer clicked and displaying next question
 
 	$('.answer').click(function () {
-		if (currentSlide < slides.length) {
+		if (currentSlide < slides.length - 1) {
 			showNextSlide();
-			getResults(this.value);			
-		} 
-			
+			getResults(this.value);
+		} else if (currentSlide === slides.length - 1) {
+			getResults(this.value);
+		} else {
+						
+		}
+
 	});
 };

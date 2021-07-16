@@ -2,6 +2,7 @@
 const quizContainer = document.getElementById('quiz');
 const answerButton = document.getElementById('.answer');
 
+// character object 
 const characters = {
 	death: {
 		name: "Death",
@@ -138,32 +139,33 @@ function buildQuiz() {
 
 	function getResults(value) {
 
-				userAnswers.push(value);
-				console.log(userAnswers);
-				const gameLength = 10;
-				if (userAnswers.length === gameLength - 1) {
-					slides[currentSlide].classList.remove('active-slide');
-				};
+		userAnswers.push(value);
+		console.log(userAnswers);
+		const gameLength = 10;
+		if (userAnswers.length === gameLength) {
+			console.log("Hey, you've finished");
 
-		// each character appears the number of times selected
-		// use filter will give array and count length
+			Object.keys(characters);
+			// This code says characters isn't iterable 
+			// userAnswers.forEach(characters.filter(character));
+
+		};
+
+		quizContainer.innerHTML = "";
+
 	};
-
-	// function showResults() {
-		
-	// };
-
+	// each character appears the number of times selected
+	// use filter will give array and count length
 	// pagination when answer button clicked 
 
 	function showSlide(n) {
-		slides[currentSlide].classList.remove('active-slide');
-		slides[n].classList.add('active-slide');
-		currentSlide = n;
-		if (currentSlide > slides.length + 1) {
-			slides.classList.remove('active-slide');
-			// getResults();
-		} else {
-			
+		if (currentSlide < slides.length - 1) {
+			slides[currentSlide].classList.remove('active-slide');
+			slides[n].classList.add('active-slide');
+			currentSlide = n;
+		} else if (currentSlide === slides.length) {
+			slides[currentSlide].classList.remove('active-slide');
+			showResults();
 		}
 	}
 
@@ -185,13 +187,11 @@ function buildQuiz() {
 	// jquery listening for answer clicked and displaying next question
 
 	$('.answer').click(function () {
-		if (currentSlide < slides.length - 1) {
+		if (currentSlide < slides.length) {
 			showNextSlide();
 			getResults(this.value);
-		} else if (currentSlide === slides.length - 1) {
+		} else if (currentSlide === slides.length) {
 			getResults(this.value);
-		} else {
-						
 		}
 
 	});

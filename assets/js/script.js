@@ -135,32 +135,54 @@ function buildQuiz() {
 		quizContainer.innerHTML = gameOutput.join('');
 	};
 
-	// This function to display the results to the user 
-	function showResults() {
-		console.log("hey! You've finished")
-	// gameOutput is an array 
-	// const gameOutput = [];
-	// 	gameOutput.push(
-	// 		`<div class="col-sm-6 m-auto results">
-	// 					<img src=${characterImage} alt="Image of ${character}">
-	// 					You are ${character}!
-	// 					You are in ${books}.
-	//                 </div>`
-	// 	);
-	};
-
 	function getResults(value) {
-
-		userAnswers.push(value);
 		console.log(userAnswers);
+		//  help from Sean Young on Slack with this map
+		const answerMap = {
+			gaspode: 0,
+			librarian: 0,
+			death: 0,
+			rob: 0,
+			nanny: 0,
+			vimes: 0
+		}
 
-		// console.log(Object.keys(characters));
+		// Stand in for the user answering quiz questions:
+		for (let i = 0; i < userAnswers.length; i++) {
+			answerMap[userAnswers[i]]++;
+		}
+		// Getting the maximum entry
+		let chosenAnswer = [...Object.entries(answerMap)].reduce((a, e) => e[1] > a[1] ? e : a);
+		let result; 
+		// console.log(result);
+		
+		// this was used to get the name of the Character 
 
-		// mentor said for each character in list of characters filter character and count number of each 
-		// each character appears the number of times selected
-		// use filter will give array and count length
-		// then input to showResults to display on page
-		// showResults();
+
+
+		// This function to display the results to the user 
+		function showResults() {
+			console.log(`Hey! You picked ${chosenAnswer}`);
+			// gameOutput is an array 
+			const gameOutput = [];
+
+
+
+
+			// add q and a to the output 
+			gameOutput.push(
+				`<div class="results">
+                        < div class = "col m-auto text-center"
+                        id = "quizQuestion" > You are ${chosenAnswer}! < /div>
+                        <div class="results text-center">You are in ${chosenAnswer}!</div>
+                </div>`
+			);
+			quizContainer.innerHTML = gameOutput.join('');
+		}
+		// join gameOutput to html push to page 
+
+		showResults(chosenAnswer);
+
 	};
 
 
@@ -174,8 +196,8 @@ function buildQuiz() {
 			slides[n].classList.add('active-slide');
 			currentSlide = n;
 		} else {
-			showResults();
 			slides[currentSlide].classList.remove('active-slide');
+			getResults();
 		};
 
 	}
@@ -194,8 +216,7 @@ function buildQuiz() {
 	// jquery listening for answer clicked and displaying next question
 
 	$('.answer').click(function () {
-		getResults(this.value);
+		userAnswers.push(this.value);
 		showNextSlide();
-
 	});
 };

@@ -136,7 +136,8 @@ function buildQuiz() {
 	};
 
 	// This function to display the results to the user 
-	// function showResults() {
+	function showResults() {
+		console.log("hey! You've finished")
 	// gameOutput is an array 
 	// const gameOutput = [];
 	// 	gameOutput.push(
@@ -146,14 +147,14 @@ function buildQuiz() {
 	// 					You are in ${books}.
 	//                 </div>`
 	// 	);
-	// };
+	};
 
 	function getResults(value) {
 
 		userAnswers.push(value);
 		console.log(userAnswers);
 
-		console.log(Object.keys(characters));
+		// console.log(Object.keys(characters));
 
 		// mentor said for each character in list of characters filter character and count number of each 
 		// each character appears the number of times selected

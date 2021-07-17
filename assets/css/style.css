@@ -314,7 +314,7 @@ ul.list-inline.sm-links-ul a:hover {
 .results {
     z-index: 2;
     width: 100%;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.7s;
 }
 

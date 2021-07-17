@@ -60,7 +60,7 @@ const characters = {
 		books: [
 			"Moving Pictures", "Men at Arms", "The Fifth Elephant", "The Truth", "Soul Music", "Hogfather", "Feet of Clay"
 		],
-		image: "assets/images/characters/noun_rob.png",
+		image: "assets/images/characters/noun_gaspode.png",
 	},
 	vimes: {
 		name: "Commander Vimes",
@@ -162,31 +162,31 @@ function buildQuiz() {
 		let books = 0;
 		let image = 0;
 
-		if (chosenAnswer == 'vimes') {
+		if (chosenAnswer.includes('vimes')) {
 			chosenAnswer = [characters.vimes.name];
 			books = [characters.vimes.books];
 			image = [characters.vimes.image];
-		} else if (chosenAnswer == 'death') {
+		} else if (chosenAnswer.includes('death')) {
 			chosenAnswer = [characters.death.name];
 			books = [characters.death.books];
 			image = [characters.death.image];
-		} else if (chosenAnswer == 'gaspode') {
+		} else if (chosenAnswer.includes('gaspode')) {
 			chosenAnswer = [characters.gaspode.name];
 			books = [characters.gaspode.books];
 			image = [characters.gaspode.image];
-		} else if (chosenAnswer == 'rob') {
+		} else if (chosenAnswer.includes('rob')) {
 			chosenAnswer = [characters.rob.name];
 			books = [characters.rob.books];
 			image = [characters.rob.image];
-		} else if (chosenAnswer == 'vetinari') {
+		} else if (chosenAnswer.includes('vetinari')) {
 			chosenAnswer = [characters.vetinari.name];
 			books = [characters.vetinari.books];
 			image = [characters.vetinari.image];
-		} else if (chosenAnswer == 'nanny') {
+		} else if (chosenAnswer.includes('nanny')) {
 			chosenAnswer = [characters.nanny.name];
 			books = [characters.nanny.books];
 			image = [characters.nanny.image];
-		} else {
+		} else if (chosenAnswer.includes('librarian')) {
 			chosenAnswer = [characters.librarian.name];
 			books = [characters.librarian.books];
 			image = [characters.librarian.image];

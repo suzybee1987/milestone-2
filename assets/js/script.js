@@ -14,7 +14,7 @@ const characters = {
 			"Going Postal", "Thud!", "Wintersmith", "Making Money", "Unseen Academicals", "I Shall Wear Midnight",
 			"Raising Steam", "The Shepherd's Crown"
 		],
-
+		image: "assets/images/characters/noun_death.png",
 	},
 
 	nanny: {
@@ -23,6 +23,7 @@ const characters = {
 			"Wyrd Sisters", "Witches Abroad", "Lords and Ladies", "Maskerade", "Carpe Jugulum",
 			"The Sea and Little Fishes", "Wintersmith", "I Shall Wear Midnight", "The Shepherd's Crown"
 		],
+		image: "assets/images/characters/noun_nanny.png",
 	},
 
 	librarian: {
@@ -32,6 +33,7 @@ const characters = {
 			"Soul Music", "Interesting Times", "Maskerade", "The Last Continent", "The Last Hero", "The Science of Discworld",
 			"The Science of Discworld II: the Globe", "The Science of Discworld III: Darwin 's Watch", "Unseen Academicals"
 		],
+		image: "assets/images/characters/noun_librarian.png",
 	},
 
 	vetinari: {
@@ -42,6 +44,7 @@ const characters = {
 			"Unseen Academicals", "Raising Steam", "The Colour of Magic", "Soul Music", "The Last Hero",
 			"Night Watch"
 		],
+		image: "assets/images/characters/noun_vetinari.png",
 	},
 
 	rob: {
@@ -49,6 +52,7 @@ const characters = {
 		books: [
 			"A Hat Full of Sky", "I Shall Wear Midnight", "The Shepherd's Crown", "The Wee Free Men", "Wintersmith"
 		],
+		image: "assets/images/characters/noun_rob.png",
 	},
 
 	gaspode: {
@@ -56,6 +60,7 @@ const characters = {
 		books: [
 			"Moving Pictures", "Men at Arms", "The Fifth Elephant", "The Truth", "Soul Music", "Hogfather", "Feet of Clay"
 		],
+		image: "assets/images/characters/noun_rob.png",
 	},
 	vimes: {
 		name: "Commander Vimes",
@@ -64,6 +69,7 @@ const characters = {
 			"The Truth", "Night Watch", "Monstrous Regiment", "Thud!", "Where's My Cow?", "Making Money",
 			"Unseen Academicals", "Snuff", "Raising Steam"
 		],
+		image: "assets/images/characters/noun_vimes.png",
 	}
 };
 
@@ -137,7 +143,7 @@ function buildQuiz() {
 
 	function getResults(value) {
 		console.log(userAnswers);
-		//  help from Sean Young on Slack with this map
+		//  help from Sean Young on Slack with this map to find the chosenAnswer
 		const answerMap = {
 			gaspode: 0,
 			librarian: 0,
@@ -153,12 +159,40 @@ function buildQuiz() {
 		}
 		// Getting the maximum entry
 		let chosenAnswer = [...Object.entries(answerMap)].reduce((a, e) => e[1] > a[1] ? e : a);
-		let result; 
-		// console.log(result);
-		
-		// this was used to get the name of the Character 
+		let books = 0;
+		let image = 0;
 
-
+		if (chosenAnswer == 'vimes') {
+			chosenAnswer = [characters.vimes.name];
+			books = [characters.vimes.books];
+			image = [characters.vimes.image];
+		} else if (chosenAnswer == 'death') {
+			chosenAnswer = [characters.death.name];
+			books = [characters.death.books];
+			image = [characters.death.image];
+		} else if (chosenAnswer == 'gaspode') {
+			chosenAnswer = [characters.gaspode.name];
+			books = [characters.gaspode.books];
+			image = [characters.gaspode.image];
+		} else if (chosenAnswer == 'rob') {
+			chosenAnswer = [characters.rob.name];
+			books = [characters.rob.books];
+			image = [characters.rob.image];
+		} else if (chosenAnswer == 'vetinari') {
+			chosenAnswer = [characters.vetinari.name];
+			books = [characters.vetinari.books];
+			image = [characters.vetinari.image];
+		} else if (chosenAnswer == 'nanny') {
+			chosenAnswer = [characters.nanny.name];
+			books = [characters.nanny.books];
+			image = [characters.nanny.image];
+		} else {
+			chosenAnswer = [characters.librarian.name];
+			books = [characters.librarian.books];
+			image = [characters.librarian.image];
+		}
+		// chosenAnswer = chosenAnswer;
+		// books = chosenAnswer[1];
 
 		// This function to display the results to the user 
 		function showResults() {
@@ -166,15 +200,17 @@ function buildQuiz() {
 			// gameOutput is an array 
 			const gameOutput = [];
 
-
-
-
 			// add q and a to the output 
 			gameOutput.push(
-				`<div class="results">
-                        < div class = "col m-auto text-center"
-                        id = "quizQuestion" > You are ${chosenAnswer}! < /div>
-                        <div class="results text-center">You are in ${chosenAnswer}!</div>
+				`<div id="results">
+				<div class="imageResult">
+				<img src=${image}>
+				</div>
+						
+                        <h2 class="col results m-auto text-center"> You are ${chosenAnswer}! </h2>
+                        <div class="text-center books">You are in ${books}!</div>
+						<div class="text-center">
+						<button class="btn btn-secondary resultsBtn"><a href="game.html">Try again?</a></button></div>
                 </div>`
 			);
 			quizContainer.innerHTML = gameOutput.join('');
@@ -184,12 +220,8 @@ function buildQuiz() {
 		showResults(chosenAnswer);
 
 	};
-
-
-
 	// pagination when answer button clicked 
-
-	// This function allows each question to be displayed until the last and then calls showResults function
+	// This function allows each question to be displayed until the last and then calls getResults function
 	function showSlide(n) {
 		if (currentSlide < slides.length - 1) {
 			slides[currentSlide].classList.remove('active-slide');

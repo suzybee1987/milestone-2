@@ -99,7 +99,7 @@ a.nav-link.text-white:hover {
 /* Modal  */
 
 .modal-title,
-.contact-header {
+.contact-header, .results {
     font-family: 'IM Fell French Canon SC', serif;
     font-weight: 800;
     text-align: center;
@@ -142,13 +142,13 @@ a.nav-link.text-white:hover {
 }
 
 .play,
-#next {
+#next, .resultsBtn {
     background-color: black;
     border-color: white;
 }
 
 
-.play:hover {
+.play:hover, .resultsBtn:hover {
     background-color: #273a4e;
     border-color: #273a4e;
 }
@@ -316,6 +316,26 @@ ul.list-inline.sm-links-ul a:hover {
     width: 100%;
     opacity: 1;
     transition: opacity 0.7s;
+    color: #fff;
+}
+
+.imageResult {
+    padding: 10px;
+}
+
+#results {
+    padding: 20px;
+}
+
+.books {
+    color: #000;
+    background-color: #ffffff91;
+    padding: 10px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    border: 1px solid #fff;
+    border-radius: 33px;
+    margin: 25px;
 }
 
 /* prev and next buttons  */

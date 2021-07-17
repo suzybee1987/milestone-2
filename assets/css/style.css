@@ -297,7 +297,7 @@ ul.list-inline.sm-links-ul a:hover {
     width: 100%;
     z-index: 1;
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: opacity 0.7s;
 }
 
 .active-slide {
@@ -309,6 +309,13 @@ ul.list-inline.sm-links-ul a:hover {
     position: relative;
     height: 200px;
     margin-top: 40px;
+}
+
+.results {
+    z-index: 2;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.7s;
 }
 
 /* prev and next buttons  */

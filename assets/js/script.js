@@ -2,7 +2,6 @@
 const quizContainer = document.getElementById('quiz');
 const answerButton = document.getElementById('.answer');
 
-// character object 
 const characters = {
 	death: {
 		name: "Death",
@@ -117,7 +116,6 @@ function buildQuiz() {
 					answers.push(
 						`<div class="col-sm-6 m-auto">
                         <button type="button" class="btn btn-light answer h-100" name="question${qNumber}" value="${option}">
-						${option}: 
                         ${currentQ.answers[option]}
                         </button>
                     </div>`
@@ -137,45 +135,53 @@ function buildQuiz() {
 		quizContainer.innerHTML = gameOutput.join('');
 	};
 
+	// This function to display the results to the user 
+	// function showResults() {
+	// gameOutput is an array 
+	// const gameOutput = [];
+	// 	gameOutput.push(
+	// 		`<div class="col-sm-6 m-auto results">
+	// 					<img src=${characterImage} alt="Image of ${character}">
+	// 					You are ${character}!
+	// 					You are in ${books}.
+	//                 </div>`
+	// 	);
+	// };
+
 	function getResults(value) {
 
 		userAnswers.push(value);
 		console.log(userAnswers);
-		const gameLength = 10;
-		if (userAnswers.length === gameLength) {
-			console.log("Hey, you've finished");
 
-			Object.keys(characters);
-			// This code says characters isn't iterable 
-			// userAnswers.forEach(characters.filter(character));
+		console.log(Object.keys(characters));
 
-		};
-
-		quizContainer.innerHTML = "";
-
+		// mentor said for each character in list of characters filter character and count number of each 
+		// each character appears the number of times selected
+		// use filter will give array and count length
+		// then input to showResults to display on page
+		// showResults();
 	};
-	// each character appears the number of times selected
-	// use filter will give array and count length
+
+
+
 	// pagination when answer button clicked 
 
+	// This function allows each question to be displayed until the last and then calls showResults function
 	function showSlide(n) {
 		if (currentSlide < slides.length - 1) {
 			slides[currentSlide].classList.remove('active-slide');
 			slides[n].classList.add('active-slide');
 			currentSlide = n;
-		} else if (currentSlide === slides.length) {
-			slides[currentSlide].classList.remove('active-slide');
+		} else {
 			showResults();
-		}
+			slides[currentSlide].classList.remove('active-slide');
+		};
+
 	}
 
 	// pagination show next question 
 	function showNextSlide() {
 		showSlide(currentSlide + 1);
-	}
-
-	function showPreviousSlide() {
-		showSlide(currentSlide - 1);
 	}
 
 	let slides = document.querySelectorAll(".slide");
@@ -187,12 +193,8 @@ function buildQuiz() {
 	// jquery listening for answer clicked and displaying next question
 
 	$('.answer').click(function () {
-		if (currentSlide < slides.length) {
-			showNextSlide();
-			getResults(this.value);
-		} else if (currentSlide === slides.length) {
-			getResults(this.value);
-		}
+		getResults(this.value);
+		showNextSlide();
 
 	});
 };

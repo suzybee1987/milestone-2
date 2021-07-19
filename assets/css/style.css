@@ -66,6 +66,10 @@ body {
         padding-right: 5px;
         border: 0;
     }
+
+    .game {
+        height: 120vh;
+    }
 }
 
 
@@ -380,6 +384,7 @@ ul.list-inline.sm-links-ul a:hover {
 /* prev and next buttons  */
 .volume {
     display: flex;
-    justify-content: flex-end;
-    /* padding-right: 10px; */
+    justify-content: center;
+    padding: 0 10px 0 10px;
+    height: 50px;
 }

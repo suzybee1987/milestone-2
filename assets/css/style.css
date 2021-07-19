@@ -71,7 +71,7 @@ body {
     }
 
     .game {
-        height: 130vh;
+        height: 120vh;
     }
 }
 
@@ -391,6 +391,7 @@ ul.list-inline.sm-links-ul a:hover {
     justify-content: center;
     padding: 0 10px 0 10px;
     height: 50px;
+
 }
 
 .muted {
@@ -398,5 +399,5 @@ ul.list-inline.sm-links-ul a:hover {
     justify-content: center;
     padding: 0 10px 0 10px;
     height: 50px;
-    
+
 }

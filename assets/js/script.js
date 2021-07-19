@@ -1,6 +1,7 @@
 // variables 
 const quizContainer = document.getElementById('quiz');
-const answerButton = document.getElementById('.answer');
+const answerButton = document.getElementsByClassName('.answer');
+const volume = document.getElementsByClassName('volume');
 
 const characters = {
 	death: {
@@ -110,6 +111,13 @@ function buildQuiz() {
 		// gameOutput is an array 
 		const gameOutput = [];
 
+		// volume.push(
+		// 	`<img src="assets/audio/noun_volume.png"></img>`
+
+		// );
+		// volume.innerHTML = volume.join('');
+
+
 		// for each question get current question and number 
 		questionList.forEach(
 			(currentQ, qNumber) => {
@@ -139,6 +147,7 @@ function buildQuiz() {
 		);
 		// join gameOutput to html push to page 
 		quizContainer.innerHTML = gameOutput.join('');
+		const volume = [];		
 	};
 
 	function getResults(value) {
@@ -250,5 +259,10 @@ function buildQuiz() {
 	$('.answer').click(function () {
 		userAnswers.push(this.value);
 		showNextSlide();
+		$(this).addClass('clicked');
+		const audio = document.querySelector(`audio[class="audioAnswer"]`);
+		if (!audio) return;
+		audio.currentTime = 0;
+		audio.play();
 	});
 };

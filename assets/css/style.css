@@ -304,6 +304,13 @@ ul.list-inline.sm-links-ul a:hover {
 
 .answer {
     margin: 10px;
+    transition: 0.1s;
+}
+/* when answer clicked enlarge button */
+.clicked {
+    transform: scale(1.2);
+    border-color: #C0C0C0;
+    box-shadow: 0 0 10px #C0C0C0;
 }
 
 #quizQuestion {
@@ -364,11 +371,11 @@ ul.list-inline.sm-links-ul a:hover {
 }
 
 /* prev and next buttons  */
-#buttons {
+/* #buttons {
     z-index: 2;
     margin-top: 100px;
 }
 
 .buttons {
     z-index: 2;
-}
+} */

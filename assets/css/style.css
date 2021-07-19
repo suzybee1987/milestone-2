@@ -55,12 +55,18 @@ body {
     padding: 10px;
 }
 
+
+
 /* as nav is transparent it is hard to see on mobile so media query to change to dark-blue  */
-/* @media only screen and (max-width: 768px) {
-    nav {
-        background-color: var(--dark-blue);
+@media only screen and (max-width: 768px) {
+    ul.navbar-nav.align-items-end.ms-auto {
+        background: #0e3159;
+        width: 162px;
+        border-radius: 1em;
+        padding-right: 5px;
+        border: 0;
     }
-} */
+}
 
 
 img,
@@ -282,7 +288,8 @@ ul.list-inline.sm-links-ul a:hover {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    flex: 1 0 auto;;
+    flex: 1 0 auto;
+    height: 100vh;
 }
 
 .gameContent {
@@ -371,11 +378,8 @@ ul.list-inline.sm-links-ul a:hover {
 }
 
 /* prev and next buttons  */
-/* #buttons {
-    z-index: 2;
-    margin-top: 100px;
+.volume {
+    display: flex;
+    justify-content: flex-end;
+    /* padding-right: 10px; */
 }
-
-.buttons {
-    z-index: 2;
-} */

@@ -2,10 +2,12 @@
 const quizContainer = document.getElementById('quiz');
 const answerButton = document.getElementsByClassName('.answer');
 const volume = document.getElementsByClassName('volume');
+const audio = document.querySelector(`audio[class="audioAnswer"]`);
 
 const characters = {
 	death: {
 		name: "Death",
+		description: "Death is curious. Death likes cats. Death is not invisible but your eyes may not comprehend his appearance. Death does not kill, but collects.",
 		books: [
 			"The Colour of Magic", "The Light Fantastic", "Equal Rites", "Mort", "Sourcery", "Wyrd Sisters",
 			"Pyramids", "Guards! Guards!", "Eric", "Moving Pictures", "Reaper Man", "Witches Abroad", "Small Gods",
@@ -20,6 +22,7 @@ const characters = {
 
 	nanny: {
 		name: "Nanny Ogg",
+		description: 'Nanny "Gytha" Ogg is everyone\'s favourite dirty minded old woman, famous for being kind hearted to all but her daughters in law. And after knowing her for 15 minutes you\'ll think you\'ve known her your full life.',
 		books: [
 			"Wyrd Sisters", "Witches Abroad", "Lords and Ladies", "Maskerade", "Carpe Jugulum",
 			"The Sea and Little Fishes", "Wintersmith", "I Shall Wear Midnight", "The Shepherd's Crown"
@@ -29,6 +32,7 @@ const characters = {
 
 	librarian: {
 		name: "The Librarian",
+		description: "The Librarian wasn't always an orangutan but got caught in a magical spell. He's happier this way and everyone's forgotten what he used to look like. Just DON'T CALL HIM A MONKEY",
 		books: [
 			"The Light Fantastic", "Equal Rites", "Sourcery", "Guards! Guards!", "Eric", "Reaper Man", "Men at Arms",
 			"Soul Music", "Interesting Times", "Maskerade", "The Last Continent", "The Last Hero", "The Science of Discworld",
@@ -39,6 +43,7 @@ const characters = {
 
 	vetinari: {
 		name: "Lord Vetinari",
+		description: "Lord Vetinari is the Patrician of Ankh Morpork and brings a special blend of tyrany and common sense to rule. He also knows everything. Yes, even what you did last night, you naughty so-and-so.",
 		books: [
 			"Sourcery", "Guards! Guards!", "Moving Pictures", "Men at Arms", "Interesting Times",
 			"Feet of Clay", "The Fifth Elephant", "The Truth", "Going Postal", "Thud!", "Making Money",
@@ -50,6 +55,7 @@ const characters = {
 
 	rob: {
 		name: "Rob Anybody",
+		description: "Rob Anybody is the leader of the Nac Mac Feegles, famous for their height (or lack of at 6\" high) and ability to defeat any foe. They also enjoy a bit of thieving and drinking ",
 		books: [
 			"A Hat Full of Sky", "I Shall Wear Midnight", "The Shepherd's Crown", "The Wee Free Men", "Wintersmith"
 		],
@@ -58,6 +64,7 @@ const characters = {
 
 	gaspode: {
 		name: "Gaspode",
+		description: "",
 		books: [
 			"Moving Pictures", "Men at Arms", "The Fifth Elephant", "The Truth", "Soul Music", "Hogfather", "Feet of Clay"
 		],
@@ -65,6 +72,7 @@ const characters = {
 	},
 	vimes: {
 		name: "Commander Vimes",
+		description: "",
 		books: [
 			"Guards! Guards!", "Men At Arms", "Feet of Clay", "Jingo", "The Fifth Elephant",
 			"The Truth", "Night Watch", "Monstrous Regiment", "Thud!", "Where's My Cow?", "Making Money",
@@ -101,6 +109,7 @@ const getJsonThenLoad = function () {
 function buildQuiz() {
 	// answer keys in here
 	let userAnswers = [];
+	audio.muted = true;
 
 	// start the game 
 	startGame();
@@ -147,8 +156,18 @@ function buildQuiz() {
 		);
 		// join gameOutput to html push to page 
 		quizContainer.innerHTML = gameOutput.join('');
-		const volume = [];		
+		const volume = [];
 	};
+
+	// function showVolumeOn(){
+	// 	volume.classList.add('.volume');
+	// 	volume.classList.remove('.muted');
+	// }
+
+	// function showVolumeOff() {
+	// 	volume.classList.add('.muted');
+	// 	volume.classList.remove('.volume');
+	// }
 
 	function getResults(value) {
 		console.log(userAnswers);
@@ -169,39 +188,47 @@ function buildQuiz() {
 		// Getting the maximum entry
 		let chosenAnswer = [...Object.entries(answerMap)].reduce((a, e) => e[1] > a[1] ? e : a);
 		let books = 0;
+		let description = 0;
 		let image = 0;
 
 		if (chosenAnswer.includes('vimes')) {
 			chosenAnswer = [characters.vimes.name];
 			books = [characters.vimes.books];
+			description = [characters.vimes.description];
 			image = [characters.vimes.image];
 		} else if (chosenAnswer.includes('death')) {
 			chosenAnswer = [characters.death.name];
 			books = [characters.death.books];
 			image = [characters.death.image];
+			description = [characters.death.description];
 		} else if (chosenAnswer.includes('gaspode')) {
 			chosenAnswer = [characters.gaspode.name];
 			books = [characters.gaspode.books];
 			image = [characters.gaspode.image];
+			description = [characters.gaspode.description];
 		} else if (chosenAnswer.includes('rob')) {
 			chosenAnswer = [characters.rob.name];
 			books = [characters.rob.books];
 			image = [characters.rob.image];
+			description = [characters.rob.description];
 		} else if (chosenAnswer.includes('vetinari')) {
 			chosenAnswer = [characters.vetinari.name];
 			books = [characters.vetinari.books];
 			image = [characters.vetinari.image];
+			description = [characters.vetinari.description];
 		} else if (chosenAnswer.includes('nanny')) {
 			chosenAnswer = [characters.nanny.name];
 			books = [characters.nanny.books];
 			image = [characters.nanny.image];
+			description = [characters.nanny.description];
 		} else if (chosenAnswer.includes('librarian')) {
 			chosenAnswer = [characters.librarian.name];
 			books = [characters.librarian.books];
 			image = [characters.librarian.image];
+			description = [characters.librarian.description];
 		}
-		// chosenAnswer = chosenAnswer;
-		// books = chosenAnswer[1];
+
+
 
 		// This function to display the results to the user 
 		function showResults() {
@@ -217,7 +244,14 @@ function buildQuiz() {
 				</div>
 						
                         <h2 class="col results m-auto text-center"> You are ${chosenAnswer}! </h2>
-                        <div class="text-center books">You are in ${books}!</div>
+						<div class="text-center books">${description}</div>
+						<a class="btn btn-secondary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample">
+    						You are in these books:
+ 						 </a>
+  						<div class="collapse" id="collapseExample">
+   						 <div class="text-center books">${books}!
+						</div>
+						</div>
 						<div class="text-center">
 						<button class="btn btn-secondary resultsBtn"><a href="game.html">Try again?</a></button></div>
                 </div>`
@@ -260,9 +294,25 @@ function buildQuiz() {
 		userAnswers.push(this.value);
 		showNextSlide();
 		$(this).addClass('clicked');
-		const audio = document.querySelector(`audio[class="audioAnswer"]`);
+
 		if (!audio) return;
 		audio.currentTime = 0;
 		audio.play();
+	});
+
+	// click to mute/unmute and also change the image 
+	// https: //stackoverflow.com/questions/5571285/how-can-i-change-image-source-on-click-with-jquery
+	$('.volume').click(function (e) {
+		// e.preventDefault();
+		if (audio.muted == true) {
+			audio.muted = false;
+			console.log('muted -> unmuted');
+
+			$('.volume').attr('src', 'assets/audio/noun_volume.png');
+		} else if (audio.muted == false) {
+			audio.muted = true;
+			$('.volume').attr('src', 'assets/audio/noun_mute.png');
+			console.log('unmuted -> muted');
+		}
 	});
 };

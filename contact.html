@@ -38,7 +38,8 @@
                             <a class="nav-link text-white trans-hover" href="game.html">PLAY</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white trans-hover" data-bs-target="#modal2">HELP</a>
+                            <a class="nav-link text-white help-btn" data-bs-target="#modal2" data-bs-toggle="modal"
+                                data-bs-dismiss="modal">HELP</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white trans-hover active" aria-current="page"
@@ -57,38 +58,38 @@
                     <h3 class="text-center contact-header">comments?</h3>
                     <form id="form" class="form-control-sm">
                         <div class="row mb-3">
-                            <div class="col-md-4">
+                            <div class="col-sm-4">
                                 <label for="name" class="form-label">name:</label>
                             </div>
-                            <div class="col-md-8">
-                                <input type="text" name="from_name" class="form-control-sm" id="name" placeholder="name"
-                                    aria-describedby="name" required>
+                            <div class="col-sm-8">
+                                <input type="text" name="from_name" class="form-control-sm" id="name"
+                                    placeholder="Death" aria-describedby="name" required>
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <div class="col-md-4">
+                            <div class="col-sm-4">
                                 <label for="emailAddress" class="form-label">email address:</label>
                             </div>
-                            <div class="col-md-8">
+                            <div class="col-sm-8">
                                 <input type="email" name="from_email" class="form-control-sm" id="emailAddress"
-                                    aria-describedby="emailHelp" placeholder="email address" required>
+                                    aria-describedby="emailHelp" placeholder="death@discworld.com" required>
                             </div>
                             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <div class="col-md-4">
+                            <div class="col-sm-4">
                                 <label for="textArea" class="form-label-sm">comments:</label>
                             </div>
-                            <div class="col-md-8">
+                            <div class="col-sm-8">
                                 <textarea name="message" class="form-control-sm" id="textArea" rows="2"></textarea>
                             </div>
                         </div>
                         <div class="row buttons justify-content-end">
-                            <div class="col-md-4">
+                            <div class="col-sm-4">
                                 <button type="submit" id="submitEmail" class="btn btn-secondary">submit</button>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-sm-4">
                                 <button type="reset" class="btn btn-light">reset</button>
                             </div>
                         </div>
@@ -102,7 +103,7 @@
         <div class="modal-dialog modal-dialog-centered modal-sm">
             <div class="modal-content">
                 <div class="modal-header text-center">
-                    <h2 class="modal-title help-title text-center" id="modelLabel2">HELP</h2>
+                    <h2 class="modal-title help-title w-100" id="modelLabel2">HELP</h2>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -118,7 +119,7 @@
 
     <!-- Transparent Footer help https://codepen.io/knuhol/pen/zzQpeR  -->
     <footer class="fixed-bottom footer d-flex mt-auto py-3 bg-light">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col">
                     <ul class="copyright">

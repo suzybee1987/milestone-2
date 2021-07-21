@@ -55,7 +55,7 @@ const characters = {
 
 	rob: {
 		name: "Rob Anybody",
-		description: "Rob Anybody is the leader of the Nac Mac Feegles, famous for their height (or lack of at 6\" high) and ability to defeat any foe. They also enjoy a bit of thieving and drinking ",
+		description: "Rob Anybody is the leader of the Nac Mac Feegles, famous for their height (or lack thereof at 6\" high) and ability to defeat any foe. They also enjoy a bit of thieving and drinking ",
 		books: [
 			"A Hat Full of Sky", "I Shall Wear Midnight", "The Shepherd's Crown", "The Wee Free Men", "Wintersmith"
 		],
@@ -315,4 +315,8 @@ function buildQuiz() {
 			console.log('unmuted -> muted');
 		}
 	});
+	//https://code-institute-room.slack.com/archives/C7J2ZAVHB/p1618324403124300?thread_ts=1618323545.123900&cid=C7J2ZAVHB
+	 $(".navbar-nav>li>a").on("click", function () {
+	 	$(".navbar-collapse").collapse("hide");
+	 });
 };

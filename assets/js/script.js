@@ -58,7 +58,7 @@ const characters = {
 
 	gaspode: {
 		name: "Gaspode",
-		description: "Gaspode is a small terrier-like dog, basically grey in colour with patches of brown, white and black. He possesses human level intelligence and the ability to speak (however since dogs can't speak humans take his speech as their own thoughts resulting in hilarity). He also has many diseases that haven't killed him due to fighting amongst themselves.",
+		description: "Gaspode is a small terrier-like dog who possesses human level intelligence and the ability to speak (however since dogs can't speak humans take his speech as their own thoughts resulting in hilarity). He has many diseases that haven't killed him due to infighting.",
 		books: [
 			" Moving Pictures", " Men at Arms", " The Fifth Elephant", " The Truth", " Soul Music", " Hogfather", " Feet of Clay"
 		],

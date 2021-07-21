@@ -12,15 +12,12 @@ body {
 body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     overflow-x: hidden;
 
 }
 
-:root {
-    --dark-blue: #030e2c;
-    --silver: #C0C0C0;
-}
+ /* Main page  */
 
 .hero {
     background: url("../images/great_atuin.png") no-repeat center center fixed;
@@ -28,27 +25,11 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    min-height: 120vh;
+    min-height: 100vh;
     min-height: 100%;
 }
 
-.content {
-    min-height: 100%;
-}
 
-.contact-hero {
-    background: url("../images/great_atuin.png") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    min-height: 120vh;
-    min-height: 100%;
-}
-
-.bg-light.h-100.p-5.rounded-3.text-center {
-    opacity: 0.7;
-}
 
 /* ----------nav -------------- */
 
@@ -58,7 +39,11 @@ body {
     padding: 10px;
 }
 
-
+/* To change the text cursor to finger pointer  */
+/* https: //stackoverflow.com/questions/8809909/change-cursor-to-finger-pointer/8809958  */
+a.help-btn {
+    cursor: pointer;
+}
 
 /* as nav is transparent it is hard to see on mobile so media query to change to dark-blue  */
 @media only screen and (max-width: 768px) {
@@ -71,7 +56,7 @@ body {
     }
 
     .game {
-        height: 120vh;
+        height: 100vh;
     }
 }
 
@@ -112,7 +97,8 @@ svg {
 /* hover underline nav items  */
 a.nav-link.text-white:hover {
     border-bottom: 2px solid white;
-    transform: scale(1.2)
+    transform: scale(1.2);
+    margin: 10px;
 }
 
 /* navbar turtle */
@@ -149,13 +135,21 @@ a.nav-link.text-white:hover {
 .modal-content {
     background-color: rgb(213 220 220 / 88%);
     text-align: center;
+    border-bottom:transparent;
+}
+
+.modal-header {
+    padding: 0.5rem 0.5rem;
+    /* border-bottom: 1px solid; */
+}
+
+.modal-body {
+    padding: 0.5em;
 }
 
 .play,
 .submit,
-.reset,
-#previous,
-#next {
+.reset, .help {
     font-family: 'IM Fell French Canon SC', serif;
     font-size: 1.5em;
 }
@@ -168,29 +162,21 @@ a.nav-link.text-white:hover {
     box-shadow: 0 0 0 0.25rem rgb(211 212 213 / 50%);
 }
 
-.help,
-#previous {
-    font-family: 'IM Fell French Canon SC',
-        serif;
-}
-
-.play,
-#next,
-.resultsBtn {
-    background-color: black;
-    border-color: white;
+.play, .resultsBtn {
+    background-color: #000;
+    border: 2px #fff ;
 }
 
 
-.play:hover,
-.resultsBtn:hover {
-    background-color: #273a4e;
-    border-color: #273a4e;
+.play:hover, .resultsBtn:hover {
+    background-color: #fff;
+    border-color:#fff;
+    color: #000
 }
 
 a,
 a:hover {
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -211,23 +197,6 @@ a:hover {
 .modal-footer {
     justify-content: center;
 }
-
-/* contact  */
-
-.contact {
-    margin-top: 4em;
-    max-width: 380px;
-    align-items: center;
-    justify-content: center;
-    opacity: 0.9;
-    border-radius: 5rem;
-    margin-bottom: 70px;
-}
-
-.form-control-sm {
-    font-size: small;
-}
-
 /* Footer  */
 
 footer {
@@ -258,6 +227,7 @@ footer li {
 
 .copyright {
     padding-top: 12px;
+    font-size: 16px;
 }
 
 .sm-links-ul {
@@ -288,6 +258,34 @@ ul.list-inline.sm-links-ul a:hover {
 }
 
 
+/* Contact page  */
+.contact-hero {
+    background: url("../images/great_atuin.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100vh;
+    min-height: 100%;
+}
+
+.bg-light.h-100.p-5.rounded-3.text-center {
+    opacity: 0.7;
+}
+.contact {
+    margin-top: 4em;
+    max-width: 380px;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+    border-radius: 5rem;
+    margin-bottom: 70px;
+}
+
+.form-control-sm {
+    font-size: small;
+}
+
 /* game page  */
 .game {
     background: url("../images/backgroundsky.png") no-repeat center center fixed;
@@ -296,7 +294,7 @@ ul.list-inline.sm-links-ul a:hover {
     -o-background-size: cover;
     background-size: cover;
     flex: 1 0 auto;
-    height: 120vh;
+    height: 100vh;
 }
 
 .gameContent {
@@ -308,9 +306,6 @@ ul.list-inline.sm-links-ul a:hover {
     padding-bottom: 60px;
 }
 
-/* quiz  */
-
-/* container holding the answers  */
 .answers {
     padding-top: 40px;
 }
@@ -328,17 +323,7 @@ ul.list-inline.sm-links-ul a:hover {
     box-shadow: 0 0 10px #C0C0C0;
 }
 
-
-
-/* #quizQuestion {
-    padding-top: 200px;
-    color: white;
-    font-family: 'IM Fell French Canon SC',
-        serif;
-    font-size: 2.5em;
-} */
-
-/* for screen sizes small and below reduce padding again  */
+/* for screen sizes small and below padding  */
 @media screen and (max-width: 576px) {
     #quizQuestion {
         padding-top: 170px;
@@ -349,7 +334,7 @@ ul.list-inline.sm-links-ul a:hover {
     }
 }
 
-/* for screen sizes medium reduce padding */
+/* for screen sizes medium increase padding */
 @media screen and (min-width: 576px) {
     #quizQuestion {
         padding-top: 180px;
@@ -361,7 +346,7 @@ ul.list-inline.sm-links-ul a:hover {
 }
 
 
-/* extra large screens   */
+/* extra large screens increase again */
 @media screen and (min-width: 1400px) {
     #quizQuestion {
         padding-top: 250px;
@@ -373,6 +358,7 @@ ul.list-inline.sm-links-ul a:hover {
 }
 
 /* css from sitepoint  */
+/* https: //www.sitepoint.com/simple-javascript-quiz/#whatsnext  */
 .slide {
     position: absolute;
     left: 0px;
@@ -389,7 +375,6 @@ ul.list-inline.sm-links-ul a:hover {
 }
 
 .quiz-container {
-    /* position: relative; */
     height: 200px;
     margin-top: 40px;
 }
@@ -401,6 +386,7 @@ ul.list-inline.sm-links-ul a:hover {
     transition: opacity 0.7s;
     color: #fff;
 }
+/* end of sitepoint css  */
 
 .imageResult {
     padding: 10px;
@@ -413,11 +399,16 @@ ul.list-inline.sm-links-ul a:hover {
 .books {
     color: #000;
     background-color: #ffffff91;
-    padding: 10px;
+    padding: 25px;
     font-family: 'Lato', sans-serif;
     font-size: 1em;
     border: 1px solid #fff;
     border-radius: 33px;
+    margin: 25px;
+    max-width: 600px;
+}
+
+.book-btn {
     margin: 25px;
 }
 
@@ -427,7 +418,6 @@ ul.list-inline.sm-links-ul a:hover {
     justify-content: center;
     padding: 0 10px 0 10px;
     height: 50px;
-
 }
 
 .muted {
@@ -435,5 +425,4 @@ ul.list-inline.sm-links-ul a:hover {
     justify-content: center;
     padding: 0 10px 0 10px;
     height: 50px;
-
 }

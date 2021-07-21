@@ -58,7 +58,7 @@ const characters = {
 
 	gaspode: {
 		name: "Gaspode",
-		description: "Gaspode is a small terrier-like dog, basically grey in colour with patches of brown, white and black. He posses human level intelligence and the ability to speak (however since dogs can't speak humans take his speech as their own thoughts resulting in hilarious outcomes. He also has many diseases that haven't killed him due to fighting amongst themselves.",
+		description: "Gaspode is a small terrier-like dog, basically grey in colour with patches of brown, white and black. He possesses human level intelligence and the ability to speak (however since dogs can't speak humans take his speech as their own thoughts resulting in hilarity). He also has many diseases that haven't killed him due to fighting amongst themselves.",
 		books: [
 			" Moving Pictures", " Men at Arms", " The Fifth Elephant", " The Truth", " Soul Music", " Hogfather", " Feet of Clay"
 		],
@@ -114,13 +114,6 @@ function buildQuiz() {
 		// gameOutput is an array 
 		const gameOutput = [];
 
-		// volume.push(
-		// 	`<img src="assets/audio/noun_volume.png"></img>`
-
-		// );
-		// volume.innerHTML = volume.join('');
-
-
 		// for each question get current question and number 
 		questionList.forEach(
 			(currentQ, qNumber) => {
@@ -152,16 +145,6 @@ function buildQuiz() {
 		quizContainer.innerHTML = gameOutput.join('');
 		const volume = [];
 	};
-
-	// function showVolumeOn(){
-	// 	volume.classList.add('.volume');
-	// 	volume.classList.remove('.muted');
-	// }
-
-	// function showVolumeOff() {
-	// 	volume.classList.add('.muted');
-	// 	volume.classList.remove('.volume');
-	// }
 
 	function getResults(value) {
 		console.log(userAnswers);
@@ -222,8 +205,6 @@ function buildQuiz() {
 			description = [characters.librarian.description];
 		}
 
-
-
 		// This function to display the results to the user 
 		function showResults() {
 			console.log(`Hey! You picked ${chosenAnswer}`);
@@ -233,22 +214,21 @@ function buildQuiz() {
 			// add q and a to the output 
 			gameOutput.push(
 				`<div id="results">
-				<div class="imageResult">
-				<img src=${image}>
-				</div>
-						
-                        <h2 class="col results m-auto text-center"> You are ${chosenAnswer}! </h2>
-						<div class="text-center books">${description}</div>
-						<a class="btn btn-secondary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample">
+					<div class="imageResult">
+						<img src=${image}>
+					</div>
+					<h2 class="col results m-3 text-center"> You are ${chosenAnswer}!</h2>
+					<div class="col-12 m-auto text-center books">${description}</div>
+					<a class="btn btn-secondary book-btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample">
     						You are in these books:
- 						 </a>
-  						<div class="collapse" id="collapseExample">
-   						 <div class="text-center books">${books}!
+ 					</a>
+  					<div class="collapse" id="collapseExample">
+   						 <div class="col-12 m-auto text-center books">${books}!
 						</div>
-						</div>
-						<div class="text-center">
+					</div>
+					<div class="text-center">
 						<button class="btn btn-secondary resultsBtn"><a href="game.html">Try again?</a></button></div>
-                </div>`
+                	</div>`
 			);
 			quizContainer.innerHTML = gameOutput.join('');
 		}

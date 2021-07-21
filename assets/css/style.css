@@ -227,7 +227,7 @@ footer li {
 
 .copyright {
     padding-top: 12px;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .sm-links-ul {
@@ -326,7 +326,7 @@ ul.list-inline.sm-links-ul a:hover {
 /* for screen sizes small and below padding  */
 @media screen and (max-width: 576px) {
     #quizQuestion {
-        padding-top: 170px;
+        padding-top: 130px;
         color: white;
         font-family: 'IM Fell French Canon SC',
             serif;

@@ -9,13 +9,7 @@ const characters = {
 		name: "Death",
 		description: "Death is curious. Death likes cats. Death is not invisible but your eyes may not comprehend his appearance. Death does not kill, but collects.",
 		books: [
-			"The Colour of Magic", "The Light Fantastic", "Equal Rites", "Mort", "Sourcery", "Wyrd Sisters",
-			"Pyramids", "Guards! Guards!", "Eric", "Moving Pictures", "Reaper Man", "Witches Abroad", "Small Gods",
-			"Lords and Ladies", "Men At Arms", "Soul Music", "Interesting Times", "Maskerade", "Feet of Clay",
-			"Hogfather", "Jingo", "The Last Continent", "Carpe Jugulumn", "The Fifth Elephant", "The Truth", "Thief of Time",
-			"The Last Hero", "The Amazing Maurice and His Educated Rodents", "Night Watch", "Monstrous Regiment", "A Hat Full of Sky",
-			"Going Postal", "Thud!", "Wintersmith", "Making Money", "Unseen Academicals", "I Shall Wear Midnight",
-			"Raising Steam", "The Shepherd's Crown"
+			" Mort", " Reaper Man", " Soul Music", " Hogfather", " Thief of Time", " and has cameos in most other Discworld novels"
 		],
 		image: "assets/images/characters/noun_death.png",
 	},
@@ -24,8 +18,8 @@ const characters = {
 		name: "Nanny Ogg",
 		description: 'Nanny "Gytha" Ogg is everyone\'s favourite dirty minded old woman, famous for being kind hearted to all but her daughters in law. And after knowing her for 15 minutes you\'ll think you\'ve known her your full life.',
 		books: [
-			"Wyrd Sisters", "Witches Abroad", "Lords and Ladies", "Maskerade", "Carpe Jugulum",
-			"The Sea and Little Fishes", "Wintersmith", "I Shall Wear Midnight", "The Shepherd's Crown"
+			" Wyrd Sisters", " Witches Abroad", " Lords and Ladies", " Maskerade", " Carpe Jugulum",
+			" The Sea and Little Fishes", " Wintersmith", " I Shall Wear Midnight", " The Shepherd's Crown"
 		],
 		image: "assets/images/characters/noun_nanny.png",
 	},
@@ -34,9 +28,9 @@ const characters = {
 		name: "The Librarian",
 		description: "The Librarian wasn't always an orangutan but got caught in a magical spell. He's happier this way and everyone's forgotten what he used to look like. Just DON'T CALL HIM A MONKEY",
 		books: [
-			"The Light Fantastic", "Equal Rites", "Sourcery", "Guards! Guards!", "Eric", "Reaper Man", "Men at Arms",
-			"Soul Music", "Interesting Times", "Maskerade", "The Last Continent", "The Last Hero", "The Science of Discworld",
-			"The Science of Discworld II: the Globe", "The Science of Discworld III: Darwin 's Watch", "Unseen Academicals"
+			" The Light Fantastic", " Equal Rites", " Sourcery", " Guards! Guards!", " Eric", " Reaper Man", " Men at Arms",
+			" Soul Music", " Interesting Times", " Maskerade", " The Last Continent", " The Last Hero", " The Science of Discworld",
+			" The Science of Discworld II: the Globe", " The Science of Discworld III: Darwin 's Watch", " Unseen Academicals"
 		],
 		image: "assets/images/characters/noun_librarian.png",
 	},
@@ -45,10 +39,10 @@ const characters = {
 		name: "Lord Vetinari",
 		description: "Lord Vetinari is the Patrician of Ankh Morpork and brings a special blend of tyrany and common sense to rule. He also knows everything. Yes, even what you did last night, you naughty so-and-so.",
 		books: [
-			"Sourcery", "Guards! Guards!", "Moving Pictures", "Men at Arms", "Interesting Times",
-			"Feet of Clay", "The Fifth Elephant", "The Truth", "Going Postal", "Thud!", "Making Money",
-			"Unseen Academicals", "Raising Steam", "The Colour of Magic", "Soul Music", "The Last Hero",
-			"Night Watch"
+			" Sourcery", " Guards! Guards!", " Moving Pictures", " Men at Arms", " Interesting Times",
+			" Feet of Clay", " The Fifth Elephant", " The Truth", " Going Postal", " Thud!", " Making Money",
+			" Unseen Academicals", " Raising Steam", " The Colour of Magic", " Soul Music", " The Last Hero",
+			" Night Watch"
 		],
 		image: "assets/images/characters/noun_vetinari.png",
 	},
@@ -57,26 +51,26 @@ const characters = {
 		name: "Rob Anybody",
 		description: "Rob Anybody is the leader of the Nac Mac Feegles, famous for their height (or lack thereof at 6\" high) and ability to defeat any foe. They also enjoy a bit of thieving and drinking ",
 		books: [
-			"A Hat Full of Sky", "I Shall Wear Midnight", "The Shepherd's Crown", "The Wee Free Men", "Wintersmith"
+			" A Hat Full of Sky", " I Shall Wear Midnight", " The Shepherd's Crown", " The Wee Free Men", " Wintersmith"
 		],
 		image: "assets/images/characters/noun_rob.png",
 	},
 
 	gaspode: {
 		name: "Gaspode",
-		description: "",
+		description: "Gaspode is a small terrier-like dog, basically grey in colour with patches of brown, white and black. He posses human level intelligence and the ability to speak (however since dogs can't speak humans take his speech as their own thoughts resulting in hilarious outcomes. He also has many diseases that haven't killed him due to fighting amongst themselves.",
 		books: [
-			"Moving Pictures", "Men at Arms", "The Fifth Elephant", "The Truth", "Soul Music", "Hogfather", "Feet of Clay"
+			" Moving Pictures", " Men at Arms", " The Fifth Elephant", " The Truth", " Soul Music", " Hogfather", " Feet of Clay"
 		],
 		image: "assets/images/characters/noun_gaspode.png",
 	},
 	vimes: {
 		name: "Commander Vimes",
-		description: "",
+		description: "Sam Vimes has many titles: His Grace, His Excellency, Duke of Ankh and others including Blackboard Monitor Vimes. Born into poverty and now a reluctant member of the nobility, having married the richest woman in the city, Sam can't turn a blind eye to crime no matter the culprit.",
 		books: [
-			"Guards! Guards!", "Men At Arms", "Feet of Clay", "Jingo", "The Fifth Elephant",
-			"The Truth", "Night Watch", "Monstrous Regiment", "Thud!", "Where's My Cow?", "Making Money",
-			"Unseen Academicals", "Snuff", "Raising Steam"
+			" Guards! Guards!", " Men At Arms", " Feet of Clay", " Jingo", " The Fifth Elephant",
+			" The Truth", " Night Watch", " Monstrous Regiment", " Thud!", " Where's My Cow?", " Making Money",
+			" Unseen Academicals", " Snuff", " Raising Steam"
 		],
 		image: "assets/images/characters/noun_vimes.png",
 	}

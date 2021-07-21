@@ -29,8 +29,7 @@ const characters = {
 		description: "The Librarian wasn't always an orangutan but got caught in a magical spell. He's happier this way and everyone's forgotten what he used to look like. Just DON'T CALL HIM A MONKEY",
 		books: [
 			" The Light Fantastic", " Equal Rites", " Sourcery", " Guards! Guards!", " Eric", " Reaper Man", " Men at Arms",
-			" Soul Music", " Interesting Times", " Maskerade", " The Last Continent", " The Last Hero", " The Science of Discworld",
-			" The Science of Discworld II: the Globe", " The Science of Discworld III: Darwin 's Watch", " Unseen Academicals"
+			" Soul Music", " Interesting Times", " Maskerade", " The Last Continent", " The Last Hero", " Unseen Academicals"
 		],
 		image: "assets/images/characters/noun_librarian.png",
 	},

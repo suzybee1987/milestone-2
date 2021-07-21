@@ -328,12 +328,48 @@ ul.list-inline.sm-links-ul a:hover {
     box-shadow: 0 0 10px #C0C0C0;
 }
 
-#quizQuestion {
-    padding-top: 100px;
+
+
+/* #quizQuestion {
+    padding-top: 200px;
     color: white;
     font-family: 'IM Fell French Canon SC',
         serif;
     font-size: 2.5em;
+} */
+
+/* for screen sizes small and below reduce padding again  */
+@media screen and (max-width: 576px) {
+    #quizQuestion {
+        padding-top: 170px;
+        color: white;
+        font-family: 'IM Fell French Canon SC',
+            serif;
+        font-size: 2.5em;
+    }
+}
+
+/* for screen sizes medium reduce padding */
+@media screen and (min-width: 576px) {
+    #quizQuestion {
+        padding-top: 180px;
+        color: white;
+        font-family: 'IM Fell French Canon SC',
+            serif;
+        font-size: 2.5em;
+    }
+}
+
+
+/* extra large screens   */
+@media screen and (min-width: 1400px) {
+    #quizQuestion {
+        padding-top: 250px;
+        color: white;
+        font-family: 'IM Fell French Canon SC',
+            serif;
+        font-size: 2.5em;
+    }
 }
 
 /* css from sitepoint  */
@@ -398,5 +434,5 @@ ul.list-inline.sm-links-ul a:hover {
     justify-content: center;
     padding: 0 10px 0 10px;
     height: 50px;
-    
+
 }

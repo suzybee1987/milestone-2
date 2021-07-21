@@ -124,7 +124,7 @@ function buildQuiz() {
 				for (option in currentQ.answers) {
 					answers.push(
 						`<div class="col-sm-6 m-auto">
-                        <button type="button" class="btn btn-light answer h-100" name="question${qNumber}" value="${option}">
+                        <button type="button" class="btn btn-light answer btn-sm" name="question${qNumber}" value="${option}">
                         ${currentQ.answers[option]}
                         </button>
                     </div>`
@@ -217,14 +217,9 @@ function buildQuiz() {
 						<img src=${image}>
 					</div>
 					<h2 class="col results m-3 text-center"> You are ${chosenAnswer}!</h2>
-					<div class="col-12 m-auto text-center books">${description}</div>
-					<a class="btn btn-secondary book-btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample">
-    						You are in these books:
- 					</a>
-  					<div class="collapse" id="collapseExample">
-   						 <div class="col-12 m-auto text-center books">${books}!
-						</div>
-					</div>
+					<div class="col-12 m-auto text-center books">${description}
+   						 <p>You are in these books: ${books}!</p>
+					</div></div>
 					<div class="text-center">
 						<button class="btn btn-secondary resultsBtn"><a href="game.html">Try again?</a></button></div>
                 	</div>`

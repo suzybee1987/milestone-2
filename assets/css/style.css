@@ -130,13 +130,6 @@ a.nav-link.text-white:hover {
     padding-left: 44px;
 }
 
-/* .welcome {
-    padding-left: 47px;
-} */
-
-/* .help-title {
-    padding-left: 200px;
-}  */
 
 .modal-content {
     background-color: rgb(213 220 220 / 88%);
@@ -178,7 +171,6 @@ a.nav-link.text-white:hover {
 .resultsBtn {
     background-color: #000;
     border: 2px #fff;
-    margin-bottom: 60px;
 }
 
 

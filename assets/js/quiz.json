@@ -1,12 +1,12 @@
 [
     {
         "id": 1,
-        "question": "Which of these statements about food are your favourite?",
+        "question": "Which of these statements about food is your favourite?",
         "answers": {
             "death": "I COULD MURDER A CURRY",
-            "gaspode": "Pride is all very well, but a sausage is a sausage.",
+            "gaspode": "Pride is all very well, but a sausage is a sausage",
             "vimes": "A BLT, heavy on the B",
-            "rob": "Food? I'd rather drink! Anything vaguely alcoholic."
+            "rob": "Food? I'd rather drink! Anything vaguely alcoholic"
         }
     },
 
@@ -97,7 +97,7 @@
         "answers": {
             "librarian": "OOK!",
             "rob": "CRIVENS!",
-            "nanny": "Don't do anything I wouldn't do, if you ever find anything I wouldn't do.",
+            "nanny": "Don't do anything I wouldn't do, if you ever find anything I wouldn't do",
             "gaspode": "Bark"
         }
     }

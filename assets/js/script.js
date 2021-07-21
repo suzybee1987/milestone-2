@@ -124,7 +124,7 @@ function buildQuiz() {
 				for (option in currentQ.answers) {
 					answers.push(
 						`<div class="col-sm-6 m-auto">
-                        <button type="button" class="btn btn-light answer btn-sm" name="question${qNumber}" value="${option}">
+                        <button type="button" class="btn btn-light answer" name="question${qNumber}" value="${option}">
                         ${currentQ.answers[option]}
                         </button>
                     </div>`

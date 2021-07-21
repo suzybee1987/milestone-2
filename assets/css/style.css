@@ -17,7 +17,7 @@ body {
 
 }
 
- /* Main page  */
+/* Main page  */
 
 .hero {
     background: url("../images/great_atuin.png") no-repeat center center fixed;
@@ -46,7 +46,7 @@ a.help-btn {
 }
 
 /* as nav is transparent it is hard to see on mobile so media query to change to dark-blue  */
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
     ul.navbar-nav.align-items-end.ms-auto {
         background: #0e3159;
         width: 162px;
@@ -135,7 +135,7 @@ a.nav-link.text-white:hover {
 .modal-content {
     background-color: rgb(213 220 220 / 88%);
     text-align: center;
-    border-bottom:transparent;
+    border-bottom: transparent;
 }
 
 .modal-header {
@@ -149,7 +149,8 @@ a.nav-link.text-white:hover {
 
 .play,
 .submit,
-.reset, .help {
+.reset,
+.help {
     font-family: 'IM Fell French Canon SC', serif;
     font-size: 1.5em;
 }
@@ -162,15 +163,17 @@ a.nav-link.text-white:hover {
     box-shadow: 0 0 0 0.25rem rgb(211 212 213 / 50%);
 }
 
-.play, .resultsBtn {
+.play,
+.resultsBtn {
     background-color: #000;
-    border: 2px #fff ;
+    border: 2px #fff;
 }
 
 
-.play:hover, .resultsBtn:hover {
+.play:hover,
+.resultsBtn:hover {
     background-color: #fff;
-    border-color:#fff;
+    border-color: #fff;
     color: #000
 }
 
@@ -197,6 +200,7 @@ a:hover {
 .modal-footer {
     justify-content: center;
 }
+
 /* Footer  */
 
 footer {
@@ -272,6 +276,7 @@ ul.list-inline.sm-links-ul a:hover {
 .bg-light.h-100.p-5.rounded-3.text-center {
     opacity: 0.7;
 }
+
 .contact {
     margin-top: 4em;
     max-width: 380px;
@@ -386,6 +391,7 @@ ul.list-inline.sm-links-ul a:hover {
     transition: opacity 0.7s;
     color: #fff;
 }
+
 /* end of sitepoint css  */
 
 .imageResult {
@@ -406,6 +412,12 @@ ul.list-inline.sm-links-ul a:hover {
     border-radius: 33px;
     margin: 25px;
     max-width: 600px;
+}
+
+@media screen and (max-width: 576px) {
+    .books {
+        padding: 12px;
+    }
 }
 
 .book-btn {

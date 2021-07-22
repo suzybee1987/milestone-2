@@ -19,3 +19,9 @@
                     alert(JSON.stringify(err));
                 });
         });
+// https: //stackoverflow.com/questions/32244107/bootstrap-form-fields-not-clearing-after-submit 
+    $('#form').on('submit', function () {
+        $(this).each(function () {
+            this.reset();
+        });
+    });

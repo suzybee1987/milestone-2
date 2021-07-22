@@ -12,7 +12,7 @@
             emailjs.sendForm(serviceID, templateID, this)
                 .then(() => {
                     subBtn.value = 'Send Email';
-                    alert('Sent!');
+                    alert('Thanks for your feedback!');
                 }, (err) => {
                     subBtn.value = 'Send Email';
                     alert(JSON.stringify(err));

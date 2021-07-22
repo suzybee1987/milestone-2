@@ -56,7 +56,7 @@
             <div class="row justify-content-center">
                 <div class="p-4 bg-light border contact">
                     <h3 class="text-center contact-header">comments?</h3>
-                    <form id="form" class="form-control-sm">
+                    <form id="form" class="form-control-sm was-validated">
                         <div class="row mb-3">
                             <div class="col-4">
                                 <label for="name" class="form-label">name:</label>
@@ -82,14 +82,13 @@
                                 <label for="textArea" class="form-label-sm">comments:</label>
                             </div>
                             <div class="col-8">
-                                <textarea name="message" class="form-control-sm" id="textArea" rows="2"></textarea>
+                                <textarea name="message" class="form-control-sm" id="textArea" rows="2"
+                                    required></textarea>
                             </div>
                         </div>
-                        <div class="row buttons justify-content-end">
-                            <div class="col-xs-4">
+                        <div class="row buttons ">
+                            <div class="col-xs-4 d-flex justify-content-end">
                                 <button type="submit" id="submitEmail" class="btn btn-secondary">submit</button>
-                            </div>
-                            <div class="col-xs-4">
                                 <button type="reset" class="btn btn-light">reset</button>
                             </div>
                         </div>
@@ -97,6 +96,8 @@
                 </div>
             </div>
     </section>
+
+
 
     <!-- bootstrap modal  -->
     <div class="modal fade" id="modal2" aria-hidden="true" aria-labelledby="modalLabel2" tabindex="-1">

@@ -36,8 +36,8 @@ body {
 /* ----------nav -------------- */
 
 .navbar-dark .navbar-toggler {
-    color: #dde1ef;
-    border-color: #dde1ef;
+    color: #fff;
+    border-color: #fff;
     padding: 10px;
 }
 
@@ -53,7 +53,7 @@ a.help-btn {
 }
 
 /* as nav is transparent it is hard to see on mobile so media query to change to dark-blue  */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
     ul.navbar-nav.align-items-end.ms-auto {
         background: #0e3159;
         width: 162px;
@@ -162,7 +162,7 @@ a.nav-link.text-white:hover {
 
 .btn-check:focus+.btn-light,
 .btn-light:focus {
-    color: #f9fafb;
+    color: #fff;
     background-color: #000;
     border-color: #000;
     box-shadow: 0 0 0 0.25rem rgb(211 212 213 / 50%);
@@ -265,7 +265,7 @@ footer img {
 ul.list-inline.sm-links-ul a:hover {
     padding: 7px 5px 10px 5px;
     transform: scale(1.1);
-    box-shadow: 0 0 1.5rem black;
+    box-shadow: 0 0 1.5rem #000;
 }
 
 
@@ -454,3 +454,27 @@ and (-webkit-min-device-pixel-ratio: 3) {
     padding: 0 10px 0 10px;
     height: 50px;
 }
+
+
+ /* 404 page  */
+
+ .error-page {
+background: url("../images/backgroundsky.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    flex: 1 0 auto;
+    min-height: 100vh;
+ }
+
+ .img-error img {
+     padding-top: 100px;
+     height: 250px;
+ }
+
+ .text-error {
+     color: #fff;
+    font-family: 'IM Fell French Canon SC', serif;
+     padding-top: 20px;
+ }

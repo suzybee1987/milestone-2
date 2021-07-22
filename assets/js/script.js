@@ -16,7 +16,7 @@ const characters = {
 
 	nanny: {
 		name: "Nanny Ogg",
-		description: 'Nanny "Gytha" Ogg is everyone\'s favourite dirty minded old woman, famous for being kind hearted to all but her daughters in law. And after knowing her for 15 minutes you\'ll think you\'ve known her your full life.',
+		description: 'Nanny "Gytha" Ogg is everyone\'s favourite dirty minded old witch, famous for being kind hearted to all but her daughters in law. And after knowing her for 15 minutes you\'ll think you\'ve known her your full life.',
 		books: [
 			" Wyrd Sisters", " Witches Abroad", " Lords and Ladies", " Maskerade", " Carpe Jugulum",
 			" The Sea and Little Fishes", " Wintersmith", " I Shall Wear Midnight", " The Shepherd's Crown"
@@ -146,7 +146,6 @@ function buildQuiz() {
 	};
 
 	function getResults(value) {
-		console.log(userAnswers);
 		//  help from Sean Young on Slack with this map to find the chosenAnswer
 		const answerMap = {
 			gaspode: 0,
@@ -206,7 +205,6 @@ function buildQuiz() {
 
 		// This function to display the results to the user 
 		function showResults() {
-			console.log(`Hey! You picked ${chosenAnswer}`);
 			// gameOutput is an array 
 			const gameOutput = [];
 

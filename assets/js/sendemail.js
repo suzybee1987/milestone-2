@@ -13,6 +13,7 @@
                 .then(() => {
                     subBtn.value = 'Send Email';
                     alert('Thanks for your feedback!');
+                    console.log('Email sent');
                 }, (err) => {
                     subBtn.value = 'Send Email';
                     alert(JSON.stringify(err));

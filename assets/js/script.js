@@ -274,13 +274,11 @@ function buildQuiz() {
 		// e.preventDefault();
 		if (audio.muted == true) {
 			audio.muted = false;
-			console.log('muted -> unmuted');
 
-			$('.volume').attr('src', 'assets/audio/noun_volume.png');
+			$('.volume').attr('src', 'assets/images/noun_volume.png');
 		} else if (audio.muted == false) {
 			audio.muted = true;
-			$('.volume').attr('src', 'assets/audio/noun_mute.png');
-			console.log('unmuted -> muted');
+			$('.volume').attr('src', 'assets/images/noun_mute.png');
 		}
 	});
 	//https://code-institute-room.slack.com/archives/C7J2ZAVHB/p1618324403124300?thread_ts=1618323545.123900&cid=C7J2ZAVHB

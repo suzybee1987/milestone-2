@@ -1,6 +1,6 @@
 # Terry Pratchett Discworld Quiz!
 
-![](assets/images/readme-docs/)
+![](assets/readme_imgs/amiresponsive.PNG)
 
 ## About
 
@@ -34,12 +34,6 @@ Link to [live site](https://suzybee1987.github.io/milestone-2/index.html)
   - [**Responsive Design**](#responsive-design)
 - [**Version Control**](#version-control)
 - [**Testing**](#testing)
-  - [**Functionality Testing**](#functionality-testing)
-  - [**User Story Testing**](#user-story-testing)
-  - [**Performance Testing**](#performance-testing)
-  - [**Responsive**](#responsive)
-  - [**W3C Validator**](#w3c-validator)
-- [**Bugs**](#bugs)
 - [**Deployment**](#deployment)
   - [**Running Locally**](#running-locally)
 - [**Credits**](#credits)
@@ -90,9 +84,6 @@ Link to [live site](https://suzybee1987.github.io/milestone-2/index.html)
 
 ### **Fonts**
 
-
-font-family: 'IM Fell Great Primer', serif; */
-
 I have chosen [IM Fell French Canon SC](https://fonts.google.com/specimen/IM+Fell+French+Canon+SC) for the headers as it is easy to read and has sufficient contrast to the main body font. The small caps style is used by the character Death in the series and as he is a prominent character I have used it for readers of the series to enjoy. 
 
 ![Example here](assets/readme_imgs/IM_Fell_French_Canon_SC.PNG)
@@ -121,9 +112,7 @@ These colours complement each other well, in keeping with what the user expects.
 
 The hero image on index.html is a picture of the Discworld as this is the theme of the quiz, it features the world resting on the back of four elephants being carried through space on a turtle (Great A'Tuin). This was sourced from [Shutterstock](https://www.shutterstock.com/editor/image/diskworld-resting-on-elephants-big-turtle-1151824745)
 
-The hero image from the game.html page is a night sky sourced from [Shutterstock](https://www.shutterstock.com/image-vector/night-shining-starry-sky-blue-space-1081014557) and I downloaded these via a standar licence trial. These images work well together and continue the consistency of the theme. 
-
-
+The hero image from the game.html page is a night sky sourced from [Shutterstock](https://www.shutterstock.com/image-vector/night-shining-starry-sky-blue-space-1081014557) and complements the colour scheme.
 
 ### **Wireframes**
 
@@ -332,15 +321,15 @@ To clone this project from GitHub follow the instructions taken from [GitHub Doc
 - [SitePoint](https://www.sitepoint.com/simple-javascript-quiz/#whatsnext) for help with the quiz layout including pagination
 - Wes Bos [JavaScript 30](https://javascript30.com/) for extra ideas on using JavaScript
 - [Hackathon](https://github.com/NicolaLampis/hackathon_ci) I took part in at the beginning of the year where I got some ideas of loading the json before beginning the quiz.
+- Some help from Sean Young and Scott Boning on Slack [post](https://code-institute-room.slack.com/archives/C7HD37Q1F/p1626514069349200) to map the answers chosen
 
 
 ### **Content**
 
-- The information provided regarding Shiatsu was provided by the business owner, Alison Melville. 
-- README.md help came from: 
-  -[Code Institute](https://github.com/Code-Institute-Solutions/SampleREADME)
-  -CI Student [Simon Vardy](https://github.com/simonjvardy/Aviation-Consultancy/blob/master/README.md)
-  -My Mentor - Maranatha Ilesanme sent me [Liga Baikova's README.md](https://github.com/LigaMoon/Boredom-guide/blob/master/README.md) to use as a rough template.
+- The content was taken from Terry Pratchett's Discworld [novels](https://www.terrypratchettbooks.com/books/) and questions and answers created by myself with some inspiration from [this site](https://www.allthetests.com/personality-tests/are-you-this-star-figure/book-characters/other-book-characters/quiz05/1050277506/which-discworld-character-are-you)
+- Descriptions of the characters were loosely taken from [Discworld Fandom](https://discworld.fandom.com/wiki/Main_Page)
+- The README.md content carried over from MS1 README.md and feedback from assessor.
+
   
 ### **Layout**
 
@@ -354,15 +343,18 @@ To clone this project from GitHub follow the instructions taken from [GitHub Doc
 
 ### **Images**
 
-
+- The hero images were sourced from Shutterstock see [here (index.html)](https://www.shutterstock.com/editor/image/diskworld-resting-on-elephants-big-turtle-1151824745) and [here (game.html)](https://www.shutterstock.com/image-vector/night-shining-starry-sky-blue-space-1081014557)
+I downloaded these via a standard licence trial. 
+- The results icons were taken from [Noun Project](https://thenounproject.com/) and [GitHub](https://github.com/logos).
 
 ### **Audio**
 
-
+- The audio for the 'whoosh' sound on game.html was sourced from [Freesound.org](https://freesound.org/people/qubodup/sounds/60013/) and is available for public use for free.
 
 ### **Inspiration**
  
-- [Abibubble's Harry Potter Quiz](https://github.com/Abibubble/milestone2-harry-potter-quiz) gave me the idea of creating a quiz with pagination with the Discworld theme. 
+- [Abibubble's Harry Potter Quiz](https://github.com/Abibubble/milestone2-harry-potter-quiz) gave me the idea of creating a quiz with pagination. 
+- [My Wizarding World ](https://my.wizardingworld.com/login) inspired my choice of background on game.html
 
 
 ### **Acknowledgements**
@@ -370,5 +362,6 @@ To clone this project from GitHub follow the instructions taken from [GitHub Doc
 - My Mentor for confidence boosting and helpful advice and feedback.
 - Friends and family for testing the site and giving feedback on different devices.
 - @Tobi and @Scott_Boning_lead on Slack who supported me through the journey
+- My husband for all his support and great ideas
 
 [Back to contents](#contents)

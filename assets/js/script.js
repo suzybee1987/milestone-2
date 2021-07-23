@@ -6,7 +6,7 @@
   I have also added my own code for additional functions for the project. */
 
 //   guidance for local storage 
-https: //stackoverflow.com/questions/44348934/javascript-html5-save-mute-on-localstorage
+// https: //stackoverflow.com/questions/44348934/javascript-html5-save-mute-on-localstorage
 
 
   // variables 

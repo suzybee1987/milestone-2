@@ -5,8 +5,8 @@
   event listeners and some code of my own
   I have also added my own code for additional functions for the project. */
 
-//   guidance for local storage 
-// https: //stackoverflow.com/questions/44348934/javascript-html5-save-mute-on-localstorage
+  //   guidance for local storage 
+  // https: //stackoverflow.com/questions/44348934/javascript-html5-save-mute-on-localstorage
 
 
   // variables 
@@ -164,7 +164,9 @@
   			death: 0,
   			rob: 0,
   			nanny: 0,
-  			vimes: 0
+  			vimes: 0,
+			vetinari: 0
+			
   		}
 
   		// Stand in for the user answering quiz questions:

@@ -242,11 +242,11 @@ Testing was completed to make sure the user goals were completed
     - Result: pagination works, no long list of questions as [expected](assets/readme_imgs/testing/userStory13.PNG)
 ]
 ### **Performance Testing**
-- Testing completed at [WebPageTest](https://www.webpagetest.org/), location London, browser Chrome. The site suggested to improve security and cache which is outside the scope of this course so far. 
-  -[index.html](https://www.webpagetest.org/result/210502_AiDc9H_54970e9720a3e3a7effb48b06e5a3eeb/)
-    -[Security Score](assets/images/readme-images/webpagetest-index)
-  -[contact.html](https://www.webpagetest.org/result/210502_AiDcYW_b5066f465ced9a2a821f8e4138e48c1b/)
-    -[Security Score](assets/images/readme-images/webpagetest-contact)
+- W3C testing completed for:
+  - [index.html](assets/readme_imgs/testing/w3ctesting/testingw3c.PNG)
+  - [game.html](assets/readme_imgs/testing/w3ctesting/testinggamehtml.PNG)
+  and
+  - [contact.html](assets/readme_imgs/testing/w3ctesting/testcontacthtml.PNG)
   
 - [Lighthouse Report Result](assets/images/readme-imgs/lighthouse-report.PNG)
   -Main issues to bring down the performance score were things outwith my control - eg. Bootstrap links (error unused CSS) and caching issues (requesting http cache-control)

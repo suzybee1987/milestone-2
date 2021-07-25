@@ -53,7 +53,7 @@ a.help-btn {
 }
 
 /* as nav is transparent it is hard to see on mobile so media query to change to dark-blue  */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
     ul.navbar-nav.align-items-end.ms-auto {
         background: #0e3159;
         width: 162px;
@@ -246,9 +246,6 @@ footer li {
     color: black;
 }
 
-/* .discworld {
-    width: 16px;
-} */
 .icon {
     height: 20px;
 }

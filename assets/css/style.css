@@ -12,7 +12,7 @@ body {
 
 body {
     font-family: 'IM Fell Great Primer',
-    serif;
+        serif;
     font-weight: 400;
     /* overflow-y: auto; */
     overflow-x: hidden;
@@ -161,14 +161,16 @@ a.nav-link.text-white:hover {
 }
 
 .submit:hover {
- color: #000;
- background-color: #fff;
- border: 2px solid #6c757d;
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #6c757d;
 }
+
 .reset {
     border: 2px solid #6c757d;
 }
-.reset:hover{
+
+.reset:hover {
     background-color: #6c757d;
     color: #fff;
 }
@@ -244,9 +246,15 @@ footer li {
     color: black;
 }
 
+/* .discworld {
+    width: 16px;
+} */
 .icon {
-    height: 30px;
-    /* padding-top: 10px; */
+    height: 20px;
+}
+
+.terry {
+    font-size: 12px;
 }
 
 .copyright {
@@ -275,10 +283,10 @@ footer img {
     height: 32px;
 }
 
-ul.list-inline.sm-links-ul a:hover {
-    padding: 7px 5px 10px 5px;
+.sm-links:hover {
+    padding: 5px;
     transform: scale(1.1);
-    box-shadow: 0 0 1.5rem #000;
+    box-shadow: 0 0 1rem #000;
 }
 
 
@@ -297,7 +305,7 @@ ul.list-inline.sm-links-ul a:hover {
 }
 
 .contact {
-    margin-top: 100px;
+    margin-top: 150px;
     max-width: 380px;
     align-items: center;
     justify-content: center;
@@ -341,6 +349,7 @@ ul.list-inline.sm-links-ul a:hover {
     transition: 0.1s;
     width: 230px;
 }
+
 /* 
 .answer:nth-child(odd) {
     background: red;
@@ -441,10 +450,7 @@ ul.list-inline.sm-links-ul a:hover {
 
 /* Portrait and Landscape */
 /* https: //css-tricks.com/snippets/css/media-queries-for-standard-devices/  */
-@media only screen 
-and (min-device-width: 375px)
-and (max-device-width: 812px) 
-and (-webkit-min-device-pixel-ratio: 3) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
     .game {
         min-height: 200vh;
     }
@@ -476,25 +482,25 @@ and (-webkit-min-device-pixel-ratio: 3) {
 }
 
 
- /* 404 page  */
+/* 404 page  */
 
- .error-page {
-background: url("../images/backgroundsky.png") no-repeat center center fixed;
+.error-page {
+    background: url("../images/backgroundsky.png") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     flex: 1 0 auto;
     min-height: 100vh;
- }
+}
 
- .img-error img {
-     padding-top: 100px;
-     height: 250px;
- }
+.img-error img {
+    padding-top: 100px;
+    height: 250px;
+}
 
- .text-error {
-     color: #fff;
+.text-error {
+    color: #fff;
     font-family: 'IM Fell French Canon SC', serif;
-     padding-top: 20px;
- }
+    padding-top: 20px;
+}

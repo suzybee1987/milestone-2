@@ -247,8 +247,10 @@ Testing was completed to make sure the user goals were completed
   - [game.html](assets/readme_imgs/testing/w3ctesting/testinggamehtml.PNG)
   and
   - [contact.html](assets/readme_imgs/testing/w3ctesting/testcontacthtml.PNG)
+
+  - W3C Jigsaw testing completed for [style.css](assets/readme_imgs/testing/w3ctesting/csstesting.PNG) file and shows only errors for fixes to layout on [mobile](https: //css-tricks.com/snippets/css/media-queries-for-standard-devices/) and [browsers](https://css-tricks.com/perfect-full-page-background-image/). It also warns about having the same colour border to background on some buttons but this doesn't cause any issues in game play as the font is a contrasting colour. 
   
-- [Lighthouse Report Result](assets/images/readme-imgs/lighthouse-report.PNG)
+- [Lighthouse Report Result]()
   -Main issues to bring down the performance score were things outwith my control - eg. Bootstrap links (error unused CSS) and caching issues (requesting http cache-control)
 
 

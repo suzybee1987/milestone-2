@@ -1,12 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=IM+Fell+Great+Primer&display=swap');
 
-
-/* font-family: 'IM Fell French Canon SC', serif;
-font-family: 'IM Fell Great Primer', serif; */
-
 html,
 body {
-    height: 100;
+    height: 100%;
     margin: 0;
 }
 
@@ -14,10 +10,8 @@ body {
     font-family: 'IM Fell Great Primer',
         serif;
     font-weight: 400;
-    /* overflow-y: auto; */
     overflow-x: hidden;
     position: relative;
-
 }
 
 /* Main page  */
@@ -29,7 +23,6 @@ body {
     -o-background-size: cover;
     background-size: cover;
     min-height: 100vh;
-    min-height: 100%;
 }
 
 
@@ -61,12 +54,10 @@ a.help-btn {
         padding-right: 5px;
         border: 0;
     }
-
     .game {
-        height: 120vh;
+        height: 110vh;
     }
 }
-
 
 img,
 svg {
@@ -74,15 +65,15 @@ svg {
     height: 75px;
 }
 
+/* on smaller screen make turtle a bit smaller  */
 @media only screen and (max-width: 768px) {
-
     img,
     svg {
-        vertical-align: middle;
         height: 50px;
     }
 }
 
+/* to make the turtle spin  */
 .navbar-brand:hover {
     animation: rotate 1.2s;
 }
@@ -108,20 +99,7 @@ a.nav-link.text-white:hover {
     margin: 10px;
 }
 
-/* navbar turtle */
-.btn-outline-light:hover {
-    color: rgb(3 14 44);
-    background-color: #9fa5a5;
-    border-color: rgb(248, 249, 250);
-    border-width: 2px;
-}
-
-/* Body styling  */
-
-
-
-
-/* Modal  */
+/* Modal styling */
 
 .modal-title,
 .contact-header {
@@ -130,7 +108,6 @@ a.nav-link.text-white:hover {
     text-align: center;
     padding-left: 44px;
 }
-
 
 .modal-content {
     background-color: rgb(213 220 220 / 88%);
@@ -189,6 +166,10 @@ a.nav-link.text-white:hover {
     border: 2px #fff;
 }
 
+.resultsBtn {
+    margin-top:20px;
+}
+
 
 .play:hover,
 .resultsBtn:hover {
@@ -225,12 +206,10 @@ a:hover {
 
 footer {
     list-style-type: none;
-    /* position: absolute; */
     bottom: 60px;
     left: 0;
     right: 0;
     width: 100vw;
-
     align-items: center;
     background: #fff;
     opacity: 0.6;
@@ -245,6 +224,8 @@ footer li {
     align-items: center;
     color: black;
 }
+
+/* SM links  */
 
 .icon {
     height: 20px;
@@ -288,13 +269,14 @@ footer img {
 
 
 /* Contact page  */
+/* https: //css-tricks.com/perfect-full-page-background-image/ to get the perfect background fit */
 .contact-hero {
     background: url("../images/great_atuin.png") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    min-height: 110vh;
+    min-height: 100vh;
 }
 
 .bg-light.h-100.p-5.rounded-3.text-center {
@@ -324,7 +306,7 @@ footer img {
     -o-background-size: cover;
     background-size: cover;
     flex: 1 0 auto;
-    min-height: 110vh;
+    min-height: 100vh;
 }
 
 .gameContent {
@@ -340,18 +322,16 @@ footer img {
     max-width: 600px;
 }
 
-
 .answer {
     margin: 10px;
     transition: 0.1s;
     width: 230px;
 }
 
-/* 
-.answer:nth-child(odd) {
-    background: red;
-} */
-
+.answer:hover {
+    color: #fff;
+    background-color: #000;
+}
 
 /* when answer clicked enlarge button */
 .clicked {
@@ -363,7 +343,7 @@ footer img {
 /* for screen sizes small and below padding  */
 @media screen and (max-width: 576px) {
     #quizQuestion {
-        padding-top: 80px;
+        padding-top: 100px;
         color: white;
         font-family: 'IM Fell French Canon SC',
             serif;
@@ -374,7 +354,7 @@ footer img {
 /* for screen sizes medium increase padding */
 @media screen and (min-width: 576px) {
     #quizQuestion {
-        padding-top: 100px;
+        padding-top: 150px;
         color: white;
         font-family: 'IM Fell French Canon SC',
             serif;
@@ -385,7 +365,7 @@ footer img {
 /* extra large screens increase again */
 @media screen and (min-width: 1400px) {
     #quizQuestion {
-        padding-top: 100px;
+        padding-top: 180px;
         color: white;
         font-family: 'IM Fell French Canon SC',
             serif;
@@ -393,7 +373,7 @@ footer img {
     }
 }
 
-/* css from sitepoint  */
+/* css from sitepoint personalised to this project  */
 /* https: //www.sitepoint.com/simple-javascript-quiz/#whatsnext  */
 .slide {
     position: absolute;
@@ -402,7 +382,7 @@ footer img {
     width: 100%;
     z-index: 1;
     opacity: 0;
-    transition: opacity 0.7s;
+    transition: opacity 1s;
 }
 
 .active-slide {
@@ -419,7 +399,7 @@ footer img {
     z-index: 2;
     width: 100%;
     opacity: 1;
-    transition: opacity 0.7s;
+    transition: opacity 1s;
     color: #fff;
 }
 
@@ -427,10 +407,6 @@ footer img {
 
 .imageResult {
     padding: 10px;
-}
-
-#results {
-    padding: 20px;
 }
 
 .books {
@@ -445,7 +421,7 @@ footer img {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 75%);
 }
 
-/* Portrait and Landscape */
+/* Portrait and Landscape because answers overlap footer on some devices*/
 /* https: //css-tricks.com/snippets/css/media-queries-for-standard-devices/  */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
     .game {
@@ -477,7 +453,7 @@ footer img {
     padding: 0 10px 0 10px;
     height: 50px;
 }
-
+ /* end of game page  */
 
 /* 404 page  */
 

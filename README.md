@@ -52,7 +52,7 @@ Link to [live site](https://suzybee1987.github.io/milestone-2/index.html)
 - As a Terry Pratchett fan 
     - I want to play the game to find out which character I am most like and to see a picture of them with a brief description
     - I want to be able to share on social media to share with friends and other Discworld lovers  
-    - I want to see social media links to the Discworld fan sites
+    - I want to see a link to the Discworld site
     - I want the site to have images from the books showing the different characters on the main screen
     - I want to see quotes from my favourite books in the series as part of the questions
     - I want the quiz to follow the Discworld theme of colours
@@ -68,7 +68,6 @@ Link to [live site](https://suzybee1987.github.io/milestone-2/index.html)
 - All users
     - I want the site to be easy to navigate on mobile primarily so I can complete it on the go and this also makes it easier to share with others
     - I want the ability to turn on and off noises 
-    - I want all of the links to different areas of the site to work
     - I want the quiz to be slick and the questions and answers to appear in turn rather than a long list
 
 

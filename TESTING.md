@@ -242,48 +242,33 @@ Testing was completed to make sure the user goals were completed
     - Result: pagination works, no long list of questions as [expected](assets/readme_imgs/testing/userStory13.PNG)
 ]
 ### **Performance Testing**
-- W3C testing completed for:
-  - [index.html](assets/readme_imgs/testing/w3ctesting/testingw3c.PNG)
-  - [game.html](assets/readme_imgs/testing/w3ctesting/testinggamehtml.PNG)
-  and
-  - [contact.html](assets/readme_imgs/testing/w3ctesting/testcontacthtml.PNG)
-  
+ 
 - [Lighthouse Report Result](assets/images/readme-imgs/lighthouse-report.PNG)
   -Main issues to bring down the performance score were things outwith my control - eg. Bootstrap links (error unused CSS) and caching issues (requesting http cache-control)
 
 
 ### **Responsive**
 The site is responsive on all browsers and mobile through bootstrap framework and media queries and was tested using [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/). 
-The live site address was given to family and friends as well as the business owner to confirm the links work as expected and is responsive on all devices. 
+The live site address was given to family and friends to confirm the links work as expected and is responsive on all devices. 
 
 
 ### **W3C Validator**
 
 **W3C tests completed for html and css pages**
+- W3C testing completed for:
+  - [index.html](assets/readme_imgs/testing/w3ctesting/testingw3c.PNG)
+  - [game.html](assets/readme_imgs/testing/w3ctesting/testinggamehtml.PNG)
+  and
+  - [contact.html](assets/readme_imgs/testing/w3ctesting/testcontacthtml.PNG)
 
-![index.html](assets/images/readme-imgs/html-validator.PNG)
-See [bugs](#bugs), below
+- [JSHint](assets/readme_imgs/testing/jshintReport.txt) shows 29 warnings about using variables only used in ES6 (const, let) etc and as this is best practice I have not changed these to var.
 
-![contact.html](assets/images/readme-imgs/html-validator-contact.PNG))
-
-![css](assets/images/readme-imgs/css-validator.PNG)
+- [style.css](assets/readme_imgs/testing/w3ctesting/csstesting.PNG) testing completed with issues regarding the webkit vendor extensions which are to be expected and it also warns about using the same background colour and borders for buttons. There is enough of a contract between the text and background for this not to be an issue. 
 
 [Back to contents](#contents)
 
 
 ## **Bugs**
-
-- iframe bug
-  - During testing the [W3C Validator](#w3c-validator) flagged the usage of <p> within the iframe which would be displayed if the youtube video would not load. This was learned on the course and there doesn't seem to be an alternative from my research. 
-
-- navbar toggler
-  - During coding process navbar toggle menu background was transparent and required a fix by setting background color to the links.
-
-- Overlapping content
-  - During coding process some elements were overlapping but fixed by assigning max-width 100vh to the background images.
-
-- Gutter issue
-  - During coding there was a horizontal scroll bar discovered and through some troubleshooting I discovered an extra div row class so fixed soon after discovery. 
 
 
 [Back to contents](#contents)

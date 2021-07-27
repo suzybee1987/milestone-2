@@ -1,38 +1,12 @@
-29 warnings
-13	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-14	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-14	'template literal syntax' is only available in ES6 (use 'esversion: 6').
-17	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-89	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-99	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-101	'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
-104	'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
-107	'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
-112	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-123	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-127	'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
-130	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-133	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-135	'template literal syntax' is only available in ES6 (use 'esversion: 6').
+CONFIGURE
+Metrics
+There are 16 functions in this file.
+
+Function with the largest signature take 2 arguments, while the median is 0.
+
+Largest function has 38 statements in it, while the median is 2.
+
+The most complex function has a cyclomatic complexity value of 9 while the median is 1.
+
+One warning
 133	The body of a for in should be wrapped in an if statement to filter unwanted properties from the prototype.
-145	'template literal syntax' is only available in ES6 (use 'esversion: 6').
-158	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-168	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-172	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-172	'spread operator' is only available in ES6 (use 'esversion: 6').
-172	'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
-175	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-176	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-177	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-220	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-224	'template literal syntax' is only available in ES6 (use 'esversion: 6').
-263	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-264	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-One undefined variable
-269	$
-278	$
-292	$
-296	$
-299	$
-304	$
-305	$

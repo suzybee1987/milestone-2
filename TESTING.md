@@ -261,7 +261,7 @@ The live site address was given to family and friends to confirm the links work 
   and
   - [contact.html](assets/readme_docs/testing/w3ctesting/testcontacthtml.PNG)
 
-- [JSHint](assets/readme_docs/testing/jshintReport.txt) shows 29 warnings about using variables only used in ES6 (const, let) etc and as this is best practice I have not changed these to var.
+- [JSHint](assets/readme_docs/testing/jshintReport.txt) which was configured to ES6 showed one warning to wrap the body of a 'for in' in an if statement. 
 
 - [style.css](assets/readme_docs/testing/w3ctesting/csstesting.PNG) testing completed with issues regarding the webkit vendor extensions which are to be expected and it also warns about using the same background colour and borders for buttons. There is enough of a contract between the text and background for this not to be an issue. 
 

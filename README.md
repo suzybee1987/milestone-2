@@ -1,6 +1,6 @@
 # Terry Pratchett Discworld Quiz!
 
-![](assets/readme_imgs/amiresponsive.PNG)
+![](assets/readme_docs/amiresponsive.PNG)
 
 ## About
 
@@ -85,11 +85,11 @@ Link to [live site](https://suzybee1987.github.io/milestone-2/index.html)
 
 I have chosen [IM Fell French Canon SC](https://fonts.google.com/specimen/IM+Fell+French+Canon+SC) for the headers as it is easy to read and has sufficient contrast to the main body font. The small caps style is used by the character Death in the series and as he is a prominent character I have used it for readers of the series to enjoy. 
 
-![Example here](assets/readme_imgs/IM_Fell_French_Canon_SC.PNG)
+![Example here](assets/readme_docs/IM_Fell_French_Canon_SC.PNG)
 
 and [IM Fell Great Primer](https://fonts.google.com/specimen/IM+Fell+Great+Primer) for the rest of the text on the site as it is easy to read with wider spacing than other fonts and complements the header font so well. It uses the same style as IM Fell French Canon SC but uses lower case so the user does not have to read a wall off caps text.
 
-![Example here](assets/readme_imgs/IM_Fell_Great_Primer.PNG)
+![Example here](assets/readme_docs/IM_Fell_Great_Primer.PNG)
 
 
 ### **Colours**
@@ -99,7 +99,7 @@ It features complementary dark blues, greens, silvers and white to create a good
 
 The colours chosen are:
 
-![Coolors Palette](assets/readme_imgs/MS2.png)
+![Coolors Palette](assets/readme_docs/MS2.png)
 
 
 Format: [Coolors Palette](https://coolors.co/ffffff-0e3159-9fa5a5-000000)
@@ -115,21 +115,21 @@ The hero image from the game.html page is a night sky sourced from [Shutterstock
 
 ### **Wireframes**
 
-The wireframes were created using [Adobe XD](https://www.adobe.com/uk/products/xd.html) and can be found in pdf form in [wireframes](assets/readme_imgs/wireframes)
+The wireframes were created using [Adobe XD](https://www.adobe.com/uk/products/xd.html) and can be found in pdf form in [wireframes](assets/readme_docs/wireframes)
 
 - Desktop view
-    - [Home](assets/readme_imgs/wireframes/home_wide.png)
-    - [How To](assets/readme_imgs/wireframes/how_to_wide.png)
-    - [Contact Page](assets/readme_imgs/wireframes/contact_wide.png)
-    - [Game Play](assets/readme_imgs/wireframes/play_wide.png)
-    - [Results](assets/readme_imgs/wireframes/end_wide.png)
+    - [Home](assets/readme_docs/wireframes/home_wide.png)
+    - [How To](assets/readme_docs/wireframes/how_to_wide.png)
+    - [Contact Page](assets/readme_docs/wireframes/contact_wide.png)
+    - [Game Play](assets/readme_docs/wireframes/play_wide.png)
+    - [Results](assets/readme_docs/wireframes/end_wide.png)
 
 - Mobile view
-    - [Home](assets/readme_imgs/wireframes/home_pixel.png)
-    - [How to](assets/readme_imgs/wireframes/how_to_pixel.png)
-    - [Contact Page](assets/readme_imgs/wireframes/contact_pixel.png)
-    - [Game Play](assets/readme_imgs/wireframes/play_pixel.png)
-    - [Results](assets/readme_imgs/wireframes/end_pixel.png)
+    - [Home](assets/readme_docs/wireframes/home_pixel.png)
+    - [How to](assets/readme_docs/wireframes/how_to_pixel.png)
+    - [Contact Page](assets/readme_docs/wireframes/contact_pixel.png)
+    - [Game Play](assets/readme_docs/wireframes/play_pixel.png)
+    - [Results](assets/readme_docs/wireframes/end_pixel.png)
 
 
 [Back to contents](#contents)

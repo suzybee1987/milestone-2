@@ -9,7 +9,6 @@ body {
     font-family: 'IM Fell Great Primer',
         serif;
     font-weight: 400;
-    /* overflow-y: auto; */
     overflow-x: hidden;
     position: relative;
 }
@@ -44,7 +43,7 @@ a.help-btn {
 }
 
 /* as nav is transparent it is hard to see on mobile so media query to change to dark-blue  */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
     ul.navbar-nav.align-items-end.ms-auto {
         background: #0e3159;
         width: 162px;
@@ -52,9 +51,8 @@ a.help-btn {
         padding-right: 5px;
         border: 0;
     }
-
     .game {
-        height: 120vh;
+        height: 110vh;
     }
 }
 
@@ -64,15 +62,15 @@ svg {
     height: 75px;
 }
 
+/* on smaller screen make turtle a bit smaller  */
 @media only screen and (max-width: 768px) {
-
     img,
     svg {
-        vertical-align: middle;
         height: 50px;
     }
 }
 
+/* to make the turtle spin  */
 .navbar-brand:hover {
     animation: rotate 1.2s;
 }
@@ -232,6 +230,10 @@ footer li {
     height: 30px;
 }
 
+.terry {
+    font-size: 12px;
+}
+
 .copyright {
     padding-top: 12px;
     font-size: 14px;
@@ -258,20 +260,22 @@ footer img {
     height: 32px;
 }
 
-ul.list-inline.sm-links-ul a:hover {
-    padding: 7px 5px 10px 5px;
+.sm-links:hover {
+    padding: 5px;
     transform: scale(1.1);
-    box-shadow: 0 0 1.5rem #000;
+    box-shadow: 0 0 1rem #000;
 }
 
-/* -------------------------Contact page------------------------- */
+
+/* Contact page  */
+/* https: //css-tricks.com/perfect-full-page-background-image/ to get the perfect background fit */
 .contact-hero {
     background: url("../images/great_atuin.png") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    min-height: 110vh;
+    min-height: 100vh;
 }
 
 .bg-light.h-100.p-5.rounded-3.text-center {
@@ -279,7 +283,7 @@ ul.list-inline.sm-links-ul a:hover {
 }
 
 .contact {
-    margin-top: 100px;
+    margin-top: 150px;
     max-width: 380px;
     align-items: center;
     justify-content: center;
@@ -301,7 +305,7 @@ ul.list-inline.sm-links-ul a:hover {
     -o-background-size: cover;
     background-size: cover;
     flex: 1 0 auto;
-    min-height: 110vh;
+    min-height: 100vh;
 }
 
 .gameContent {
@@ -321,6 +325,11 @@ ul.list-inline.sm-links-ul a:hover {
     margin: 10px;
     transition: 0.1s;
     width: 230px;
+}
+
+.answer:hover {
+    color: #fff;
+    background-color: #000;
 }
 
 /* when answer clicked enlarge button */
@@ -345,7 +354,7 @@ ul.list-inline.sm-links-ul a:hover {
 /* for screen sizes medium increase padding */
 @media screen and (min-width: 576px) {
     #quizQuestion {
-        padding-top: 120px;
+        padding-top: 150px;
         color: white;
         font-family: 'IM Fell French Canon SC',
             serif;
@@ -356,7 +365,7 @@ ul.list-inline.sm-links-ul a:hover {
 /* extra large screens increase again */
 @media screen and (min-width: 1400px) {
     #quizQuestion {
-        padding-top: 150px;
+        padding-top: 180px;
         color: white;
         font-family: 'IM Fell French Canon SC',
             serif;
@@ -445,6 +454,7 @@ ul.list-inline.sm-links-ul a:hover {
     padding: 0 10px 0 10px;
     height: 50px;
 }
+ /* end of game page  */
 
 /*----------------- 404 page ------------------ */
 .error-page {
@@ -467,3 +477,4 @@ ul.list-inline.sm-links-ul a:hover {
     font-family: 'IM Fell French Canon SC', serif;
     padding-top: 20px;
 }
+

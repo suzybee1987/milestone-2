@@ -1,27 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=IM+Fell+Great+Primer&display=swap');
 
-
-/* font-family: 'IM Fell French Canon SC', serif;
-font-family: 'IM Fell Great Primer', serif; */
-
 html,
 body {
     height: 100;
-    margin: 0;
 }
 
 body {
     font-family: 'IM Fell Great Primer',
-    serif;
+        serif;
     font-weight: 400;
     /* overflow-y: auto; */
     overflow-x: hidden;
     position: relative;
-
 }
 
 /* Main page  */
-
 .hero {
     background: url("../images/great_atuin.png") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -29,9 +22,7 @@ body {
     -o-background-size: cover;
     background-size: cover;
     min-height: 100vh;
-    min-height: 100%;
 }
-
 
 /* ----------nav -------------- */
 
@@ -66,7 +57,6 @@ a.help-btn {
         height: 120vh;
     }
 }
-
 
 img,
 svg {
@@ -116,13 +106,7 @@ a.nav-link.text-white:hover {
     border-width: 2px;
 }
 
-/* Body styling  */
-
-
-
-
-/* Modal  */
-
+/* -------------------Modal-------------------  */
 .modal-title,
 .contact-header {
     font-family: 'IM Fell French Canon SC', serif;
@@ -130,7 +114,6 @@ a.nav-link.text-white:hover {
     text-align: center;
     padding-left: 44px;
 }
-
 
 .modal-content {
     background-color: rgb(213 220 220 / 88%);
@@ -161,14 +144,16 @@ a.nav-link.text-white:hover {
 }
 
 .submit:hover {
- color: #000;
- background-color: #fff;
- border: 2px solid #6c757d;
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #6c757d;
 }
+
 .reset {
     border: 2px solid #6c757d;
 }
-.reset:hover{
+
+.reset:hover {
     background-color: #6c757d;
     color: #fff;
 }
@@ -187,6 +172,9 @@ a.nav-link.text-white:hover {
     border: 2px #fff;
 }
 
+.resultsBtn {
+    margin: 15px;
+}
 
 .play:hover,
 .resultsBtn:hover {
@@ -201,7 +189,6 @@ a:hover {
     text-decoration: none;
 }
 
-
 .btn-light.help:hover {
     background-color: black;
     border: 1px solid black;
@@ -214,21 +201,18 @@ a:hover {
     color: inherit;
 }
 
-
 .modal-footer {
     justify-content: center;
 }
 
-/* Footer  */
-
+/*--------------------------- Modal----------------------- end  */
+/*-----------------------------Footer ---------------------------- */
 footer {
     list-style-type: none;
-    /* position: absolute; */
-    bottom: 60px;
+    bottom: 0;
     left: 0;
     right: 0;
     width: 100vw;
-
     align-items: center;
     background: #fff;
     opacity: 0.6;
@@ -246,7 +230,6 @@ footer li {
 
 .icon {
     height: 30px;
-    /* padding-top: 10px; */
 }
 
 .copyright {
@@ -281,8 +264,7 @@ ul.list-inline.sm-links-ul a:hover {
     box-shadow: 0 0 1.5rem #000;
 }
 
-
-/* Contact page  */
+/* -------------------------Contact page------------------------- */
 .contact-hero {
     background: url("../images/great_atuin.png") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -311,7 +293,7 @@ ul.list-inline.sm-links-ul a:hover {
     font-size: small;
 }
 
-/* game page  */
+/* --------------------game page----------------------------  */
 .game {
     background: url("../images/backgroundsky.png") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -335,17 +317,11 @@ ul.list-inline.sm-links-ul a:hover {
     max-width: 600px;
 }
 
-
 .answer {
     margin: 10px;
     transition: 0.1s;
     width: 230px;
 }
-/* 
-.answer:nth-child(odd) {
-    background: red;
-} */
-
 
 /* when answer clicked enlarge button */
 .clicked {
@@ -354,10 +330,11 @@ ul.list-inline.sm-links-ul a:hover {
     box-shadow: 0 0 10px #C0C0C0;
 }
 
+/* media queries for question page */
 /* for screen sizes small and below padding  */
 @media screen and (max-width: 576px) {
     #quizQuestion {
-        padding-top: 80px;
+        padding-top: 100px;
         color: white;
         font-family: 'IM Fell French Canon SC',
             serif;
@@ -368,7 +345,7 @@ ul.list-inline.sm-links-ul a:hover {
 /* for screen sizes medium increase padding */
 @media screen and (min-width: 576px) {
     #quizQuestion {
-        padding-top: 100px;
+        padding-top: 120px;
         color: white;
         font-family: 'IM Fell French Canon SC',
             serif;
@@ -379,11 +356,21 @@ ul.list-inline.sm-links-ul a:hover {
 /* extra large screens increase again */
 @media screen and (min-width: 1400px) {
     #quizQuestion {
-        padding-top: 100px;
+        padding-top: 150px;
         color: white;
         font-family: 'IM Fell French Canon SC',
             serif;
         font-size: 2.5em;
+    }
+}
+
+/* Portrait and Landscape iPhones */
+/* https: //css-tricks.com/snippets/css/media-queries-for-standard-devices/  */
+@media only screen and (min-device-width: 375px) 
+    and (max-device-width: 812px) 
+    and (-webkit-min-device-pixel-ratio: 3) {
+    .game {
+        min-height: 200vh;
     }
 }
 
@@ -396,7 +383,7 @@ ul.list-inline.sm-links-ul a:hover {
     width: 100%;
     z-index: 1;
     opacity: 0;
-    transition: opacity 0.7s;
+    transition: opacity 1s;
 }
 
 .active-slide {
@@ -413,18 +400,14 @@ ul.list-inline.sm-links-ul a:hover {
     z-index: 2;
     width: 100%;
     opacity: 1;
-    transition: opacity 0.7s;
+    transition: opacity 1s;
     color: #fff;
 }
 
 /* end of sitepoint css  */
 
-.imageResult {
-    padding: 10px;
-}
-
-#results {
-    padding: 20px;
+.character {
+    height: 80px;
 }
 
 .books {
@@ -439,17 +422,6 @@ ul.list-inline.sm-links-ul a:hover {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 75%);
 }
 
-/* Portrait and Landscape */
-/* https: //css-tricks.com/snippets/css/media-queries-for-standard-devices/  */
-@media only screen 
-and (min-device-width: 375px)
-and (max-device-width: 812px) 
-and (-webkit-min-device-pixel-ratio: 3) {
-    .game {
-        min-height: 200vh;
-    }
-}
-
 @media screen and (max-width: 576px) {
     .books {
         padding: 12px;
@@ -460,7 +432,6 @@ and (-webkit-min-device-pixel-ratio: 3) {
     margin: 25px;
 }
 
-/* prev and next buttons  */
 .volume {
     display: flex;
     justify-content: center;
@@ -475,26 +446,24 @@ and (-webkit-min-device-pixel-ratio: 3) {
     height: 50px;
 }
 
-
- /* 404 page  */
-
- .error-page {
-background: url("../images/backgroundsky.png") no-repeat center center fixed;
+/*----------------- 404 page ------------------ */
+.error-page {
+    background: url("../images/backgroundsky.png") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     flex: 1 0 auto;
     min-height: 100vh;
- }
+}
 
- .img-error img {
-     padding-top: 100px;
-     height: 250px;
- }
+.img-error img {
+    padding-top: 100px;
+    height: 250px;
+}
 
- .text-error {
-     color: #fff;
+.text-error {
+    color: #fff;
     font-family: 'IM Fell French Canon SC', serif;
-     padding-top: 20px;
- }
+    padding-top: 20px;
+}

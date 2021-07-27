@@ -1,6 +1,6 @@
 # Terry Pratchett Discworld Quiz!
 
-![](assets/readme_imgs/amiresponsive.PNG)
+![](assets/readme_docs/amiresponsive.PNG)
 
 ## About
 
@@ -52,7 +52,7 @@ Link to [live site](https://suzybee1987.github.io/milestone-2/index.html)
 - As a Terry Pratchett fan 
     - I want to play the game to find out which character I am most like and to see a picture of them with a brief description
     - I want to be able to share on social media to share with friends and other Discworld lovers  
-    - I want to see social media links to the Discworld fan sites
+    - I want to see a link to the Discworld site
     - I want the site to have images from the books showing the different characters on the main screen
     - I want to see quotes from my favourite books in the series as part of the questions
     - I want the quiz to follow the Discworld theme of colours
@@ -68,7 +68,6 @@ Link to [live site](https://suzybee1987.github.io/milestone-2/index.html)
 - All users
     - I want the site to be easy to navigate on mobile primarily so I can complete it on the go and this also makes it easier to share with others
     - I want the ability to turn on and off noises 
-    - I want all of the links to different areas of the site to work
     - I want the quiz to be slick and the questions and answers to appear in turn rather than a long list
 
 
@@ -86,11 +85,11 @@ Link to [live site](https://suzybee1987.github.io/milestone-2/index.html)
 
 I have chosen [IM Fell French Canon SC](https://fonts.google.com/specimen/IM+Fell+French+Canon+SC) for the headers as it is easy to read and has sufficient contrast to the main body font. The small caps style is used by the character Death in the series and as he is a prominent character I have used it for readers of the series to enjoy. 
 
-![Example here](assets/readme_imgs/IM_Fell_French_Canon_SC.PNG)
+![Example here](assets/readme_docs/IM_Fell_French_Canon_SC.PNG)
 
 and [IM Fell Great Primer](https://fonts.google.com/specimen/IM+Fell+Great+Primer) for the rest of the text on the site as it is easy to read with wider spacing than other fonts and complements the header font so well. It uses the same style as IM Fell French Canon SC but uses lower case so the user does not have to read a wall off caps text.
 
-![Example here](assets/readme_imgs/IM_Fell_Great_Primer.PNG)
+![Example here](assets/readme_docs/IM_Fell_Great_Primer.PNG)
 
 
 ### **Colours**
@@ -100,7 +99,7 @@ It features complementary dark blues, greens, silvers and white to create a good
 
 The colours chosen are:
 
-![Coolors Palette](assets/readme_imgs/MS2.png)
+![Coolors Palette](assets/readme_docs/MS2.png)
 
 
 Format: [Coolors Palette](https://coolors.co/ffffff-0e3159-9fa5a5-000000)
@@ -116,21 +115,21 @@ The hero image from the game.html page is a night sky sourced from [Shutterstock
 
 ### **Wireframes**
 
-The wireframes were created using [Adobe XD](https://www.adobe.com/uk/products/xd.html) and can be found in pdf form in [wireframes](assets/readme_imgs/wireframes)
+The wireframes were created using [Adobe XD](https://www.adobe.com/uk/products/xd.html) and can be found in pdf form in [wireframes](assets/readme_docs/wireframes)
 
 - Desktop view
-    - [Home](assets/readme_imgs/wireframes/home_wide.png)
-    - [How To](assets/readme_imgs/wireframes/how_to_wide.png)
-    - [Contact Page](assets/readme_imgs/wireframes/contact_wide.png)
-    - [Game Play](assets/readme_imgs/wireframes/play_wide.png)
-    - [Results](assets/readme_imgs/wireframes/end_wide.png)
+    - [Home](assets/readme_docs/wireframes/home_wide.png)
+    - [How To](assets/readme_docs/wireframes/how_to_wide.png)
+    - [Contact Page](assets/readme_docs/wireframes/contact_wide.png)
+    - [Game Play](assets/readme_docs/wireframes/play_wide.png)
+    - [Results](assets/readme_docs/wireframes/end_wide.png)
 
 - Mobile view
-    - [Home](assets/readme_imgs/wireframes/home_pixel.png)
-    - [How to](assets/readme_imgs/wireframes/how_to_pixel.png)
-    - [Contact Page](assets/readme_imgs/wireframes/contact_pixel.png)
-    - [Game Play](assets/readme_imgs/wireframes/play_pixel.png)
-    - [Results](assets/readme_imgs/wireframes/end_pixel.png)
+    - [Home](assets/readme_docs/wireframes/home_pixel.png)
+    - [How to](assets/readme_docs/wireframes/how_to_pixel.png)
+    - [Contact Page](assets/readme_docs/wireframes/contact_pixel.png)
+    - [Game Play](assets/readme_docs/wireframes/play_pixel.png)
+    - [Results](assets/readme_docs/wireframes/end_pixel.png)
 
 
 [Back to contents](#contents)

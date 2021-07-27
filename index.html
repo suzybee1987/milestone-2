@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="Enter your description here" />
+    <meta name="The Discworld Quiz was created to help you decide which character in the books you are most like"
+        content="quiz, discworld, terry pratchett, death, vimes, nanny ogg, the librarian, rob anybody, gaspode, vetinari" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -17,10 +18,8 @@
     <link rel="manifest" href="assets/images/favicon/site.webmanifest" crossorigin="use-credentials">
 
     <title>Discworld Quiz</title>
-    <!-- jquery cdn -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-
     <!-- code to launch modal on page load -->
     <!-- https://www.tutorialrepublic.com/codelab.php?topic=faq&file=show-bootstrap-modal-on-page-load  -->
 
@@ -33,8 +32,8 @@
         <!-- Transparent navbar https://www.youtube.com/watch?v=kmmxxfyufLE -->
         <nav class="navbar fixed-top navbar-expand-md navbar-dark p-md-3">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html" aria-current="page"><img
-                        src="assets/images/noun_turtle.png"></a>
+                <a class="navbar-brand" href="index.html" aria-current="page"><img src="assets/images/noun_turtle.png"
+                        alt="turtle icon"></a>
                 <button class="navbar-toggler btn btn-outline-light" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -82,7 +81,7 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button class="btn btn-secondary play align-items-center"><a href="game.html">PLAY</a></button>
+                    <a href="game.html" class="btn btn-secondary play align-items-center">PLAY</a>
                     <button data-bs-target="#modal2" data-bs-toggle="modal" data-bs-dismiss="modal"
                         class="btn btn-light help">HELP</button>
                 </div>
@@ -93,7 +92,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header text-center">
-                    <h2 class="modal-title help-title w-100" id="modelLabel2">HELP</h2>
+                    <h2 class="modal-title help-title w-100" id="modalLabel2">HELP</h2>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -101,45 +100,55 @@
                         honestly as you can and all will be revealed!</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary play"><a href="game.html">PLAY</a></button>
+                    <a href="game.html" class="btn btn-secondary play">PLAY</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a> -->
     <!-- Transparent Footer help https://codepen.io/knuhol/pen/zzQpeR  -->
     <footer class="fixed-bottom footer d-flex mt-auto py-3 bg-light">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col">
                     <ul class="copyright">
-                        <li class="list-inline-item"><img class="icon" src="assets/images/copyright.png"><span
-                                class="sr-only">Copyright</span>
-                            Terry Pratchett</li>
+                        <li class="list-inline-item sm-links discworld"><a href="https://www.discworldemporium.com/"
+                                target="_blank"><img src="assets/images/discworldEmporium.jpg" width="32px"
+                                    alt="link to Discworld Emporium" rel="noopener"></a></li>
+                        <li class="list-inline-item"><img class="icon" src="assets/images/copyright.png"
+                                alt="copyright symbol"></li>
+                        <li class="list-inline-item terry">Terry Pratchett</li>
                     </ul>
                 </div>
                 <div class="col">
                     <ul class="list-inline sm-links-ul">
                         <li class="list-inline-item sm-links">
                             <a href="https://github.com/suzybee1987" target="_blank" rel="noopener">
-                                <img src="assets\images\github.png">
-                                </a>
+                                <img src="assets/images/github.png" alt="GitHub link" width="32px">
+                            </a>
                         </li>
                         <li class="list-inline-item sm-links">
                             <a href="https://www.instagram.com/" target="_blank" rel="noopener">
-                                <img src="assets\images\noun_ig.png">
-                                </a>
+                                <img src="assets/images/noun_ig.png" alt="instagram link" width="32px">
+                            </a>
+                        </li>
+                        <li class="list-inline-item sm-links">
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+                                <img src="assets/images/facebook.png" alt="facebook link" width="32px">
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
+        </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script>
+        // code to launch modal when window ready 
         $(document).ready(function () {
             $("#modal").modal('show');
         });

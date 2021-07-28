@@ -1,5 +1,10 @@
 # Terry Pratchett Discworld Quiz!
 
+![GitHub contributors](https://img.shields.io/github/contributors/suzybee1987/milestone-2)
+![GitHub last commit](https://img.shields.io/github/last-commit/suzybee1987/milestone-2)
+![GitHub language count](https://img.shields.io/github/languages/count/suzybee1987/milestone-2)
+![GitHub top language](https://img.shields.io/github/languages/top/suzybee1987/milestone-2)
+
 ![](assets/readme_docs/amiresponsive.PNG)
 
 ## About
@@ -247,6 +252,7 @@ Features relevant to all pages:
 
 ### **Future Features**
 - I would like to implement a link to share with friends on WhatsApp and social media 
+- I would like to use local storage to save the mute status on the game
 
 
 ### **Responsive Design**
@@ -329,7 +335,7 @@ To clone this project from GitHub follow the instructions taken from [GitHub Doc
 - Descriptions of the characters were loosely taken from [Discworld Fandom](https://discworld.fandom.com/wiki/Main_Page)
 - The README.md content carried over from MS1 README.md and feedback from assessor.
 
-  
+
 ### **Layout**
 
 -Code Institute lessons using bootstrap
@@ -360,7 +366,7 @@ I downloaded these via a standard licence trial.
 
 - My Mentor for confidence boosting and helpful advice and feedback.
 - Friends and family for testing the site and giving feedback on different devices.
-- @Tobi and @Scott_Boning_lead on Slack who supported me through the journey
-- My husband for all his support and great ideas
+- @Tobi and @Scott_Boning_lead on Slack who supported me through the journey.
+- My husband for all his support, patience and great ideas.
 
 [Back to contents](#contents)

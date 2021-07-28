@@ -263,12 +263,20 @@ The live site address was given to family and friends to confirm the links work 
 
 - [JSHint](assets/readme_docs/testing/jshintReport.txt) which was configured to ES6 showed one warning to wrap the body of a 'for in' in an if statement. 
 
-- [style.css](assets/readme_docs/testing/w3ctesting/csstesting.PNG) testing completed with issues regarding the webkit vendor extensions which are to be expected and it also warns about using the same background colour and borders for buttons. There is enough of a contract between the text and background for this not to be an issue. 
+- [style.css](assets/readme_docs/testing/w3ctesting/csstesting.png) testing completed with issues regarding the webkit vendor extensions which are to be expected and it also warns about using the same background colour and borders for buttons. There is enough of a contract between the text and background for this not to be an issue. I attempted to save this as a PDF but GitPod wouldn't accept it so saved as PNG and assessor should zoom in to see all the information, thanks. 
 
 [Back to contents](#contents)
 
 
 ## **Bugs**
 
+- **game.html** 
+  - when first creating the game there were issues with the questions overlapping the footer on certain devices and since the footer is transparent it wasn't a traditional fix of adding it to the end of the content. This meant the size of some of the buttons was reduced and the hero image viewport height just a bit higher than full screen in case the user had to scroll. 
+  - padding-top amended for the best mobile experience and media queries added
+  - issue within script.js where Vetinari score was omitted so this was added in later.
+  - some minor styling with font sizes and margin amended. 
+
+- **index.html**
+  - Modal launch on page load stopped working after running Lighthouse test because it detected unused code (jQuery CDN link) which was removed and then resolved on next commit. 
 
 [Back to contents](#contents)

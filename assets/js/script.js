@@ -143,7 +143,7 @@
   				// add q and a to the output 
   				gameOutput.push(
   					`<div class="slide">
-                        <div class="col m-auto text-center" id="quizQuestion">${currentQ.question}</div>
+                        <h2 class="col m-auto text-center" id="quizQuestion">${currentQ.question}</h2>
                         <div class="answers row text-center">${answers.join('')}</div>
                 </div>`
   				);

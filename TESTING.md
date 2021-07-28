@@ -192,62 +192,76 @@ Testing was completed to make sure the user goals were completed
     - Testing: I played the game to get to descriptions
     - Result: see [screenshot](assets/readme_docs/testing/userStory1.PNG)
 
+
     - Expectation 2: I want to be able to share on social media to share with friends and other Discworld lovers
     - Testing: check footer to see links to social media included to open in new tab easily
     - Result: see [screenshot](assets/readme_docs/testing/userStory2.PNG)
+
 
     - Expectation 3: I want to see a link to the Discworld site
     - Testing: check footer for link to Discworld site in new tab
     - Fix: no link added so I included a new <li> element for [Discworld Emporium](assets/readme_docs/testing/userStory3.PNG)
 
+  
     - Expectation 4: I want the site to have images from the books showing the different characters on the main screen
     - Testing: open index.html to see picture of Discworld behind modal
     - Restult: see [screenshot 1](assets/readme_docs/testing/userStory4.PNG) and [2](assets/readme_docs/testing/userStory4b.PNG)
 
+  
     - Expectation 5: I want to see quotes from my favourite books in the series as part of the questions
     - Testing: play the game to see quotes from the books
     - Result: see [1](assets/readme_docs/testing/userStory5.PNG), [2](assets/readme_docs/testing/userStory5b.PNG), [3](assets/readme_docs/testing/userStory5c.PNG), [4](assets/readme_docs/testing/userStory5d.PNG)
 
+  
     - Expectation 6: I want the quiz to follow the Discworld theme of colours
     - Testing: Open Discworld Emporium site to compare colour scheme
     - Result: see [1](assets/readme_docs/testing/userStory6.PNG) to see screenshot from website
 
+  
 - As a user returning to the site:
     - Expectation 7: I want to be able to do the quiz multiple times to get different answers and see the descriptions of different characters and which books they appear in
     - Testing: Play the game and try again to get different character 
     - Result: [Try again](assets/readme_docs/testing/userStory7.PNG) button available to obtain [different character](assets/readme_docs/testing/userStory7b.PNG)
 
+  
 - As a user who does not know the Terry Pratchett Discworld series
     - Expectation 8: I want an explanation of each character when I complete the quiz
     - Testing: complete quiz to see each character description
     - Fix: Upon testing I noticed Lord Vetinari answer wasn't available and discovered an issue with the answer Map in script.js so amended this to include him. 
     Result now: All characters available [Gaspode](assets/readme_docs/testing/gaspode.PNG), [Vimes](assets/readme_docs/testing/vimes.PNG), [Death](assets/readme_docs/testing/death.PNG), [Nanny](assets/readme_docs/testing/nanny.PNG), [Rob](assets/readme_docs/testing/rob.PNG), [Vetinari](assets/readme_docs/testing/vetinari.PNG)
+  
 
     - Expectation 9: I want to see a picture representing the character to give me an idea of their personality
     - Testing: check all answers for image of character
     - Result: all characters available, see screenshots for Expectation 8.
 
+  
     - Expectation 10: I want to see a help section to get information on how to play the game
     - Testing: Trigger help modal from each page
     - Result: help modal [triggers](assets/readme_docs/testing/help.PNG) as expected on each page
 
+  
 - All users
     - Expectation 11: I want the site to be easy to navigate on mobile primarily so I can complete it on the go and this also makes it easier to share with others
     - Testing: test all pages on different mobiles
     - Fix: Some padding-top added to ensure good spacing on all [devices](assets/readme_docs/testing/userStory11.PNG), [2](assets/readme_docs/testing/userStory11b.PNG), [3](assets/readme_docs/testing/userStory11c.PNG)
 
+  
     - Expectation 12: I want the ability to turn on and off noises 
     - Testing: test volume button to make sure there is ability to turn off noises
     - Result: volume can be muted on the game as [expected](assets/readme_docs/testing/userStory12.PNG)
 
+  
     - Expectation 13: I want the quiz to be slick and the questions and answers to appear in turn rather than a long list
     - Testing: click through game to ensure pagination works
     - Result: pagination works, no long list of questions as [expected](assets/readme_docs/testing/userStory13.PNG)
 
+  
     - Expectation 14: I want to be able to contact the site owner with feedback
     - Testing: Navigate to contact page to feedback to site owner
     - Result: Contact page has feedback [form](assets/readme_docs/testing/userstory14.PNG)
 
+  
 [Back to contents](#contents)
 
 ### **Performance Testing**
@@ -271,6 +285,8 @@ The live site address was given to family and friends to confirm the links work 
   - [game.html](assets/readme_docs/testing/w3ctesting/testinggamehtml.PNG)
   and
   - [contact.html](assets/readme_docs/testing/w3ctesting/testcontacthtml.PNG)
+  
+  No issues with W3C Validator on Markup except on game.html where there was a recommendation to follow semantic headings after section, however when script.js is added on the live site this uses an h2 element so resolved upon game play.
 
 - [JSHint](assets/readme_docs/testing/jshintReport.txt) which was configured to ES6 showed one warning to wrap the body of a 'for in' in an if statement. 
 

@@ -74,6 +74,7 @@ Link to [live site](https://suzybee1987.github.io/milestone-2/index.html)
     - I want the site to be easy to navigate on mobile primarily so I can complete it on the go and this also makes it easier to share with others
     - I want the ability to turn on and off noises 
     - I want the quiz to be slick and the questions and answers to appear in turn rather than a long list
+    - I also want to be able to contact the site owner with feedback
 
 
 ### **Site Owner Goals** 
@@ -92,7 +93,7 @@ I have chosen [IM Fell French Canon SC](https://fonts.google.com/specimen/IM+Fel
 
 ![Example here](assets/readme_docs/IM_Fell_French_Canon_SC.PNG)
 
-and [IM Fell Great Primer](https://fonts.google.com/specimen/IM+Fell+Great+Primer) for the rest of the text on the site as it is easy to read with wider spacing than other fonts and complements the header font so well. It uses the same style as IM Fell French Canon SC but uses lower case so the user does not have to read a wall off caps text.
+and [IM Fell Great Primer](https://fonts.google.com/specimen/IM+Fell+Great+Primer) for the rest of the text on the site as it is easy to read with wider spacing than other fonts and complements the header font so well. It uses the same style as IM Fell French Canon SC but uses lower case so the user does not have to read a wall of caps text.
 
 ![Example here](assets/readme_docs/IM_Fell_Great_Primer.PNG)
 
@@ -183,8 +184,6 @@ The wireframes were created using [Adobe XD](https://www.adobe.com/uk/products/x
   - Used to generate a favicon for the website title.
 - [Lighthouse](https://developers.google.com/web/tools/lighthouse)
   - Used to audit the site for quality and ensure responsiveness.
-- [WebPageTest](https://www.webpagetest.org/)
-  - Used to test performance.
 - [amiresponsive](http://ami.responsivedesign.is/)
   - An online tool to check how responsive the site is on different devices.
 - [tinypng](https://tinypng.com/)
@@ -205,7 +204,7 @@ Features relevant to all pages:
     - All links show an underline or animation when hovered over (except volume button on game.html to prevent confusion) and for the icons this is done using the border attribute to provide spacing and prevent overlapping the icon. The animation for the home button is a turtle that spins which relates to the turtle from the book series.
     - The home button is on the left side of the header and sections of the page listed on the right where a user would expect them to be.
     - Navigation links are underlined or animated when the user hovers over them to give feedback that they have hovered over the right spot.
-    - The navbar is transparent to alow the user to enjoy the full length of the hero images.
+    - The navbar is transparent to allow the user to enjoy the full length of the hero images.
     - On mobile view the navigation links collapse in to a toggle button for easier user experience. As the navbar list font is hard to see against the background I have added a background to the links. Some JavaScript was used with the navbar to ensure the menu closes after a link is pressed to avoid the user having to close the menu afterwards. 
     - The colour scheme is designed to be easy to read with the contrast and the ratio tested on Google Dev Tools.
 
@@ -216,21 +215,21 @@ Features relevant to all pages:
   
 - **Footer** 
     - Transparent and fixed at the bottom of the screen. It wouldn't sit after all of the content since this would create white space which is a bad user experience.  
-    - Contains a link to my GitHub repository and also Instagram to encourage the user to share the site with others and search for Discworld related pages. It also reminds the user the content is copyrighted by Terry Pratchett. 
+    - Contains a link to my GitHub repository and also Instagram and Facebook to encourage the user to share the site with others and search for Discworld related pages. It also reminds the user the content is copyrighted by Terry Pratchett and has a link to Discworld Emporium. 
 
   
 #### *index.html*
   
 - **Modal**
-   - The modal launches on page load and prompts the user to click to play the game or be directed to the help modal. The help modal instructs the user to how the quiz works and has a link to game.html for ease once the user has learned the help information. 
+   - The modal launches on page load and prompts the user to click to play the game or be directed to the help modal. The help modal instructs the user to how the quiz works and has a link to game.html for ease once the user has learned the help information. If the modal is closed the user can still access the game, help and contact form using the navigation form. 
 
 #### *game.html*
 
 - **Questions and Answers section**
-    - The quiz section is loaded to game.html via pagination from the script.js file. The questions are loaded in quiz.json and then accessed by script.js to display on game.html. The questions are aligned at the top and then the four answers in Bootstrap buttons which scale slightly upwards in size when clicked. 
+    - The quiz section is loaded to game.html via pagination from the script.js file. The questions are loaded in quiz.json and then accessed by script.js to display on game.html. The questions are aligned at the top and then the four answers in Bootstrap buttons which scale slightly upwards in size when clicked to feedback to the user the answer they have clicked. There is also a transition between questions for a nice user experience.
 
 - **Mute button**
-    - On desktop the mute button is situated at the top right of the page and is automatically set to mute for the best user experience. On the mobile page this is located in the middle of the navbar to ensure the users eye is drawn to it when they play the game. The noise is a 'whoosh' and makes it feel like the answers are being quickly pulled off the page to reveal the next question. 
+    - On desktop the mute button is situated at the top right of the page and is automatically set to mute for the best user experience. On the mobile page this is located in the middle of the navbar to ensure the users eye is drawn to it when they play the game. The noise is a 'whoosh' and makes it feel like the answers are being quickly pulled off the page to reveal the next question.
 
 - **Results**
     - The results section is revealed once all of the questions have been asked and shows an icon of the character chosen, a description of that character and a list of the books they appear in. These are also linked to the page via pagination from the script.js file and allow the user to get more information about the character chosen. This section also has a 'Try Again' button to encourage the user to try and get different characters. By clicking this link the game.html is reloaded from the start. 
@@ -239,7 +238,7 @@ Features relevant to all pages:
 #### *contact.html*
 
 - **Contact form**
-    - For the user to give feedback these fields are required: Name, Email and comments and show error messages if not filled before clicking submit. Once the user fills out this section an email is sent to my inbox with the details and the user receives confirmation via JavaScript alert to confirm their email has been sent. 
+    - For the user to give feedback these fields are required: Name, Email and comments and show error messages if not filled before clicking submit. Once the user fills out this section an email is sent to my inbox with the details and the user receives confirmation via alert on window to confirm their email has been sent. 
     - On the form the buttons are as a user would expect there is a submit and reset button on the form with the Reset button having more muted colours and Submit button the obvious choice for the user to select upon filling out the form.  
 
 - **Modal**
@@ -248,7 +247,7 @@ Features relevant to all pages:
 #### *404.html*
 
  - **Button**
-    - On the 404.html page the button redirects the user back to index.html to prevent them having to press the browser back button. 
+    - On the 404.html page the button redirects the user back to index.html to prevent them having to press the browser back button for better experience. 
 
 ### **Future Features**
 - I would like to implement a link to share with friends on WhatsApp and social media 
@@ -257,7 +256,7 @@ Features relevant to all pages:
 
 ### **Responsive Design**
 
-- Bootstrap columns were used to make the site responsive on all devices and viewport height adjusted for best user experience
+- Bootstrap columns were used to make the site responsive on all devices and viewport height adjusted for the best user experience
 
 [Back to contents](#contents)
 
@@ -305,7 +304,7 @@ To deploy the page to **GitHub Pages** these steps were taken:
 
 ### How to run the project locally
 
-To clone this project from GitHub follow the instructions taken from [GitHub Docs](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository):
+To clone this project from GitHub follow the instructions taken from [GitHub Docs](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) explained here:
 1. Navigate to the [GitHub Repository](https://github.com/suzybee1987/milestone-2)
 2. Above the files click the green Download Code link.
 3. To clone using HTTPS click the clipboard symbol under "Clone with HTTPS". To clone using SSH key click Use SSH then click the clipboard symbol. To clone using GitHub CLI select Use GitHub CLI and click the clipboard symbol. 

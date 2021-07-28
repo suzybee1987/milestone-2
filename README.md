@@ -45,7 +45,6 @@ Link to [live site](https://suzybee1987.github.io/milestone-2/index.html)
   - [**Code**](#code)
   - [**Content**](#content)
   - [**Images**](#images)
-  - [**Videos**](#videos)
   - [**Inspiration**](#inspiration)
   - [**Acknowledgements**](#acknowledgements)
   

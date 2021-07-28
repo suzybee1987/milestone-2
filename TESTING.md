@@ -81,15 +81,16 @@ The devices used in this testing include Acer Swift 3, iPad Mini 2, Huawei P30 l
        - Testing: tested by hovering over GitHub icon button
        - Result: hovering over ion increases icon size and link is in box shadow
 
-  - **Instagram link**
-    1. - Expected: clicking on Instagram icon takes user to Instagram in new tab
-       - Testing: tested by clicking Instagram icon
-       - Result: link takes user to [Instagram](https://www.instagram.com/)
+  - **Social Media link**
+    1. - Expected: clicking on Instagram icon takes user to Instagram in new tab and clicking on Facebook icon takes user to Facebook site in new tab 
+       - Testing: tested by clicking Instagram and Facebook icon
+       - Result: link takes user to the individual social media link
 
     2. - Expected: hovering over link increases icon size and border shadow appears
        - Testing: tested by hovering over Instagram icon button
-       - Result: hovering over ion increases icon size and link is in box shadow
+       - Result: hovering over icon increases icon size and link is in box shadow
 
+[Back to contents](#contents)
 
 #### **Home page**
 
@@ -116,6 +117,7 @@ The devices used in this testing include Acer Swift 3, iPad Mini 2, Huawei P30 l
     - Testing: click play button 
     - Result: link takes the user to game.html
   
+[Back to contents](#contents)
 
 #### **Game page**
 
@@ -144,7 +146,7 @@ The devices used in this testing include Acer Swift 3, iPad Mini 2, Huawei P30 l
     - Testing: reduce window size
     - Result: works normally by stacking the answers at small screen size
 
-
+[Back to contents](#contents)
 #### **Contact page**
 **Submit**
   1. - Expected: form should not submit without all fields completed
@@ -180,6 +182,7 @@ The devices used in this testing include Acer Swift 3, iPad Mini 2, Huawei P30 l
   - Testing: send form to test it resets
   - Fix: I used jQuery on submit event to correct this
 
+[Back to contents](#contents)
 
 ### **User Story Testing**
 
@@ -240,17 +243,25 @@ Testing was completed to make sure the user goals were completed
     - Expectation 13: I want the quiz to be slick and the questions and answers to appear in turn rather than a long list
     - Testing: click through game to ensure pagination works
     - Result: pagination works, no long list of questions as [expected](assets/readme_docs/testing/userStory13.PNG)
-]
+
+    - Expectation 14: I want to be able to contact the site owner with feedback
+    - Testing: Navigate to contact page to feedback to site owner
+    - Result: Contact page has feedback [form](assets/readme_docs/testing/userstory14.PNG)
+
+[Back to contents](#contents)
+
 ### **Performance Testing**
  
 - [Lighthouse Report Result](assets/images/readme-imgs/lighthouse-report.PNG)
   -Main issues to bring down the performance score were things outwith my control - eg. Bootstrap links (error unused CSS) and caching issues (requesting http cache-control)
 
+[Back to contents](#contents)
 
 ### **Responsive**
 The site is responsive on all browsers and mobile through bootstrap framework and media queries and was tested using [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/). 
 The live site address was given to family and friends to confirm the links work as expected and is responsive on all devices. 
 
+[Back to contents](#contents)
 
 ### **W3C Validator**
 
@@ -280,3 +291,5 @@ The live site address was given to family and friends to confirm the links work 
   - Modal launch on page load stopped working after running Lighthouse test because it detected unused code (jQuery CDN link) which was removed and then resolved on next commit. 
 
 [Back to contents](#contents)
+
+[Back to README](README.md)

@@ -18,11 +18,17 @@ body {
     min-height: 100vh;
 }
 
+:root {
+    --white: #fff;
+    --dark:#000;
+}
+
+
 /* ----------nav -------------- */
 
 .navbar-dark .navbar-toggler {
-    color: #fff;
-    border-color: #fff;
+    color: var(--white);
+    border-color: var(--white);
     padding: 10px;
 }
 
@@ -132,8 +138,8 @@ a.nav-link.text-white:hover {
 }
 
 .submit:hover {
-    color: #000;
-    background-color: #fff;
+    color:var(--dark);
+    background-color: var(--white);
     border: 2px solid #6c757d;
 }
 
@@ -143,21 +149,21 @@ a.nav-link.text-white:hover {
 
 .reset:hover {
     background-color: #6c757d;
-    color: #fff;
+    color: var(--white);
 }
 
 .btn-check:focus+.btn-light,
 .btn-light:focus {
-    color: #fff;
-    background-color: #000;
-    border-color: #000;
+    color: var(--white);
+    background-color:var(--dark);
+    border-color:var(--dark);
     box-shadow: 0 0 0 0.25rem rgb(211 212 213 / 50%);
 }
 
 .play,
 .resultsBtn {
-    background-color: #000;
-    border: 2px #fff;
+    background-color:var(--dark);
+    border: 2px var(--white);
 }
 
 .resultsBtn {
@@ -166,21 +172,21 @@ a.nav-link.text-white:hover {
 
 .play:hover,
 .resultsBtn:hover {
-    background-color: #fff;
-    border-color: #fff;
-    color: #000
+    background-color: var(--white);
+    border-color: var(--white);
+    color:var(--dark)
 }
 
 a,
 a:hover {
-    color: #fff;
+    color: var(--white);
     text-decoration: none;
 }
 
 .btn-light.help:hover {
     background-color: black;
     border: 1px solid black;
-    color: #fff;
+    color: var(--white);
 }
 
 a,
@@ -201,7 +207,7 @@ footer {
     right: 0;
     width: 100vw;
     align-items: center;
-    background: #fff;
+    background: var(--white);
     opacity: 0.6;
     height: 50px;
     z-index: 2;
@@ -248,7 +254,7 @@ footer li {
 
 .sm-links:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 1rem #000;
+    box-shadow: 0 0 1remvar(--dark);
 }
 
 /* Contact page  */
@@ -312,8 +318,8 @@ footer li {
 }
 
 .answer:hover {
-    color: #fff;
-    background-color: #000;
+    color: var(--white);
+    background-color:var(--dark);
 }
 
 /* when answer clicked enlarge button */
@@ -328,7 +334,7 @@ footer li {
 @media screen and (max-width: 576px) {
     #quizQuestion {
         padding-top: 100px;
-        color: white;
+        color:  var(--white);
         font-family: 'IM Fell French Canon SC',
             serif;
         font-size: 2em;
@@ -394,7 +400,7 @@ footer li {
     width: 100%;
     opacity: 1;
     transition: opacity 1s;
-    color: #fff;
+    color: var(--white);
 }
 
 /* end of sitepoint css  */
@@ -404,7 +410,7 @@ footer li {
 }
 
 .books {
-    color: #000;
+    color:var(--dark);
     background-color: #ffffff91;
     padding: 20px;
     font-family: 'IM Fell Great Primer', serif;
@@ -455,7 +461,7 @@ footer li {
 }
 
 .text-error {
-    color: #fff;
+    color: var(--white);
     font-family: 'IM Fell French Canon SC', serif;
     padding-top: 20px;
 }

@@ -21,5 +21,11 @@
    },
    "files.autoSave": "off",
    "workbench.colorTheme": "Monokai Dimmed",
-   "editor.defaultFormatter": "HookyQR.beautify"
+   "editor.defaultFormatter": "HookyQR.beautify",
+   "[javascript]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features"
+   },
+   "[html]": {
+      "editor.defaultFormatter": "vscode.html-language-features"
+   }
 }

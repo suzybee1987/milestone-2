@@ -14,17 +14,17 @@ const quizContainer = document.getElementById('quiz');
 const audio = document.querySelector(`audio[class="audioAnswer"]`);
 let audioIconDesktop = document.getElementById("volumeBtnDesktop");
 let audioIconMobile = document.getElementById("volumeBtnMobile");
+let localAudio = localStorage.getItem("audio");
 
 // local storage audio setting 
-if (localStorage.getItem("audio")) {
+if (localAudio === "true") {
 	audio.muted = false
-	audioIconDesktop.src = "assets/images/noun_mute.png";
-	audioIconMobile.src = 'assets/images/noun_mute.png';
-
-} else {
-	audio.muted = true;
 	audioIconDesktop.src = 'assets/images/noun_volume.png';
 	audioIconMobile.src = 'assets/images/noun_volume.png';
+} else {
+	audio.muted = true;
+	audioIconDesktop.src = "assets/images/noun_mute.png";
+	audioIconMobile.src = 'assets/images/noun_mute.png';
 }
 
 
